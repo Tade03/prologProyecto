@@ -326,7 +326,7 @@ etapa_edad(adulto_mayor, 116).
 etapa_edad(adulto_mayor, 117).
 etapa_edad(adulto_mayor, 118).
 etapa_edad(adulto_mayor, 119).
-etapa_edad(adulto_mayor, 120).
+etapa_edad(adulto_mayor, 120).
 
 % Situación Económica
 situacion_economica(clase_baja).
@@ -492,6 +492,7 @@ subtipo_situacion(maya, clase_baja).
 subtipo_situacion(zapoteco, clase_media_baja).
 subtipo_situacion(ingles, clase_media_alta).
 subtipo_situacion(frances, clase_media_alta).
+subtipo_situacion(espanol, clase_media).
 
 % Relación entre Subtipo de Idioma y Religión
 subtipo_religion(nahuatl, sin_religion).
@@ -499,6 +500,7 @@ subtipo_religion(ingles, protestantes_evangelicos).
 subtipo_religion(aleman, catolicos).
 subtipo_religion(frances, judios).
 subtipo_religion(maya, catolicos).
+subtipo_religion(espanol, catolicos).
 
 % ---
 
@@ -579,3 +581,11 @@ perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, cl
 
 religion_por_idioma(Idioma, Religion) :-
     subtipo_religion(Idioma, Religion).
+
+
+religion_por_clase_social(ClaseSocial, Religion) :-
+    situacion_religion(ClaseSocial, Religion).
+
+religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion) :-
+    religion_por_idioma(Idioma, Religion),
+    religion_por_clase_social(ClaseSocial, Religion).
