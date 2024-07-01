@@ -70,14 +70,6 @@ subtipo_etnicidad(argelinos, descendientes_de_inmigrantes).
 subtipo_etnicidad(senegaleses, descendientes_de_inmigrantes).
 subtipo_etnicidad(sudafricanos, descendientes_de_inmigrantes).
 
-% Nivel Educativo
-nivel_educativo(analfabetos).
-nivel_educativo(educacion_basica_incompleta).
-nivel_educativo(educacion_basica_completa).
-nivel_educativo(educacion_media_superior).
-nivel_educativo(educacion_superior).
-nivel_educativo(postgrado).
-
 % Edad (1 a 120)
 edad(1).
 edad(2).
@@ -581,3 +573,9 @@ perfil_demografico(occidentales, indigenas, educacion_media_superior, adultos, c
 perfil_demografico(surenos, mestizos, educacion_superior, jovenes_adultos, clase_media).
 perfil_demografico(peninsulares, descendientes_de_inmigrantes, educacion_basica_completa, adolescentes, clase_media_baja).
 perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, clase_baja).
+
+
+% definicion de reglas
+
+religion_por_idioma(Idioma, Religion) :-
+    subtipo_religion(Idioma, Religion).
