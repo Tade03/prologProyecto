@@ -1,0 +1,213 @@
+% Región Geográfica
+region_geografica(nortenos).
+region_geografica(bajacalifornianos).
+region_geografica(bajio).
+region_geografica(occidentales).
+region_geografica(surenos).
+region_geografica(peninsulares).
+region_geografica(centroamericanos).
+
+% Etnicidad
+etnicidad(mestizos).
+etnicidad(indigenas).
+etnicidad(afrodescendientes).
+etnicidad(descendientes_de_inmigrantes).
+etnicidad(criollos).
+
+% Subcategoría de Etnicidad
+subtipo_etnicidad(nahuatl, indigenas).
+subtipo_etnicidad(maya, indigenas).
+subtipo_etnicidad(zapoteco, indigenas).
+subtipo_etnicidad(mixteco, indigenas).
+subtipo_etnicidad(otomi, indigenas).
+subtipo_etnicidad(totonaca, indigenas).
+
+subtipo_etnicidad(espanoles, descendientes_de_inmigrantes).
+subtipo_etnicidad(italianos, descendientes_de_inmigrantes).
+subtipo_etnicidad(alemanes, descendientes_de_inmigrantes).
+subtipo_etnicidad(libaneses, descendientes_de_inmigrantes).
+subtipo_etnicidad(chinos, descendientes_de_inmigrantes).
+subtipo_etnicidad(japoneses, descendientes_de_inmigrantes).
+subtipo_etnicidad(coreanos, descendientes_de_inmigrantes).
+subtipo_etnicidad(judios, descendientes_de_inmigrantes).
+subtipo_etnicidad(franceses, descendientes_de_inmigrantes).
+subtipo_etnicidad(ingleses, descendientes_de_inmigrantes).
+subtipo_etnicidad(irlandeses, descendientes_de_inmigrantes).
+subtipo_etnicidad(polacos, descendientes_de_inmigrantes).
+subtipo_etnicidad(rusos, descendientes_de_inmigrantes).
+subtipo_etnicidad(hungaros, descendientes_de_inmigrantes).
+subtipo_etnicidad(checos, descendientes_de_inmigrantes).
+subtipo_etnicidad(austriacos, descendientes_de_inmigrantes).
+subtipo_etnicidad(cubanos, descendientes_de_inmigrantes).
+subtipo_etnicidad(argentinos, descendientes_de_inmigrantes).
+subtipo_etnicidad(chilenos, descendientes_de_inmigrantes).
+subtipo_etnicidad(colombianos, descendientes_de_inmigrantes).
+subtipo_etnicidad(venezolanos, descendientes_de_inmigrantes).
+subtipo_etnicidad(peruanos, descendientes_de_inmigrantes).
+subtipo_etnicidad(brasilenos, descendientes_de_inmigrantes).
+subtipo_etnicidad(ecuatorianos, descendientes_de_inmigrantes).
+subtipo_etnicidad(bolivianos, descendientes_de_inmigrantes).
+subtipo_etnicidad(paraguayos, descendientes_de_inmigrantes).
+subtipo_etnicidad(uruguayos, descendientes_de_inmigrantes).
+subtipo_etnicidad(costarricenses, descendientes_de_inmigrantes).
+subtipo_etnicidad(salvadorenos, descendientes_de_inmigrantes).
+subtipo_etnicidad(hondurenos, descendientes_de_inmigrantes).
+subtipo_etnicidad(nicaraguenses, descendientes_de_inmigrantes).
+subtipo_etnicidad(panamenos, descendientes_de_inmigrantes).
+subtipo_etnicidad(canadienses, descendientes_de_inmigrantes).
+subtipo_etnicidad(estadounidenses, descendientes_de_inmigrantes).
+subtipo_etnicidad(filipinos, descendientes_de_inmigrantes).
+subtipo_etnicidad(indios, descendientes_de_inmigrantes).
+subtipo_etnicidad(pakistanies, descendientes_de_inmigrantes).
+subtipo_etnicidad(iranies, descendientes_de_inmigrantes).
+subtipo_etnicidad(iraquies, descendientes_de_inmigrantes).
+subtipo_etnicidad(sirios, descendientes_de_inmigrantes).
+subtipo_etnicidad(turcos, descendientes_de_inmigrantes).
+subtipo_etnicidad(griegos, descendientes_de_inmigrantes).
+subtipo_etnicidad(egipcios, descendientes_de_inmigrantes).
+subtipo_etnicidad(marroquies, descendientes_de_inmigrantes).
+subtipo_etnicidad(argelinos, descendientes_de_inmigrantes).
+subtipo_etnicidad(senegaleses, descendientes_de_inmigrantes).
+subtipo_etnicidad(sudafricanos, descendientes_de_inmigrantes).
+
+% Nivel Educativo
+nivel_educativo(analfabetos).
+nivel_educativo(educacion_basica_incompleta).
+nivel_educativo(educacion_basica_completa).
+nivel_educativo(educacion_media_superior).
+nivel_educativo(educacion_superior).
+nivel_educativo(postgrado).
+
+% Edad
+edad(niños, 0-12).
+edad(adolescentes, 13-17).
+edad(jovenes_adultos, 18-29).
+edad(adultos, 30-59).
+edad(adultos_mayores, 60-120).
+
+% Situación Económica
+situacion_economica(clase_baja).
+situacion_economica(clase_media_baja).
+situacion_economica(clase_media).
+situacion_economica(clase_media_alta).
+situacion_economica(clase_alta).
+
+% Región Geográfica
+region_geografica(nortenos).
+region_geografica(bajacalifornianos).
+region_geografica(bajio).
+region_geografica(occidentales).
+region_geografica(surenos).
+region_geografica(peninsulares).
+region_geografica(centroamericanos).
+
+% Etnias
+etnicidad(mestizos).
+etnicidad(indigenas).
+etnicidad(afrodescendientes).
+etnicidad(descendientes_de_inmigrantes).
+etnicidad(criollos).
+
+% Nivel Educativo
+nivel_educativo(analfabetos).
+nivel_educativo(educacion_basica_incompleta).
+nivel_educativo(educacion_basica_completa).
+nivel_educativo(educacion_media_superior).
+nivel_educativo(educacion_superior).
+nivel_educativo(postgrado).
+
+% Edad
+edad(niños).
+edad(adolescentes).
+edad(jovenes_adultos).
+edad(adultos).
+edad(adultos_mayores).
+
+% Situación Económica
+situacion_economica(clase_baja).
+situacion_economica(clase_media_baja).
+situacion_economica(clase_media).
+situacion_economica(clase_media_alta).
+situacion_economica(clase_alta).
+
+% Religión
+religion(catolicos).
+religion(protestantes_evangelicos).
+religion(testigos_de_jehova).
+religion(mormones).
+religion(judios).
+religion(musulmanes).
+religion(budistas).
+religion(hinduistas).
+religion(sin_religion).
+
+% Idioma
+idioma(hablantes_de_espanol).
+idioma(hablantes_de_lenguas_indigenas).
+idioma(hablantes_de_lenguas_extranjeras).
+
+% Ocupación
+ocupacion(campesinos).
+ocupacion(pescadores).
+ocupacion(mineros).
+ocupacion(obrero_industriales).
+ocupacion(comerciantes).
+ocupacion(profesionales).
+ocupacion(funcionarios_publicos).
+ocupacion(artistas_y_artesanos).
+ocupacion(trabajadores_del_sector_servicios).
+ocupacion(emprendedores).
+
+% Estado Civil
+estado_civil(solteros).
+estado_civil(casados).
+estado_civil(divorciados).
+estado_civil(viudos).
+estado_civil(en_union_libre).
+
+% Géneros
+genero(hombre).
+genero(mujer).
+genero(no_binaria).
+genero(transgenero).
+genero(agenero).
+genero(bigenero).
+genero(fluido).
+
+% Residencia
+residencia(urbanos).
+residencia(suburbanos).
+residencia(rurales).
+residencia(migrantes).
+
+% Participación Política
+participacion_politica(activos_politicamente).
+participacion_politica(no_activos_politicamente).
+participacion_politica(militantes_de_partidos_politicos).
+participacion_politica(independientes).
+
+% Condición de Salud
+condicion_de_salud(personas_con_discapacidad).
+condicion_de_salud(personas_sin_discapacidad).
+condicion_de_salud(personas_con_enfermedades_cronicas).
+condicion_de_salud(personas_con_enfermedades_mentales).
+
+% Preferencia Alimentaria
+preferencia_alimentaria(omnivoros).
+preferencia_alimentaria(vegetarianos).
+preferencia_alimentaria(veganos).
+preferencia_alimentaria(pescetarianos).
+preferencia_alimentaria(flexitarianos).
+
+% Actividad Física
+actividad_fisica(activos_fisicamente).
+actividad_fisica(sedentarios).
+actividad_fisica(deportistas_profesionales).
+actividad_fisica(aficionados_al_fitness).
+
+% Consumo de Medios
+consumo_de_medios(consumidores_de_television).
+consumo_de_medios(usuarios_de_redes_sociales).
+consumo_de_medios(lectores_de_periodicos_y_revistas).
+consumo_de_medios(radioescuchas).
+consumo_de_medios(consumidores_de_contenido_digital).
