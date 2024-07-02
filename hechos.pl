@@ -1,3 +1,18 @@
+mexicano(juan).
+mexicano(maria).
+mexicano(jose).
+
+% Hechos de personas mexicanas
+mexicano(juan).
+mexicano(maria).
+mexicano(jose).
+
+% Relaciones de personas con regiones y etnicidades
+pertenece_region(juan, nortenos).
+pertenece_region(maria, bajio).
+pertenece_etnicidad(juan, mestizos).
+pertenece_etnicidad(maria, indigenas).
+
 % Region Geográfica
 region_geografica(nortenos).
 region_geografica(bajacalifornianos).
@@ -579,9 +594,17 @@ perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, cl
 
 % definicion de reglas
 
+% Reglas para encontrar mexicanos de ciertas regiones o etnicidades
+mexicano_de_region(Region, Persona) :-
+    mexicano(Persona),
+    pertenece_region(Persona, Region).
+
+mexicano_de_etnicidad(Etnicidad, Persona) :-
+    mexicano(Persona),
+    pertenece_etnicidad(Persona, Etnicidad).
+
 religion_por_idioma(Idioma, Religion) :-
     subtipo_religion(Idioma, Religion).
-
 
 religion_por_clase_social(ClaseSocial, Religion) :-
     situacion_religion(ClaseSocial, Religion).
