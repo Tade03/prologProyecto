@@ -1,6 +1,9 @@
-mexicano(juan).
-mexicano(maria).
-mexicano(jose).
+
+:- discontiguous region_geografica/1.
+:- discontiguous etnicidad/1.
+:- discontiguous pertenece_region/2.
+:- discontiguous subtipo_religion/2.
+:- discontiguous pertenece_religion/2.
 
 % Hechos de personas mexicanas
 mexicano(juan).
@@ -213,9 +216,10 @@ etapas_de_vida(ninez).
 etapas_de_vida(adolesencia).
 etapas_de_vida(juventud).
 etapas_de_vida(adultez).
-etapas_de_vida(adulto_mayor)
+etapas_de_vida(adulto_mayor).
 
-%Etapa_Edad
+% Etapa Edad
+
 etapa_edad(infancia, 1).
 etapa_edad(infancia, 2).
 etapa_edad(infancia, 3).
@@ -595,6 +599,7 @@ perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, cl
 % definicion de reglas
 
 % Reglas para encontrar mexicanos de ciertas regiones o etnicidades
+
 mexicano_de_region(Region, Persona) :-
     mexicano(Persona),
     pertenece_region(Persona, Region).
@@ -602,6 +607,10 @@ mexicano_de_region(Region, Persona) :-
 mexicano_de_etnicidad(Etnicidad, Persona) :-
     mexicano(Persona),
     pertenece_etnicidad(Persona, Etnicidad).
+
+mexicano_de_religion(Religion, Persona) :-
+    mexicano(Persona),
+    pertenece_religion(Persona, Religion).
 
 religion_por_idioma(Idioma, Religion) :-
     subtipo_religion(Idioma, Religion).
@@ -612,3 +621,14 @@ religion_por_clase_social(ClaseSocial, Religion) :-
 religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion) :-
     religion_por_idioma(Idioma, Religion),
     religion_por_clase_social(ClaseSocial, Religion).
+
+% Encuentra la religión de una persona mexicana basada en su etnicidad y región
+religion_por_etnicidad_y_region(Etnicidad, Region, Religion) :-
+    mexicano_de_etnicidad(Etnicidad, Persona),
+    mexicano_de_region(Region, Persona),
+    pertenece_religion(Persona, Religion).
+
+% Combina la información de idioma y clase social para encontrar la religión de una persona
+religion_total(Idioma, ClaseSocial, Etnicidad, Region, Religion) :-
+    religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion),
+    religion_por_etnicidad_y_region(Etnicidad, Region, Religion).
