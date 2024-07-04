@@ -4,6 +4,7 @@
 :- discontiguous pertenece_region/2.
 :- discontiguous subtipo_religion/2.
 :- discontiguous pertenece_religion/2.
+:- discontiguous nivel_educativo_persona/1.
 
 % Hechos de personas mexicanas
 mexicano(juan).
@@ -13,8 +14,19 @@ mexicano(jose).
 % Relaciones de personas con regiones y etnicidades
 pertenece_region(juan, nortenos).
 pertenece_region(maria, bajio).
+pertenece_region(jose, nortenos).
+
+% ---
+
 pertenece_etnicidad(juan, mestizos).
 pertenece_etnicidad(maria, indigenas).
+pertenece_etnicidad(jose, mestizos).
+
+% ---
+
+pertenece_religion(juan, catolicos).
+pertenece_religion(maria, protestantes_evangelicos).
+pertenece_religion(jose, catolicos).
 
 % Region Geográfica
 region_geografica(nortenos).
@@ -218,6 +230,10 @@ etapas_de_vida(juventud).
 etapas_de_vida(adultez).
 etapas_de_vida(adulto_mayor).
 
+edad_persona(juan, 30).
+edad_persona(maria, 25).
+edad_persona(jose, 40).
+
 % Etapa Edad
 
 etapa_edad(infancia, 1).
@@ -354,22 +370,6 @@ situacion_economica(clase_media).
 situacion_economica(clase_media_alta).
 situacion_economica(clase_alta).
 
-% Región Geográfica
-region_geografica(nortenos).
-region_geografica(bajacalifornianos).
-region_geografica(bajio).
-region_geografica(occidentales).
-region_geografica(surenos).
-region_geografica(peninsulares).
-region_geografica(centroamericanos).
-
-% Etnias
-etnicidad(mestizos).
-etnicidad(indigenas).
-etnicidad(afrodescendientes).
-etnicidad(descendientes_de_inmigrantes).
-etnicidad(criollos).
-
 % Nivel Educativo
 nivel_educativo(analfabetos).
 nivel_educativo(educacion_basica_incompleta).
@@ -377,6 +377,18 @@ nivel_educativo(educacion_basica_completa).
 nivel_educativo(educacion_media_superior).
 nivel_educativo(educacion_superior).
 nivel_educativo(postgrado).
+
+% Definir el nivel educativo de cada persona
+
+pertenece_educacion(juan, educacion_media_superior).
+pertenece_educacion(maria, educacion_basica_completa).
+pertenece_educacion(jose, educacion_superior).
+
+% Definir la situacion economica de cada persona
+
+pertenece_economia(juan, clase_media).
+pertenece_economia(maria, clase_baja).
+pertenece_economia(jose, clase_alta).
 
 % Religión
 religion(catolicos).
@@ -595,6 +607,8 @@ perfil_demografico(surenos, mestizos, educacion_superior, jovenes_adultos, clase
 perfil_demografico(peninsulares, descendientes_de_inmigrantes, educacion_basica_completa, adolescentes, clase_media_baja).
 perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, clase_baja).
 
+% ----------------------------------------------------------------------------------------------------------------------------------
+% Reglas con Listas de Argumentos 
 
 % definicion de reglas
 
@@ -609,7 +623,7 @@ mexicano_de_etnicidad(Etnicidad, Persona) :-
     pertenece_etnicidad(Persona, Etnicidad).
 
 mexicano_de_religion(Religion, Persona) :-
-    mexicano(Persona),
+    mexicano(Persona), 
     pertenece_religion(Persona, Religion).
 
 religion_por_idioma(Idioma, Religion) :-
@@ -632,3 +646,34 @@ religion_por_etnicidad_y_region(Etnicidad, Region, Religion) :-
 religion_total(Idioma, ClaseSocial, Etnicidad, Region, Religion) :-
     religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion),
     religion_por_etnicidad_y_region(Etnicidad, Region, Religion).
+
+% Personas de una región específica
+personas_de_region(Region, Persona) :- 
+    pertenece_region(Persona, Region).
+
+% Personas de una etnicidad específica
+personas_de_etnicidad(Etnicidad, Persona) :- 
+    pertenece_etnicidad(Persona, Etnicidad).
+
+% Personas que hablan un idioma específico
+personas_hablan_idioma(Idioma, Persona) :- 
+    pertenece_religion(Persona, Religion), 
+    religion_idioma(Religion, Idioma).
+
+% Consultar el nivel educativo de una persona
+nivel_educativo_persona(Persona, Nivel) :- 
+    nivel_educativo(Nivel), 
+    pertenece_educacion(Persona, Nivel).
+
+% ¿Qué personas pertenecen a una religion en alguna entidad especifica?
+% esta regla cuenta con operadores para consultas más específicas
+
+persona_region_etnicidad(Persona, Region, Etnicidad) :-
+pertenece_region(Persona, Region),
+pertenece_etnicidad(Persona, Etnicidad).
+
+% ¿Qué personas pertenecen a alguna religion? 
+% (no importa qué religion) Esta Regla cuenta con funciones de Agregación Y Busqueda.
+ 
+personas_por_religion(Religion, Personas) :- 
+findall(Persona, pertenece_religion(Persona, Religion), Personas).
