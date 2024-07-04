@@ -614,27 +614,42 @@ perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, cl
 
 % Reglas para encontrar mexicanos de ciertas regiones o etnicidades
 
+
+% ¿Qué personas mexicanas pertenecen a una región específica?
+
 mexicano_de_region(Region, Persona) :-
     mexicano(Persona),
     pertenece_region(Persona, Region).
+
+% ¿Qué personas mexicanas pertenecen a una etnicidad específica?
 
 mexicano_de_etnicidad(Etnicidad, Persona) :-
     mexicano(Persona),
     pertenece_etnicidad(Persona, Etnicidad).
 
+% ¿Qué personas mexicanas pertenecen a una religión específica?
+
 mexicano_de_religion(Religion, Persona) :-
     mexicano(Persona), 
     pertenece_religion(Persona, Religion).
 
+% ¿Qué religiones están asociadas a un idioma específico?
+
 religion_por_idioma(Idioma, Religion) :-
     subtipo_religion(Idioma, Religion).
+
+% ¿Qué religiones están asociadas a una clase social específica?
 
 religion_por_clase_social(ClaseSocial, Religion) :-
     situacion_religion(ClaseSocial, Religion).
 
+%  ¿Qué religiones están asociadas a un idioma y clase social específicos?
+
 religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion) :-
     religion_por_idioma(Idioma, Religion),
     religion_por_clase_social(ClaseSocial, Religion).
+
+% ¿Qué religión practica una persona mexicana basada en su etnicidad y región?
 
 % Encuentra la religión de una persona mexicana basada en su etnicidad y región
 religion_por_etnicidad_y_region(Etnicidad, Region, Religion) :-
@@ -642,24 +657,33 @@ religion_por_etnicidad_y_region(Etnicidad, Region, Religion) :-
     mexicano_de_region(Region, Persona),
     pertenece_religion(Persona, Religion).
 
+% ¿Qué religión practica una persona mexicana considerando su idioma, clase social, etnicidad y región?
+
 % Combina la información de idioma y clase social para encontrar la religión de una persona
 religion_total(Idioma, ClaseSocial, Etnicidad, Region, Religion) :-
     religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion),
     religion_por_etnicidad_y_region(Etnicidad, Region, Religion).
 
+
+%  ¿Qué personas pertenecen a una región específica?
+
 % Personas de una región específica
 personas_de_region(Region, Persona) :- 
     pertenece_region(Persona, Region).
 
+% ¿ A qué etnicidad pertenece cierta persona ?
 % Personas de una etnicidad específica
 personas_de_etnicidad(Etnicidad, Persona) :- 
     pertenece_etnicidad(Persona, Etnicidad).
 
+% ¿Qué personas hablan un idioma específico? 
 % Personas que hablan un idioma específico
 personas_hablan_idioma(Idioma, Persona) :- 
     pertenece_religion(Persona, Religion), 
     religion_idioma(Religion, Idioma).
 
+
+% ¿Qué nivel educativo tiene una persona específica?
 % Consultar el nivel educativo de una persona
 nivel_educativo_persona(Persona, Nivel) :- 
     nivel_educativo(Nivel), 
