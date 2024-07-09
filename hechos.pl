@@ -128,13 +128,13 @@ mexicano('Jacobo').
 mexicano('Jaime').
 mexicano('Javier').
 mexicano('Jeronimo').
-mexicano('Jesus').
+mexicano("Jesus").
 mexicano('Joaquin').
 mexicano('Jonatan').
 mexicano('Jorge').
 mexicano('Jose').
 mexicano('Josefino').
-mexicano('Juan').
+mexicano("Juan").
 mexicano('Julian').
 mexicano('Julio').
 mexicano('Justo').
@@ -358,32 +358,32 @@ mexicano('Virginia').
 mexicano('Yolanda').
 mexicano('Zoila').
 
-
 % Relaciones de personas con regiones y etnicidades
-pertenece_region(juan, nortenos).
-pertenece_region(maria, bajio).
-pertenece_region(jose, nortenos).
+pertenece_region('Juan', 'Nortenos').
+pertenece_region('Jose', 'Nortenos').
+pertenece_region('Maria', 'Bajio').
+
 
 % ---
 
-pertenece_etnicidad(juan, mestizos).
-pertenece_etnicidad(maria, indigenas).
-pertenece_etnicidad(jose, mestizos).
+pertenece_etnicidad('Juan', mestizos).
+pertenece_etnicidad('Maria', indigenas).
+pertenece_etnicidad('Jose', mestizos).
 
 % ---
 
-pertenece_religion(juan, catolicos).
-pertenece_religion(maria, protestantes_evangelicos).
-pertenece_religion(jose, catolicos).
+pertenece_religion('Juan', catolicos).
+pertenece_religion('Maria', protestantes_evangelicos).
+pertenece_religion('Jose', catolicos).
 
 % Region Geográfica
-region_geografica(nortenos).
-region_geografica(bajacalifornianos).
-region_geografica(bajio).
-region_geografica(occidentales).
-region_geografica(surenos).
-region_geografica(peninsulares).
-region_geografica(centroamericanos).
+region_geografica('Nortenos').
+region_geografica('BajaCalifornianos').
+region_geografica('Bajio').
+region_geografica('Occidentales').
+region_geografica('Sureños').
+region_geografica('Peninsulares').
+region_geografica('Centroamericanos').
 
 % Etnicidad
 etnicidad(mestizos).
@@ -962,6 +962,11 @@ perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, cl
 
 % Reglas para encontrar mexicanos de ciertas regiones o etnicidades
 
+% ¿Cuantos mexicanos hay?
+
+total_mexicanos(Total) :-
+    findall(Persona, mexicano(Persona), ListaMexicanos),
+    length(ListaMexicanos, Total).
 
 % ¿Qué personas mexicanas pertenecen a una región específica?
 
@@ -1016,13 +1021,13 @@ religion_total(Idioma, ClaseSocial, Etnicidad, Region, Religion) :-
 %  ¿Qué personas pertenecen a una región específica?
 
 % Personas de una región específica
-personas_de_region(Region, Persona) :- 
+/* personas_de_region(Region, Persona) :- 
     pertenece_region(Persona, Region).
 
 % ¿ A qué etnicidad pertenece cierta persona ?
 % Personas de una etnicidad específica
 personas_de_etnicidad(Etnicidad, Persona) :- 
-    pertenece_etnicidad(Persona, Etnicidad).
+    pertenece_etnicidad(Persona, Etnicidad). */
 
 % ¿Qué personas hablan un idioma específico? 
 % Personas que hablan un idioma específico
