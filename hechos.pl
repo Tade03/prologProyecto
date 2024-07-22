@@ -7,8 +7,30 @@
 :- discontiguous nivel_educativo_persona/1.
 :- discontiguous mexicano_de_region_y_genero/3.
 :- discontiguous pertenece_genero/2.
-:- discontiguous e_ca_ct_p/4.
-:- discontiguous e_ca_ct_p/3.
+:- discontiguous estado_capital_comidaTipica_poblacion/4.
+:- discontiguous estado_capital_comidaTipica_poblacion/3.
+:- discontiguous pertenece_etnicidad/2.
+:- discontiguous comida_tipica/1.
+:- discontiguous jardinero_mas_de_80/1.
+:- discontiguous obrero_industrial_mas_de_50/1.
+:- discontiguous investigador_vive_en_suburbano/1.
+:- discontiguous artista_vive_en_urbano/1.
+:- discontiguous investigador_mas_de_90/1.
+:- discontiguous ganadero_mas_de_90/1.
+:- discontiguous etapas_de_vida/1.
+:- discontiguous nivel_educativo/1.
+:- discontiguous religion/1.
+:- discontiguous estado/1.
+:- discontiguous etapa_edad/2.
+:- discontiguous pertenece_economia/2.
+:- discontiguous imprimir_personas/1.
+:- discontiguous es_catolico/0.
+:- discontiguous religion/2.
+:- discontiguous personas_por_religion/2.
+:- discontiguous personas_de_etnicidad/2.
+:- discontiguous estado_capital/2.
+:- discontiguous estado_poblacion/2.
+
 % Hechos de personas mexicanas
 
 %mexicanos
@@ -424,356 +446,355 @@ mexicano('Taiyari').
 
 % Relaciones de personas con regiones y etnicidades
 
-pertenece_region('Juan', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Maria', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Pedro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Aaron', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Abel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Arely', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alma', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Abelardo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Abraham', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Adalberto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Adan', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Adolfo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Adrian', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Agustin', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alejandro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alex', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alexis', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alfonso', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alfredo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Allan', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alonso', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alvaro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Amado', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Amador', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Amando', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Amancio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Amaranto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Americo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Amilcar', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Anastasio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Anselmo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Antonio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Armando', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Arnoldo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Arturo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Augusto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Aurelio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Baltazar', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Bartolo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Bartolome', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Benigno', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Benito', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Benjamin', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Brandon', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Kevin', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Bernardo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Braulio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Bruno', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Camilo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Carlos', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Carmelo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Cayetano', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Celestino', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
+% Relaciones de personas con regiones y etnicidades
+
+pertenece_region('Juan', ['Centro-Norte']).
+pertenece_region('Maria', ['Centro-Sur', 'Este']).
+pertenece_region('Pedro', ['Noreste']).
+pertenece_region('Ana', ['Noroeste', 'Occidente']).
+pertenece_region('Aaron', ['Sureste']).
+pertenece_region('Abel', ['Suroeste', 'Centro-Norte']).
+pertenece_region('Arely', ['Centro-Sur']).
+pertenece_region('Alma', ['Este', 'Noreste']).
+pertenece_region('Abelardo', ['Noroeste']).
+pertenece_region('Abraham', ['Occidente', 'Sureste']).
+pertenece_region('Adalberto', ['Suroeste']).
+pertenece_region('Adan', ['Centro-Norte', 'Centro-Sur']).
+pertenece_region('Adolfo', ['Este']).
+pertenece_region('Adrian', ['Noreste', 'Noroeste']).
+pertenece_region('Agustin', ['Occidente']).
+pertenece_region('Alejandro', ['Sureste', 'Suroeste']).
+pertenece_region('Alex', ['Centro-Norte']).
+pertenece_region('Alexis', ['Centro-Sur', 'Este']).
+pertenece_region('Alfonso', ['Noreste']).
+pertenece_region('Alfredo', ['Noroeste', 'Occidente']).
+pertenece_region('Allan', ['Sureste']).
+pertenece_region('Alonso', ['Suroeste', 'Centro-Norte']).
+pertenece_region('Alvaro', ['Centro-Sur']).
+pertenece_region('Amado', ['Este', 'Noreste']).
+pertenece_region('Amador', ['Centro-Sur']).
+pertenece_region('Amando', ['Noreste', 'Occidente']).
+pertenece_region('Amancio', ['Centro-Norte']).
+pertenece_region('Amaranto', ['Centro-Norte', 'Suroeste']).
+pertenece_region('Americo', ['Este']).
+pertenece_region('Amilcar', ['Centro-Sur', 'Centro-Norte']).
+pertenece_region('Anastasio', ['Noreste']).
+pertenece_region('Anselmo', ['Noroeste']).
+pertenece_region('Antonio', ['Sureste']).
+pertenece_region('Armando', ['Noroeste', 'Sureste']).
+pertenece_region('Arnoldo', ['Occidente']).
+pertenece_region('Arturo', ['Este', 'Centro-Norte']).
+pertenece_region('Augusto', ['Centro-Sur']).
+pertenece_region('Aurelio', ['Noroeste', 'Centro-Norte']).
+pertenece_region('Baltazar', ['Noreste']).
+pertenece_region('Bartolo', ['Sureste']).
+pertenece_region('Bartolome', ['Noroeste', 'Sureste']).
+pertenece_region('Benigno', ['Occidente']).
+pertenece_region('Benito', ['Noroeste']).
+pertenece_region('Benjamin', ['Centro-Sur', 'Este']).
+pertenece_region('Brandon', ['Noreste', 'Suroeste']).
+pertenece_region('Kevin', ['Sureste']).
+pertenece_region('Bernardo', ['Centro-Norte', 'Centro-Sur']).
+pertenece_region('Braulio', ['Sureste']).
+pertenece_region('Bruno', ['Noroeste', 'Centro-Norte']).
+pertenece_region('Camilo', ['Centro-Norte']).
+pertenece_region('Carlos', ['Noroeste']).
+pertenece_region('Carmelo', ['Centro-Norte', 'Noroeste']).
+pertenece_region('Cayetano', ['Centro-Sur']).
+pertenece_region('Celestino', ['Centro-Norte']).
 pertenece_region('Cesar', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Cipriano', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ciriaco', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ciro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Clemente', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Cleto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Cosme', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Cristian', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Cristobal', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Damian', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Daniel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('David', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Demetrio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Dionisio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Domingo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Donato', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Eduardo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Efrain', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Elias', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Eliseo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Emiliano', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Emilio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Enrique', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ernesto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Esteban', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Eugenio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Eusebio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Evaristo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Facundo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Federico', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Fernando', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Fidel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Firman', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Felipe', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Fernando', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Fidel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Francisco', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gabino', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gabriel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gaspar', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gaston', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gaudencio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('German', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gerardo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gilberto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gines', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gonzalo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gregorio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gualberto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Guido', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Guillermo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gustavo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Hector', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Heriberto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Higinio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Hilario', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Hipolito', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Horacio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Hugo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Humberto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ignacio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Inocencio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ireneo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Isaias', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Isidro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ismael', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ivan', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jacobo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jaime', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Javier', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jeronimo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jesus', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Joaquin', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jonatan', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jorge', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jose', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Josefino', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Juan', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Julian', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Julio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Justo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Laureano', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lauro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Leandro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Leonardo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lino', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lisandro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lorenzo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Luis', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Macedonio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Marcelino', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Marco', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Marcus', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Mario', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Martin', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Mateo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Matias', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Mauricio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Maximino', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Melchor', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Melquiades', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Miguel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Modesto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Moises', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Nahum', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Narciso', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Nataniel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Nicolas', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Oscar', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Pablo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Pascual', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Patricio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Pedro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Pio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rafael', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ramiro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ramon', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Raul', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Renato', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Frida', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Reynaldo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ricardo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rigoberto', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rogelio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rodrigo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Roman', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ruben', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rufino', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Salvador', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Samuel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Santiago', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Sebastian', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Sergio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Simon', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Sireno', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Socorro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Socrates', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Susano', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Tadeo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Teofilo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Tereso', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Thomas', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Tiburcio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Timoteo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Tomas', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Tomas', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ulises', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Urbano', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Uriel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ursulo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Valentin', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Valerio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Vicente', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Victor', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Octavio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alfonso', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alfredo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Alvaro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Andrea', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Angelica', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Angela', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Antonia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Araceli', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Aurora', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Beatriz', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Belen', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Bertha', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Blanca', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Brenda', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Camila', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Caridad', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Carina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Carla', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Carmen', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Carolina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Catalina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Cecilia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Celia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Clara', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Claudia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Concepcion', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Concha', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Consuelo', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Diana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Dolores', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Dora', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Dulce', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Edith', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Elena', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Elisa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Elizabeth', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Elvira', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Emilia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Esperanza', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ester', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Eugenia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Eva', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Fabiola', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Felipa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Fernanda', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Flor', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Francisca', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gabriela', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Genoveva', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Georgina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Gloria', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Graciela', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Guadalupe', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Haydee', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Helena', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Hilda', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ines', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Irma', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Isabel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jacinta', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jacqueline', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Jimena', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Josefina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Juana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Juliana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Julia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Laura', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Leonor', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Leticia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lilia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Liliana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lisandro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lorena', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lourdes', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lucia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Luciana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Lucinda', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Luisa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Luz', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Magdalena', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Margarita', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Maria', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Mariana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Maricela', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Marilu', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Marina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Marisa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Marta', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Martina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Matilde', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Melisa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Mercedes', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Monica', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Miriam', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Mirta', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Nadia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Natalia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Natividad', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Nicole', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Norma', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Olga', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Olivia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Paola', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Patricia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Paula', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Paulina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Paz', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Petra', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Pilar', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Priscila', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Raquel', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rebeca', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Regina', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Renata', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ricarda', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rita', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Roberta', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rocio', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rosa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rosalia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Rosario', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ruth', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Salome', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Sandra', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Sara', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Silvia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Socorro', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Sofia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Soledad', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Susana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Tamara', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Tatiana', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Teresa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Ursula', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Vanesa', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Victoria', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Violeta', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Virginia', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Yolanda', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
-pertenece_region('Zoila', ['Centro-Norte', 'Centro-Sur', 'Este', 'Noreste', 'Noroeste', 'Occidente', 'Sureste', 'Suroeste']).
+pertenece_region('Cipriano', ['Centro-Sur']).
+pertenece_region('Ciriaco', ['Noreste', 'Occidente']).
+pertenece_region('Ciro', ['Centro-Norte']).
+pertenece_region('Clemente', ['Centro-Norte', 'Suroeste']).
+pertenece_region('Cleto', ['Este']).
+pertenece_region('Cosme', ['Centro-Sur', 'Centro-Norte']).
+pertenece_region('Cristian', ['Noreste']).
+pertenece_region('Cristobal', ['Noroeste']).
+pertenece_region('Damian', ['Sureste']).
+pertenece_region('Daniel', ['Noroeste', 'Sureste']).
+pertenece_region('David', ['Occidente']).
+pertenece_region('Demetrio', ['Este', 'Centro-Norte']).
+pertenece_region('Dionisio', ['Centro-Sur']).
+pertenece_region('Domingo', ['Noroeste', 'Centro-Norte']).
+pertenece_region('Donato', ['Noreste']).
+pertenece_region('Eduardo', ['Sureste']).
+pertenece_region('Efrain', ['Noroeste', 'Sureste']).
+pertenece_region('Elias', ['Occidente']).
+pertenece_region('Eliseo', ['Noroeste']).
+pertenece_region('Emiliano', ['Centro-Sur', 'Este']).
+pertenece_region('Emilio', ['Noreste', 'Suroeste']).
+pertenece_region('Enrique', ['Sureste']).
+pertenece_region('Ernesto', ['Centro-Norte', 'Centro-Sur']).
+pertenece_region('Esteban', ['Sureste']).
+pertenece_region('Eugenio', ['Noroeste', 'Centro-Norte']).
+pertenece_region('Eusebio', ['Centro-Norte']).
+pertenece_region('Evaristo', ['Noroeste']).
+pertenece_region('Facundo', ['Centro-Norte', 'Noroeste']).
+pertenece_region('Federico', ['Centro-Sur']).
+pertenece_region('Fernando', ['Centro-Norte']).
+pertenece_region('Fidel', ['Noroeste']).
+pertenece_region('Firman', ['Centro-Norte']).
+pertenece_region('Felipe', ['Centro-Sur']).
+pertenece_region('Fernando', ['Centro-Norte', 'Noreste']).
+pertenece_region('Fidel', ['Centro-Norte', 'Sureste']).
+pertenece_region('Francisco', ['Centro-Sur', 'Occidente']).
+pertenece_region('Gabino', ['Centro-Norte']).
+pertenece_region('Gabriel', ['Centro-Sur']).
+pertenece_region('Gaspar', ['Este']).
+pertenece_region('Gaston', ['Noroeste']).
+pertenece_region('Gaudencio', ['Centro-Norte', 'Noreste']).
+pertenece_region('German', ['Noroeste']).
+pertenece_region('Gerardo', ['Centro-Norte', 'Sureste']).
+pertenece_region('Gilberto', ['Centro-Sur', 'Occidente']).
+pertenece_region('Gines', ['Noroeste', 'Sureste']).
+pertenece_region('Gonzalo', ['Noreste']).
+pertenece_region('Gregorio', ['Centro-Norte', 'Centro-Sur']).
+pertenece_region('Gualberto', ['Este']).
+pertenece_region('Guido', ['Noreste']).
+pertenece_region('Guillermo', ['Centro-Sur', 'Noroeste']).
+pertenece_region('Gustavo', ['Noreste', 'Sureste']).
+pertenece_region('Hector', ['Centro-Norte']).
+pertenece_region('Heriberto', ['Centro-Sur', 'Occidente']).
+pertenece_region('Higinio', ['Este']).
+pertenece_region('Hilario', ['Centro-Norte', 'Sureste']).
+pertenece_region('Hipolito', ['Noreste']).
+pertenece_region('Horacio', ['Centro-Sur', 'Noroeste']).
+pertenece_region('Hugo', ['Centro-Norte']).
+pertenece_region('Humberto', ['Noroeste', 'Sureste']).
+pertenece_region('Ignacio', ['Centro-Norte']).
+pertenece_region('Inocencio', 'Centro-Norte').
+pertenece_region('Ireneo', 'Centro-Sur').
+pertenece_region('Isaias', 'Este').
+pertenece_region('Isidro', 'Noreste').
+pertenece_region('Ismael', 'Noroeste').
+pertenece_region('Ivan', 'Occidente').
+pertenece_region('Jacobo', 'Sureste').
+pertenece_region('Jaime', 'Suroeste').
+pertenece_region('Javier', 'Centro-Norte').
+pertenece_region('Jeronimo', 'Centro-Sur').
+pertenece_region('Jesus', 'Este').
+pertenece_region('Joaquin', 'Noreste').
+pertenece_region('Jonatan', 'Noroeste').
+pertenece_region('Jorge', 'Occidente').
+pertenece_region('Jose', 'Sureste').
+pertenece_region('Josefino', 'Suroeste').
+pertenece_region('Julian', 'Centro-Sur').
+pertenece_region('Julio', 'Este').
+pertenece_region('Justo', 'Noreste').
+pertenece_region('Laureano', 'Noroeste').
+pertenece_region('Lauro', 'Occidente').
+pertenece_region('Leandro', 'Sureste').
+pertenece_region('Leonardo', 'Suroeste').
+pertenece_region('Lino', 'Centro-Norte').
+pertenece_region('Lisandro', 'Centro-Sur').
+pertenece_region('Lorenzo', 'Este').
+pertenece_region('Luis', 'Noreste').
+pertenece_region('Macedonio', 'Noroeste').
+pertenece_region('Marcelino', 'Occidente').
+pertenece_region('Marco', 'Sureste').
+pertenece_region('Marcus', 'Suroeste').
+pertenece_region('Mario', 'Centro-Norte').
+pertenece_region('Martin', 'Centro-Sur').
+pertenece_region('Mateo', 'Este').
+pertenece_region('Matias', 'Noreste').
+pertenece_region('Mauricio', 'Noroeste').
+pertenece_region('Maximino', 'Occidente').
+pertenece_region('Melchor', 'Sureste').
+pertenece_region('Melquiades', 'Suroeste').
+pertenece_region('Miguel', 'Centro-Norte').
+pertenece_region('Modesto', 'Centro-Sur').
+pertenece_region('Moises', 'Este').
+pertenece_region('Nahum', 'Noreste').
+pertenece_region('Narciso', 'Noroeste').
+pertenece_region('Nataniel', 'Occidente').
+pertenece_region('Nicolas', 'Sureste').
+pertenece_region('Oscar', 'Suroeste').
+pertenece_region('Pablo', 'Centro-Norte').
+pertenece_region('Pascual', 'Centro-Sur').
+pertenece_region('Patricio', 'Este').
+pertenece_region('Pio', 'Noroeste').
+pertenece_region('Rafael', 'Occidente').
+pertenece_region('Ramiro', 'Sureste').
+pertenece_region('Ramon', 'Suroeste').
+pertenece_region('Raul', 'Centro-Norte').
+pertenece_region('Renato', 'Centro-Sur').
+pertenece_region('Frida', 'Este').
+pertenece_region('Reynaldo', 'Noreste').
+pertenece_region('Ricardo', 'Noroeste').
+pertenece_region('Rigoberto', 'Occidente').
+pertenece_region('Rogelio', 'Sureste').
+pertenece_region('Rodrigo', 'Suroeste').
+pertenece_region('Roman', 'Centro-Norte').
+pertenece_region('Ruben', 'Centro-Sur').
+pertenece_region('Rufino', 'Este').
+pertenece_region('Salvador', 'Noreste').
+pertenece_region('Samuel', 'Noroeste').
+pertenece_region('Santiago', 'Occidente').
+pertenece_region('Sebastian', 'Sureste').
+pertenece_region('Sergio', 'Suroeste').
+pertenece_region('Simon', 'Centro-Norte').
+pertenece_region('Sireno', 'Centro-Sur').
+pertenece_region('Socorro', 'Este').
+pertenece_region('Socrates', 'Noreste').
+pertenece_region('Susano', 'Noroeste').
+pertenece_region('Tadeo', 'Occidente').
+pertenece_region('Teofilo', 'Sureste').
+pertenece_region('Tereso', 'Suroeste').
+pertenece_region('Thomas', 'Centro-Norte').
+pertenece_region('Tiburcio', 'Centro-Sur').
+pertenece_region('Timoteo', 'Este').
+pertenece_region('Tomas', 'Noreste').
+pertenece_region('Ulises', 'Noroeste').
+pertenece_region('Urbano', 'Occidente').
+pertenece_region('Uriel', 'Sureste').
+pertenece_region('Ursulo', 'Suroeste').
+pertenece_region('Valentin', 'Centro-Norte').
+pertenece_region('Valerio', 'Centro-Sur').
+pertenece_region('Vicente', 'Este').
+pertenece_region('Victor', 'Noreste').
+pertenece_region('Octavio', 'Noroeste').
+pertenece_region('Alfonso', 'Occidente').
+pertenece_region('Alfredo', 'Sureste').
+pertenece_region('Alvaro', 'Suroeste').
+pertenece_region('Andrea', 'Centro-Sur').
+pertenece_region('Angelica', 'Este').
+pertenece_region('Angela', 'Noreste').
+pertenece_region('Antonia', 'Noroeste').
+pertenece_region('Araceli', 'Occidente').
+pertenece_region('Aurora', 'Sureste').
+pertenece_region('Beatriz', 'Suroeste').
+pertenece_region('Belen', 'Centro-Norte').
+pertenece_region('Bertha', 'Centro-Sur').
+pertenece_region('Blanca', 'Este').
+pertenece_region('Brenda', 'Centro-Norte').
+pertenece_region('Camila', 'Centro-Sur').
+pertenece_region('Caridad', 'Este').
+pertenece_region('Carina', 'Noreste').
+pertenece_region('Carla', 'Noroeste').
+pertenece_region('Carmen', 'Occidente').
+pertenece_region('Carolina', 'Sureste').
+pertenece_region('Catalina', 'Suroeste').
+pertenece_region('Cecilia', 'Centro-Norte').
+pertenece_region('Celia', 'Centro-Sur').
+pertenece_region('Clara', 'Este').
+pertenece_region('Claudia', 'Noreste').
+pertenece_region('Concepcion', 'Noroeste').
+pertenece_region('Concha', 'Occidente').
+pertenece_region('Consuelo', 'Sureste').
+pertenece_region('Diana', 'Suroeste').
+pertenece_region('Dolores', 'Centro-Norte').
+pertenece_region('Dora', 'Centro-Sur').
+pertenece_region('Dulce', 'Este').
+pertenece_region('Edith', 'Noreste').
+pertenece_region('Elena', 'Noroeste').
+pertenece_region('Elisa', 'Occidente').
+pertenece_region('Elizabeth', 'Sureste').
+pertenece_region('Elvira', 'Suroeste').
+pertenece_region('Emilia', 'Centro-Norte').
+pertenece_region('Esperanza', 'Centro-Sur').
+pertenece_region('Ester', 'Este').
+pertenece_region('Eugenia', 'Noreste').
+pertenece_region('Eva', 'Noroeste').
+pertenece_region('Fabiola', 'Occidente').
+pertenece_region('Felipa', 'Sureste').
+pertenece_region('Fernanda', 'Suroeste').
+pertenece_region('Flor', 'Centro-Norte').
+pertenece_region('Francisca', 'Centro-Sur').
+pertenece_region('Gabriela', 'Este').
+pertenece_region('Genoveva', 'Noreste').
+pertenece_region('Georgina', 'Noroeste').
+pertenece_region('Gloria', 'Occidente').
+pertenece_region('Graciela', 'Sureste').
+pertenece_region('Guadalupe', 'Suroeste').
+pertenece_region('Haydee', 'Centro-Norte').
+pertenece_region('Helena', 'Centro-Sur').
+pertenece_region('Hilda', 'Centro-Norte').
+pertenece_region('Ines', 'Centro-Sur').
+pertenece_region('Irma', 'Este').
+pertenece_region('Isabel', 'Noreste').
+pertenece_region('Jacinta', 'Noroeste').
+pertenece_region('Jacqueline', 'Occidente').
+pertenece_region('Jimena', 'Sureste').
+pertenece_region('Josefina', 'Suroeste').
+pertenece_region('Juana', 'Centro-Norte').
+pertenece_region('Juliana', 'Centro-Sur').
+pertenece_region('Julia', 'Este').
+pertenece_region('Laura', 'Noreste').
+pertenece_region('Leonor', 'Noroeste').
+pertenece_region('Leticia', 'Occidente').
+pertenece_region('Lilia', 'Sureste').
+pertenece_region('Liliana', 'Suroeste').
+pertenece_region('Lisandro', 'Centro-Norte').
+pertenece_region('Lorena', 'Centro-Sur').
+pertenece_region('Lourdes', 'Este').
+pertenece_region('Lucia', 'Noreste').
+pertenece_region('Luciana', 'Noroeste').
+pertenece_region('Lucinda', 'Occidente').
+pertenece_region('Luisa', 'Sureste').
+pertenece_region('Luz', 'Suroeste').
+pertenece_region('Magdalena', 'Centro-Norte').
+pertenece_region('Margarita', 'Centro-Sur').
+pertenece_region('Maria', 'Este').
+pertenece_region('Mariana', 'Noreste').
+pertenece_region('Maricela', 'Noroeste').
+pertenece_region('Marilu', 'Occidente').
+pertenece_region('Marina', 'Sureste').
+pertenece_region('Marisa', 'Suroeste').
+pertenece_region('Marta', 'Centro-Norte').
+pertenece_region('Martina', 'Centro-Sur').
+pertenece_region('Matilde', 'Este').
+pertenece_region('Melisa', 'Noreste').
+pertenece_region('Mercedes', 'Noroeste').
+pertenece_region('Monica', 'Occidente').
+pertenece_region('Miriam', 'Sureste').
+pertenece_region('Mirta', 'Suroeste').
+pertenece_region('Nadia', 'Centro-Norte').
+pertenece_region('Natalia', 'Centro-Sur').
+pertenece_region('Natividad', 'Este').
+pertenece_region('Nicole', 'Noreste').
+pertenece_region('Norma', 'Noroeste').
+pertenece_region('Olga', 'Centro-Norte').
+pertenece_region('Olivia', 'Centro-Sur').
+pertenece_region('Paola', 'Este').
+pertenece_region('Patricia', 'Noreste').
+pertenece_region('Paula', 'Noroeste').
+pertenece_region('Paulina', 'Occidente').
+pertenece_region('Paz', 'Sureste').
+pertenece_region('Petra', 'Suroeste').
+pertenece_region('Pilar', 'Centro-Norte').
+pertenece_region('Priscila', 'Centro-Sur').
+pertenece_region('Raquel', 'Este').
+pertenece_region('Rebeca', 'Noreste').
+pertenece_region('Regina', 'Noroeste').
+pertenece_region('Renata', 'Occidente').
+pertenece_region('Ricarda', 'Sureste').
+pertenece_region('Rita', 'Suroeste').
+pertenece_region('Roberta', 'Centro-Norte').
+pertenece_region('Rocio', 'Centro-Sur').
+pertenece_region('Rosa', 'Este').
+pertenece_region('Rosalia', 'Noreste').
+pertenece_region('Rosario', 'Noroeste').
+pertenece_region('Ruth', 'Occidente').
+pertenece_region('Salome', 'Sureste').
+pertenece_region('Sandra', 'Suroeste').
+pertenece_region('Sara', 'Centro-Norte').
+pertenece_region('Silvia', 'Centro-Sur').
+pertenece_region('Socorro', 'Este').
+pertenece_region('Sofia', 'Noreste').
+pertenece_region('Soledad', 'Noroeste').
+pertenece_region('Susana', 'Occidente').
+pertenece_region('Tamara', 'Sureste').
+pertenece_region('Tatiana', 'Suroeste').
+pertenece_region('Teresa', 'Centro-Norte').
+pertenece_region('Ursula', 'Centro-Sur').
+pertenece_region('Vanesa', 'Este').
+pertenece_region('Victoria', 'Noreste').
+pertenece_region('Violeta', 'Noroeste').
+pertenece_region('Virginia', 'Occidente').
+pertenece_region('Yolanda', 'Sureste').
+pertenece_region('Zoila', 'Suroeste').
+
 
 % --- Nombres De Grupos Indigenas
 % --- Mujer 
@@ -836,14 +857,761 @@ etnicidad(indigenas).
 etnicidad(afrodescendientes).
 etnicidad(descendientes_de_inmigrantes).
 etnicidad(criollos).
+% Subcategoría de Etnicidad
+% -- indigenas
+% Subcategoría de Etnicidad
+subtipo_etnicidad(indigenas, ['Guarijio', 'Huasteco', 'Tarahumara', 'Zapoteco', 'Mixteco', 'Amuzgo', 'Huichol', 'Purepecha',
+     'Otomi', 'Quiche', 'Nahua', 'Pame', 'Maya', 'Kiliwa', 'Popoluca', 'Mayo', 'Yaqui', 'Tepehuano', 'Mazahua']).
+subtipo_etnicidad(descendientes_de_inmigrantes, ['espanoles', 'italianos', 'alemanes', 'libaneses', 'chinos',
+'japoneses', 'coreanos', 'judios', 'franceses', 'ingleses', 'irlandeses', 'polacos', 'rusos', 'hungaros', 'checos',
+'austriacos', 'cubanos', 'argentinos', 'chilenos', 'colombianos', 'venezolanos', 'peruanos', 'brasilenos', 'ecuatorianos',
+'bolivianos', 'paraguayos', 'uruguayos', 'costarricenses', 'salvadorenos', 'hondurenos', 'nicaraguenses', 'panamenos', 'canadienses',
+  'estadounidenses', 'filipinos', 'indios', 'pakistanies', 'iranies', 'iraquies', 'sirios', 'turcos', 'griegos', 'egipcios', 'marroquies', 'argelinos', 'senegaleses', 'sudafricanos']).
 
-% ---
+pertenece_etnicidad('Juan', [criollo, afrodescendiente]).
+pertenece_etnicidad('Maria', [criollo, asiatico, europeo]).
+pertenece_etnicidad('Pedro', [mestizo, criollo]).
+pertenece_etnicidad('Ana', [criollo, afrodescendiente]).
+pertenece_etnicidad('Aaron', [criollo, europeo]).
+pertenece_etnicidad('Abel', [mestizo, criollo]).
+pertenece_etnicidad('Arely', [criollo, mestizo]).
+pertenece_etnicidad('Alma', [europeo, mestizo]).
+pertenece_etnicidad('Abelardo', [mestizo, criollo]).
+pertenece_etnicidad('Abraham', [europeo, mestizo, asiatico]).
+pertenece_etnicidad('Adalberto', [asiatico, criollo, europeo]).
+pertenece_etnicidad('Adan', [europeo, mestizo]).
+pertenece_etnicidad('Adolfo', [asiatico, criollo]).
+pertenece_etnicidad('Adrian', [asiatico, criollo]).
+pertenece_etnicidad('Agustin', [mestizo, europeo]).
+pertenece_etnicidad('Alejandro', [mestizo, europeo, afrodescendiente]).
+pertenece_etnicidad('Alex', [criollo, mestizo, europeo]).
+pertenece_etnicidad('Alexis', [europeo, mestizo]).
+pertenece_etnicidad('Alfonso', [criollo, mestizo]).
+pertenece_etnicidad('Alfredo', [mestizo, afrodescendiente, criollo]).
+pertenece_etnicidad('Allan', [europeo, criollo]).
+pertenece_etnicidad('Alonso', [criollo, europeo, asiatico]).
+pertenece_etnicidad('Alvaro', [afrodescendiente, asiatico, europeo]).
+pertenece_etnicidad('Amado', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Amador', [asiatico, mestizo]).
+pertenece_etnicidad('Amando', [asiatico, europeo, afrodescendiente]).
+pertenece_etnicidad('Amancio', [criollo, europeo]).
+pertenece_etnicidad('Americo', [afrodescendiente]).
+pertenece_etnicidad('Amilcar', [asiatico, afrodescendiente, criollo]).
+pertenece_etnicidad('Anastasio', [asiatico, europeo]).
+pertenece_etnicidad('Anselmo', [mestizo, criollo, asiatico]).
+pertenece_etnicidad('Antonio', [criollo, afrodescendiente]).
+pertenece_etnicidad('Armando', [criollo, afrodescendiente, mestizo]).
+pertenece_etnicidad('Arnoldo', [afrodescendiente, asiatico]).
+pertenece_etnicidad('Arturo', [mestizo, criollo]).
+pertenece_etnicidad('Augusto', [afrodescendiente, asiatico]).
+pertenece_etnicidad('Aurelio', [criollo]).
+pertenece_etnicidad('Baltazar', [afrodescendiente, asiatico, criollo]).
+pertenece_etnicidad('Bartolo', [criollo, europeo, afrodescendiente]).
+pertenece_etnicidad('Bartolome', [afrodescendiente]).
+pertenece_etnicidad('Benigno', [europeo, afrodescendiente]).
+pertenece_etnicidad('Benito', [mestizo]).
+pertenece_etnicidad('Benjamin', [europeo]).
+pertenece_etnicidad('Brandon', [europeo, asiatico, mestizo]).
+pertenece_etnicidad('Kevin', [afrodescendiente, criollo, europeo]).
+pertenece_etnicidad('Bernardo', [criollo]).
+pertenece_etnicidad('Braulio', [criollo]).
+pertenece_etnicidad('Bruno', [mestizo, criollo]).
+pertenece_etnicidad('Camilo', [criollo]).
+pertenece_etnicidad('Carlos', [asiatico, europeo, afrodescendiente]).
+pertenece_etnicidad('Carmelo', [mestizo, criollo]).
+pertenece_etnicidad('Cayetano', [asiatico, mestizo]).
+pertenece_etnicidad('Celestino', [mestizo]).
+pertenece_etnicidad('Cesar', [asiatico, mestizo]).
+pertenece_etnicidad('Cipriano', [criollo, afrodescendiente, mestizo]).
+pertenece_etnicidad('Ciriaco', [europeo]).
+pertenece_etnicidad('Ciro', [afrodescendiente]).
+pertenece_etnicidad('Clemente', [asiatico]).
+pertenece_etnicidad('Cleto', [asiatico, afrodescendiente, mestizo]).
+pertenece_etnicidad('Cosme', [criollo]).
+pertenece_etnicidad('Cristian', [mestizo, asiatico, afrodescendiente]).
+pertenece_etnicidad('Cristobal', [europeo]).
+pertenece_etnicidad('Damian', [criollo]).
+pertenece_etnicidad('Daniel', [mestizo, afrodescendiente, europeo]).
+pertenece_etnicidad('David', [afrodescendiente, asiatico, mestizo]).
+pertenece_etnicidad('Demetrio', [europeo, mestizo]).
+pertenece_etnicidad('Dionisio', [mestizo]).
+pertenece_etnicidad('Domingo', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Donato', [asiatico]).
+pertenece_etnicidad('Eduardo', [asiatico, mestizo]).
+pertenece_etnicidad('Efrain', [asiatico, europeo]).
+pertenece_etnicidad('Elias', [criollo]).
+pertenece_etnicidad('Eliseo', [criollo, mestizo, asiatico]).
+pertenece_etnicidad('Emiliano', [mestizo, criollo]).
+pertenece_etnicidad('Emilio', [mestizo, criollo, europeo]).
+pertenece_etnicidad('Enrique', [afrodescendiente, criollo, europeo]).
+pertenece_etnicidad('Ernesto', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Esteban', [asiatico]).
+pertenece_etnicidad('Eugenio', [criollo, europeo]).
+pertenece_etnicidad('Eusebio', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Evaristo', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Facundo', [europeo]).
+pertenece_etnicidad('Federico', [criollo]).
+pertenece_etnicidad('Fernando', [asiatico]).
+pertenece_etnicidad('Fidel', [asiatico, europeo, afrodescendiente]).
+pertenece_etnicidad('Firman', [asiatico, europeo]).
+pertenece_etnicidad('Felipe', [afrodescendiente]).
+pertenece_etnicidad('Fernando', [mestizo]).
+pertenece_etnicidad('Fidel', [criollo]).
+pertenece_etnicidad('Francisco', [mestizo, europeo]).
+pertenece_etnicidad('Gabino', [afrodescendiente]).
+pertenece_etnicidad('Gabriel', [europeo]).
+pertenece_etnicidad('Gaspar', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Gaston', [afrodescendiente, europeo, mestizo]).
+pertenece_etnicidad('Gaudencio', [criollo, afrodescendiente]).
+pertenece_etnicidad('German', [europeo]).
+pertenece_etnicidad('Gerardo', [europeo, mestizo, afrodescendiente]).
+pertenece_etnicidad('Gilberto', [asiatico, criollo]).
+pertenece_etnicidad('Gines', [asiatico, europeo, afrodescendiente]).
+pertenece_etnicidad('Gonzalo', [asiatico, mestizo]).
+pertenece_etnicidad('Gregorio', [europeo, asiatico]).
+pertenece_etnicidad('Gualberto', [criollo]).
+pertenece_etnicidad('Guido', [asiatico]).
+pertenece_etnicidad('Guillermo', [europeo]).
+pertenece_etnicidad('Gustavo', [mestizo, criollo]).
+pertenece_etnicidad('Hector', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Heriberto', [criollo]).
+pertenece_etnicidad('Higinio', [criollo, afrodescendiente, mestizo]).
+pertenece_etnicidad('Hilario', [criollo]).
+pertenece_etnicidad('Hipolito', [europeo, criollo]).
+pertenece_etnicidad('Horacio', [asiatico, criollo]).
+pertenece_etnicidad('Hugo', [criollo]).
+pertenece_etnicidad('Humberto', [mestizo, asiatico]).
+pertenece_etnicidad('Ignacio', [asiatico, europeo, criollo]).
+pertenece_etnicidad('Inocencio', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Ireneo', [asiatico]).
+pertenece_etnicidad('Isaias', [mestizo, criollo]).
+pertenece_etnicidad('Isidro', [europeo, criollo]).
+pertenece_etnicidad('Ismael', [criollo, asiatico, europeo]).
+pertenece_etnicidad('Ivan', [criollo, asiatico]).
+pertenece_etnicidad('Jacobo', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Jaime', [criollo]).
+pertenece_etnicidad('Javier', [afrodescendiente]).
+pertenece_etnicidad('Jeronimo', [criollo]).
+pertenece_etnicidad('Jesus', [asiatico, europeo]).
+pertenece_etnicidad('Joaquin', [afrodescendiente]).
+pertenece_etnicidad('Jonatan', [afrodescendiente]).
+pertenece_etnicidad('Jorge', [criollo]).
+pertenece_etnicidad('Jose', [criollo]).
+pertenece_etnicidad('Josefino', [asiatico]).
+pertenece_etnicidad('Julian', [asiatico, afrodescendiente, mestizo]).
+pertenece_etnicidad('Julio', [asiatico, europeo]).
+pertenece_etnicidad('Justo', [europeo, criollo]).
+pertenece_etnicidad('Laureano', [criollo, mestizo, asiatico]).
+pertenece_etnicidad('Lauro', [asiatico, mestizo, afrodescendiente]).
+pertenece_etnicidad('Leandro', [europeo, criollo]).
+pertenece_etnicidad('Leonardo', [europeo, criollo]).
+pertenece_etnicidad('Lino', [europeo]).
+pertenece_etnicidad('Lisandro', [asiatico]).
+pertenece_etnicidad('Lorenzo', [asiatico, afrodescendiente, europeo]).
+pertenece_etnicidad('Luis', [europeo]).
+pertenece_etnicidad('Macedonio', [mestizo, europeo, afrodescendiente]).
+pertenece_etnicidad('Marcelino', [mestizo, criollo]).
+pertenece_etnicidad('Marco', [criollo]).
+pertenece_etnicidad('Marcus', [asiatico]).
+pertenece_etnicidad('Mario', [criollo]).
+pertenece_etnicidad('Martin', [asiatico]).
+pertenece_etnicidad('Mateo', [asiatico]).
+pertenece_etnicidad('Matias', [europeo]).
+pertenece_etnicidad('Mauricio', [asiatico]).
+pertenece_etnicidad('Maximino', [asiatico, europeo, criollo]).
+pertenece_etnicidad('Melchor', [mestizo, afrodescendiente, europeo]).
+pertenece_etnicidad('Melquiades', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Miguel', [mestizo, criollo, afrodescendiente]).
+pertenece_etnicidad('Modesto', [europeo]).
+pertenece_etnicidad('Moises', [afrodescendiente]).
+pertenece_etnicidad('Nahum', [europeo]).
+pertenece_etnicidad('Narciso', [afrodescendiente, criollo, europeo]).
+pertenece_etnicidad('Nataniel', [europeo, criollo]).
+pertenece_etnicidad('Nicolas', [criollo, mestizo]).
+pertenece_etnicidad('Oscar', [mestizo, asiatico]).
+pertenece_etnicidad('Pablo', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Pascual', [afrodescendiente]).
+pertenece_etnicidad('Patricio', [mestizo, criollo, afrodescendiente]).
+pertenece_etnicidad('Pio', [europeo, asiatico]).
+pertenece_etnicidad('Rafael', [mestizo, asiatico]).
+pertenece_etnicidad('Ramiro', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Ramon', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Raul', [mestizo]).
+pertenece_etnicidad('Renato', [afrodescendiente, mestizo, europeo]).
+pertenece_etnicidad('Frida', [afrodescendiente]).
+pertenece_etnicidad('Reynaldo', [asiatico]).
+pertenece_etnicidad('Ricardo', [asiatico, mestizo]).
+pertenece_etnicidad('Rigoberto', [criollo]).
+pertenece_etnicidad('Rogelio', [criollo, afrodescendiente, europeo]).
+pertenece_etnicidad('Rodrigo', [europeo]).
+pertenece_etnicidad('Roman', [mestizo, europeo]).
+pertenece_etnicidad('Ruben', [mestizo]).
+pertenece_etnicidad('Rufino', [europeo, asiatico, criollo]).
+pertenece_etnicidad('Salvador', [afrodescendiente, asiatico]).
+pertenece_etnicidad('Samuel', [asiatico]).
+pertenece_etnicidad('Santiago', [mestizo, europeo]).
+pertenece_etnicidad('Sebastian', [criollo, afrodescendiente]).
+pertenece_etnicidad('Sergio', [asiatico]).
+pertenece_etnicidad('Simon', [afrodescendiente, asiatico]).
+pertenece_etnicidad('Sireno', [mestizo, criollo]).
+pertenece_etnicidad('Socorro', [asiatico, afrodescendiente, criollo]).
+pertenece_etnicidad('Socrates', [europeo, afrodescendiente, mestizo]).
+pertenece_etnicidad('Susano', [mestizo, asiatico, europeo]).
+pertenece_etnicidad('Tadeo', [criollo]).
+pertenece_etnicidad('Teofilo', [mestizo]).
+pertenece_etnicidad('Tereso', [mestizo, criollo, europeo]).
+pertenece_etnicidad('Thomas', [mestizo, europeo, asiatico]).
+pertenece_etnicidad('Tiburcio', [mestizo, criollo, afrodescendiente]).
+pertenece_etnicidad('Timoteo', [criollo, europeo, afrodescendiente]).
+pertenece_etnicidad('Tomas', [asiatico]).
+pertenece_etnicidad('Tomas', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Ulises', [mestizo, asiatico, criollo]).
+pertenece_etnicidad('Urbano', [mestizo, asiatico]).
+pertenece_etnicidad('Uriel', [europeo]).
+pertenece_etnicidad('Ursulo', [europeo, criollo]).
+pertenece_etnicidad('Valentin', [afrodescendiente, europeo, mestizo]).
+pertenece_etnicidad('Valerio', [afrodescendiente, asiatico, europeo]).
+pertenece_etnicidad('Vicente', [mestizo, europeo, asiatico]).
+pertenece_etnicidad('Victor', [criollo, europeo]).
+pertenece_etnicidad('Octavio', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Alfonso', [mestizo]).
+pertenece_etnicidad('Alfredo', [criollo, afrodescendiente, europeo]).
+pertenece_etnicidad('Alvaro', [criollo, europeo, asiatico]).
+pertenece_etnicidad('Andrea', [criollo, asiatico, mestizo]).
+pertenece_etnicidad('Angelica', [asiatico, mestizo, europeo]).
+pertenece_etnicidad('Angela', [europeo, mestizo]).
+pertenece_etnicidad('Antonia', [afrodescendiente]).
+pertenece_etnicidad('Araceli', [afrodescendiente, criollo]).
+pertenece_etnicidad('Aurora', [mestizo, europeo, criollo]).
+pertenece_etnicidad('Beatriz', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Belen', [afrodescendiente, asiatico, mestizo]).
+pertenece_etnicidad('Bertha', [asiatico]).
+pertenece_etnicidad('Blanca', [mestizo, europeo, asiatico]).
+pertenece_etnicidad('Brenda', [criollo, asiatico]).
+pertenece_etnicidad('Camila', [criollo, mestizo]).
+pertenece_etnicidad('Caridad', [europeo, criollo, asiatico]).
+pertenece_etnicidad('Carina', [afrodescendiente]).
+pertenece_etnicidad('Carla', [afrodescendiente]).
+pertenece_etnicidad('Carmen', [mestizo, afrodescendiente, asiatico]).
+pertenece_etnicidad('Carolina', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Catalina', [afrodescendiente, asiatico, europeo]).
+pertenece_etnicidad('Cecilia', [criollo, europeo, afrodescendiente]).
+pertenece_etnicidad('Celia', [afrodescendiente, asiatico, mestizo]).
+pertenece_etnicidad('Clara', [afrodescendiente, asiatico]).
+pertenece_etnicidad('Claudia', [mestizo]).
+pertenece_etnicidad('Concepcion', [asiatico, criollo, mestizo]).
+pertenece_etnicidad('Concha', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Consuelo', [europeo, criollo]).
+pertenece_etnicidad('Diana', [asiatico, criollo, afrodescendiente]).
+pertenece_etnicidad('Dolores', [europeo]).
+pertenece_etnicidad('Dora', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Dulce', [mestizo, afrodescendiente, asiatico]).
+pertenece_etnicidad('Edith', [mestizo, criollo]).
+pertenece_etnicidad('Elena', [criollo, asiatico, afrodescendiente]).
+pertenece_etnicidad('Elisa', [mestizo, criollo, asiatico]).
+pertenece_etnicidad('Elizabeth', [mestizo]).
+pertenece_etnicidad('Elvira', [mestizo, europeo]).
+pertenece_etnicidad('Emilia', [asiatico]).
+pertenece_etnicidad('Esperanza', [asiatico, mestizo]).
+pertenece_etnicidad('Ester', [europeo, afrodescendiente, mestizo]).
+pertenece_etnicidad('Eugenia', [mestizo]).
+pertenece_etnicidad('Eva', [mestizo, afrodescendiente, criollo]).
+pertenece_etnicidad('Fabiola', [asiatico, criollo]).
+pertenece_etnicidad('Felipa', [asiatico, mestizo, europeo]).
+pertenece_etnicidad('Fernanda', [afrodescendiente, mestizo, europeo]).
+pertenece_etnicidad('Flor', [europeo, criollo, mestizo]).
+pertenece_etnicidad('Francisca', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Gabriela', [asiatico, mestizo]).
+pertenece_etnicidad('Genoveva', [europeo, asiatico]).
+pertenece_etnicidad('Georgina', [asiatico]).
+pertenece_etnicidad('Gloria', [asiatico, europeo, afrodescendiente]).
+pertenece_etnicidad('Graciela', [asiatico]).
+pertenece_etnicidad('Guadalupe', [criollo, afrodescendiente, asiatico]).
+pertenece_etnicidad('Haydee', [criollo]).
+pertenece_etnicidad('Helena', [afrodescendiente]).
+pertenece_etnicidad('Hilda', [mestizo, europeo]).
+pertenece_etnicidad('Ines', [europeo, afrodescendiente, criollo]).
+pertenece_etnicidad('Irma', [europeo, asiatico]).
+pertenece_etnicidad('Isabel', [asiatico]).
+pertenece_etnicidad('Jacinta', [europeo, mestizo]).
+pertenece_etnicidad('Jacqueline', [mestizo]).
+pertenece_etnicidad('Jimena', [mestizo, europeo, criollo]).
+pertenece_etnicidad('Josefina', [mestizo, afrodescendiente]).
+pertenece_etnicidad('Juana', [europeo, criollo, afrodescendiente]).
+pertenece_etnicidad('Juliana', [europeo, criollo]).
+pertenece_etnicidad('Julia', [asiatico, mestizo]).
+pertenece_etnicidad('Laura', [criollo, asiatico, mestizo]).
+pertenece_etnicidad('Leonor', [afrodescendiente]).
+pertenece_etnicidad('Leticia', [afrodescendiente]).
+pertenece_etnicidad('Lilia', [asiatico, mestizo, criollo]).
+pertenece_etnicidad('Liliana', [europeo]).
+pertenece_etnicidad('Lisandro', [mestizo, afrodescendiente, asiatico]).
+pertenece_etnicidad('Lorena', [afrodescendiente, europeo, criollo]).
+pertenece_etnicidad('Lourdes', [criollo, europeo, mestizo]).
+pertenece_etnicidad('Lucia', [mestizo, asiatico]).
+pertenece_etnicidad('Luciana', [asiatico]).
+pertenece_etnicidad('Lucinda', [asiatico, mestizo]).
+pertenece_etnicidad('Luisa', [criollo, afrodescendiente]).
+pertenece_etnicidad('Luz', [afrodescendiente, criollo, mestizo]).
+pertenece_etnicidad('Magdalena', [afrodescendiente]).
+pertenece_etnicidad('Margarita', [asiatico]).
+pertenece_etnicidad('Maria', [asiatico, criollo, europeo]).
+pertenece_etnicidad('Mariana', [criollo, europeo]).
+pertenece_etnicidad('Maricela', [afrodescendiente]).
+pertenece_etnicidad('Marilu', [europeo, criollo, mestizo]).
+pertenece_etnicidad('Marina', [criollo, mestizo, asiatico]).
+pertenece_etnicidad('Marisa', [afrodescendiente, mestizo, europeo]).
+pertenece_etnicidad('Marta', [asiatico, afrodescendiente, criollo]).
+pertenece_etnicidad('Martina', [afrodescendiente, europeo]).
+pertenece_etnicidad('Matilde', [europeo, afrodescendiente]).
+pertenece_etnicidad('Melisa', [afrodescendiente]).
+pertenece_etnicidad('Mercedes', [mestizo, afrodescendiente, europeo]).
+pertenece_etnicidad('Monica', [europeo, criollo, asiatico]).
+pertenece_etnicidad('Miriam', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Mirta', [mestizo]).
+pertenece_etnicidad('Nadia', [europeo, asiatico]).
+pertenece_etnicidad('Natalia', [europeo]).
+pertenece_etnicidad('Natividad', [asiatico]).
+pertenece_etnicidad('Nicole', [europeo]).
+pertenece_etnicidad('Norma', [asiatico]).
+pertenece_etnicidad('Olga', [asiatico, criollo, europeo]).
+pertenece_etnicidad('Olivia', [asiatico]).
+pertenece_etnicidad('Paola', [mestizo]).
+pertenece_etnicidad('Patricia', [afrodescendiente, europeo]).
+pertenece_etnicidad('Paula', [afrodescendiente]).
+pertenece_etnicidad('Paulina', [afrodescendiente, europeo, criollo]).
+pertenece_etnicidad('Paz', [criollo]).
+pertenece_etnicidad('Petra', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Pilar', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Priscila', [criollo, mestizo, asiatico]).
+pertenece_etnicidad('Raquel', [criollo, afrodescendiente]).
+pertenece_etnicidad('Rebeca', [europeo, mestizo, criollo]).
+pertenece_etnicidad('Regina', [afrodescendiente, mestizo]).
+pertenece_etnicidad('Renata', [europeo, criollo]).
+pertenece_etnicidad('Ricarda', [afrodescendiente]).
+pertenece_etnicidad('Rita', [afrodescendiente, asiatico]).
+pertenece_etnicidad('Roberta', [europeo]).
+pertenece_etnicidad('Rocio', [asiatico]).
+pertenece_etnicidad('Rosa', [afrodescendiente]).
+pertenece_etnicidad('Rosalia', [europeo, asiatico, criollo]).
+pertenece_etnicidad('Rosario', [asiatico, europeo]).
+pertenece_etnicidad('Ruth', [afrodescendiente]).
+pertenece_etnicidad('Salome', [criollo]).
+pertenece_etnicidad('Sandra', [asiatico, afrodescendiente]).
+pertenece_etnicidad('Sara', [afrodescendiente]).
+pertenece_etnicidad('Silvia', [europeo]).
+pertenece_etnicidad('Socorro', [afrodescendiente, criollo, europeo]).
+pertenece_etnicidad('Sofia', [afrodescendiente, europeo]).
+pertenece_etnicidad('Soledad', [europeo]).
+pertenece_etnicidad('Susana', [asiatico, afrodescendiente, criollo]).
+pertenece_etnicidad('Tamara', [asiatico]).
+pertenece_etnicidad('Tatiana', [criollo, europeo]).
+pertenece_etnicidad('Teresa', [mestizo, europeo]).
+pertenece_etnicidad('Ursula', [europeo]).
+pertenece_etnicidad('Vanesa', [europeo]).
+pertenece_etnicidad('Victoria', [mestizo, criollo]).
+pertenece_etnicidad('Violeta', [asiatico, europeo]).
+pertenece_etnicidad('Virginia', [afrodescendiente, criollo, asiatico]).
+pertenece_etnicidad('Yolanda', [asiatico]).
+pertenece_etnicidad('Zoila', [criollo]).
 
-pertenece_etnicidad('Juan', mestizos).
-pertenece_etnicidad('Maria', indigenas).
-pertenece_etnicidad('Jose', mestizos).
 
-% --- nombres indigenas
+persona_pertenece_etnicidad_clase_social('Juan', [criollo, afrodescendiente], [clase_media], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Maria', [criollo, asiatico, europeo], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Pedro', [mestizo, criollo], [clase_media], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Ana', [criollo, afrodescendiente], [clase_media], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Aaron', [criollo, europeo], [clase_media], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Abel', [mestizo, criollo], [clase_media], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Arely', [criollo, mestizo], [clase_media], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Alma', [europeo, mestizo], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Abelardo', [mestizo, criollo], [clase_media], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Abraham', [europeo, mestizo, asiatico], [clase_media], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Adalberto', [asiatico, criollo, europeo], [clase_media], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Adan', [europeo, mestizo], [clase_media], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Adolfo', [asiatico, criollo], [clase_media], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Adrian', [asiatico, criollo], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Agustin', [mestizo, europeo], [clase_media], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Alejandro', [mestizo, europeo, afrodescendiente], [clase_media], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Alex', [criollo, mestizo, europeo], [clase_media], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Alexis', [europeo, mestizo], [clase_media], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Alfonso', [criollo, mestizo], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Alfredo', [mestizo, afrodescendiente, criollo], [clase_media], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Allan', [europeo, criollo], [clase_media], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Alonso', [criollo, europeo, asiatico], [clase_media], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Alvaro', [afrodescendiente, asiatico, europeo], [clase_media], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Amado', [asiatico, afrodescendiente], [clase_media], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Amador', [asiatico, mestizo], [clase_media], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Amando', [asiatico, europeo, afrodescendiente], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Amancio', [criollo, europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Americo', [afrodescendiente], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Amilcar', [asiatico, afrodescendiente, criollo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Anastasio', [asiatico, europeo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Anselmo', [mestizo, criollo, asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Antonio', [criollo, afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Armando', [criollo, afrodescendiente, mestizo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Arnoldo', [afrodescendiente, asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Arturo', [mestizo, criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Augusto', [afrodescendiente, asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Aurelio', [criollo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Baltazar', [afrodescendiente, asiatico, criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Bartolo', [criollo, europeo, afrodescendiente], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Bartolome', [afrodescendiente], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Benigno', [europeo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Benito', [mestizo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Benjamin', [europeo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Brandon', [europeo, asiatico, mestizo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Kevin', [afrodescendiente, criollo, europeo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Bernardo', [criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Braulio', [criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Bruno', [mestizo, criollo], [clase_media_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Camilo', [criollo], [clase_media_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Carlos', [asiatico, europeo, afrodescendiente], [clase_media_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Carmelo', [mestizo, criollo], [clase_media_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Cayetano', [asiatico, mestizo], [clase_media_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Celestino', [mestizo], [clase_media_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Cesar', [asiatico, mestizo], [clase_media_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Cipriano', [criollo, afrodescendiente, mestizo], [clase_media_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Ciriaco', [europeo], [clase_media_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Ciro', [afrodescendiente], [clase_media_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Clemente', [asiatico], [clase_media_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Cleto', [asiatico, afrodescendiente, mestizo], [clase_media_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Cosme', [criollo], [clase_media_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Cristian', [mestizo, asiatico, afrodescendiente], [clase_media_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Cristobal', [europeo], [clase_media_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Damian', [criollo], [clase_media_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Daniel', [mestizo, afrodescendiente, europeo], [clase_media_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('David', [afrodescendiente, asiatico, mestizo], [clase_media_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Demetrio', [europeo, mestizo], [clase_media_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Dionisio', [mestizo], [clase_media_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Domingo', [afrodescendiente, mestizo], [clase_media_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Donato', [asiatico], [clase_media_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Eduardo', [asiatico, mestizo], [clase_media_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Efrain', [asiatico, europeo], [clase_media_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Elias', [criollo], [clase_media_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Eliseo', [criollo, mestizo, asiatico], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Emiliano', [mestizo, criollo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Emilio', [mestizo, criollo, europeo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Enrique', [afrodescendiente, criollo, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Ernesto', [mestizo, afrodescendiente], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Esteban', [asiatico], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Eugenio', [criollo, europeo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Eusebio', [mestizo, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Evaristo', [mestizo, afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Facundo', [europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Federico', [criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Fernando', [asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Fidel', [asiatico, europeo, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Firman', [asiatico, europeo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Felipe', [afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Fernando', [mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Fidel', [criollo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Francisco', [mestizo, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Gabino', [afrodescendiente], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Gabriel', [europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Gaspar', [mestizo, afrodescendiente], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Gaston', [afrodescendiente, europeo, mestizo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Gaudencio', [criollo, afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('German', [europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Gerardo', [europeo, mestizo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Gilberto', [asiatico, criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Gines', [asiatico, europeo, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Gonzalo', [asiatico, mestizo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Gregorio', [europeo, asiatico], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Gualberto', [criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Guido', [asiatico], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Guillermo', [europeo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Gustavo', [mestizo, criollo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Hector', [asiatico, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Heriberto', [criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Higinio', [criollo, afrodescendiente, mestizo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Hilario', [criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Hipolito', [europeo, criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Horacio', [asiatico, criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Hugo', [criollo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Humberto', [mestizo, asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Ignacio', [asiatico, europeo, criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Inocencio', [mestizo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Ireneo', [asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Isaias', [mestizo, criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Isidro', [europeo, criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Ismael', [criollo, asiatico, europeo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Ivan', [criollo, asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Jacobo', [afrodescendiente, mestizo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Jaime', [criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Javier', [afrodescendiente], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Jeronimo', [criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Jesus', [asiatico, europeo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Joaquin', [afrodescendiente], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Jonatan', [afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Jorge', [criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Jose', [criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Josefino', [asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Julian', [asiatico, afrodescendiente, mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Julio', [asiatico, europeo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Justo', [europeo, criollo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Laureano', [criollo, mestizo, asiatico], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Lauro', [asiatico, mestizo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Leandro', [europeo, criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Leonardo', [europeo, criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Lino', [europeo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Lisandro', [asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Lorenzo', [asiatico, afrodescendiente, europeo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Luis', [europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Macedonio', [mestizo, europeo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Marcelino', [mestizo, criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Marco', [criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Marcus', [asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Mario', [criollo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Martin', [asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Mateo', [asiatico], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Matias', [europeo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Mauricio', [asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Maximino', [asiatico, europeo, criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Melchor', [mestizo, afrodescendiente, europeo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Melquiades', [afrodescendiente, mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Miguel', [mestizo, criollo, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Modesto', [europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Moises', [afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Nahum', [europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Narciso', [afrodescendiente, criollo, europeo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Nataniel', [europeo, criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Nicolas', [criollo, mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Oscar', [mestizo, asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Pablo', [afrodescendiente, mestizo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Pascual', [afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Patricio', [mestizo, criollo, afrodescendiente], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Pio', [europeo, asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Rafael', [mestizo, asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Ramiro', [mestizo, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Ramon', [afrodescendiente, mestizo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Raul', [mestizo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Renato', [afrodescendiente, mestizo, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Frida', [afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Reynaldo', [asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Ricardo', [asiatico, mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Rigoberto', [criollo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Rogelio', [criollo, afrodescendiente, europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Rodrigo', [europeo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Roman', [mestizo, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Ruben', [mestizo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Rufino', [europeo, asiatico, criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Salvador', [afrodescendiente, asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Samuel', [asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Santiago', [mestizo, europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Sebastian', [criollo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Sergio', [asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Simon', [afrodescendiente, asiatico], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Sireno', [mestizo, criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Socorro', [asiatico, afrodescendiente, criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Socrates', [europeo, afrodescendiente, mestizo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Susano', [mestizo, asiatico, europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Tadeo', [criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Teofilo', [mestizo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Tereso', [mestizo, criollo, europeo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Thomas', [mestizo, europeo, asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Tiburcio', [mestizo, criollo, afrodescendiente], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Timoteo', [criollo, europeo, afrodescendiente], [clase_alta], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Tomas', [asiatico], [clase_alta], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Tomas', [afrodescendiente, mestizo], [clase_alta], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Ulises', [mestizo, asiatico, criollo], [clase_alta], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Urbano', [mestizo, asiatico], [clase_alta], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Uriel', [europeo], [clase_alta], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Ursulo', [europeo, criollo], [clase_alta], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Valentin', [afrodescendiente, europeo, mestizo], [clase_alta], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Valerio', [afrodescendiente, asiatico, europeo], [clase_alta], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Vicente', [mestizo, europeo, asiatico], [clase_alta], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Victor', [criollo, europeo], [clase_alta], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Octavio', [mestizo, afrodescendiente], [clase_alta], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Alfonso', [mestizo], [clase_alta], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Alfredo', [criollo, afrodescendiente, europeo], [clase_alta], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Alvaro', [criollo, europeo, asiatico], [clase_alta], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Andrea', [criollo, asiatico, mestizo], [clase_alta], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Angelica', [asiatico, mestizo, europeo], [clase_alta], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Angela', [europeo, mestizo], [clase_alta], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Antonia', [afrodescendiente], [clase_alta], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Araceli', [afrodescendiente, criollo], [clase_alta], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Aurora', [mestizo, europeo, criollo], [clase_alta], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Beatriz', [asiatico, afrodescendiente], [clase_alta], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Belen', [afrodescendiente, asiatico, mestizo], [clase_alta], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Bertha', [asiatico], [clase_alta], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Blanca', [mestizo, europeo, asiatico], [clase_alta], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Brenda', [criollo, asiatico], [clase_alta], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Camila', [criollo, mestizo], [clase_alta], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Caridad', [europeo, criollo, asiatico], [clase_alta], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Carina', [afrodescendiente], [clase_alta], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Carla', [afrodescendiente], [clase_alta], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Carmen', [mestizo, afrodescendiente, asiatico], [clase_alta], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Carolina', [mestizo, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Catalina', [afrodescendiente, asiatico, europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Cecilia', [criollo, europeo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Celia', [afrodescendiente, asiatico, mestizo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Clara', [afrodescendiente, asiatico], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Claudia', [mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Concepcion', [asiatico, criollo, mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Concha', [asiatico, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Consuelo', [europeo, criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Diana', [asiatico, criollo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Dolores', [europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Dora', [asiatico, afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Dulce', [mestizo, afrodescendiente, asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Edith', [mestizo, criollo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Elena', [criollo, asiatico, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Elisa', [mestizo, criollo, asiatico], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Elizabeth', [mestizo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Elvira', [mestizo, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Emilia', [asiatico], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Esperanza', [asiatico, mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Ester', [europeo, afrodescendiente, mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Eugenia', [mestizo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Eva', [mestizo, afrodescendiente, criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Fabiola', [asiatico, criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Felipa', [asiatico, mestizo, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Fernanda', [afrodescendiente, mestizo, europeo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Flor', [europeo, criollo, mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Francisca', [asiatico, afrodescendiente], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Gabriela', [asiatico, mestizo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Genoveva', [europeo, asiatico], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Georgina', [asiatico], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Gloria', [asiatico, europeo, afrodescendiente], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Graciela', [asiatico], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Guadalupe', [criollo, afrodescendiente, asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Haydee', [criollo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Helena', [afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Hilda', [mestizo, europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Ines', [europeo, afrodescendiente, criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Irma', [europeo, asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Isabel', [asiatico], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Jacinta', [europeo, mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Jacqueline', [mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Jimena', [mestizo, europeo, criollo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Josefina', [mestizo, afrodescendiente], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Juana', [europeo, criollo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Juliana', [europeo, criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Julia', [asiatico, mestizo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Laura', [criollo, asiatico, mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Leonor', [afrodescendiente], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Leticia', [afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Lilia', [asiatico, mestizo, criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Liliana', [europeo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Lisandro', [mestizo, afrodescendiente, asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Lorena', [afrodescendiente, europeo, criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Lourdes', [criollo, europeo, mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Lucia', [mestizo, asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Luciana', [asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Lucinda', [asiatico, mestizo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Luisa', [criollo, afrodescendiente], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Luz', [afrodescendiente, criollo, mestizo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Magdalena', [afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Margarita', [asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Maria', [asiatico, criollo, europeo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Mariana', [criollo, europeo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Maricela', [afrodescendiente], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Marilu', [europeo, criollo, mestizo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Marina', [criollo, mestizo, asiatico], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Marisa', [afrodescendiente, mestizo, europeo], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Marta', [asiatico, afrodescendiente, criollo], [clase_media], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Martina', [afrodescendiente, europeo], [clase_media], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Matilde', [europeo, afrodescendiente], [clase_media], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Melisa', [afrodescendiente], [clase_media], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Mercedes', [mestizo, afrodescendiente, europeo], [clase_media], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Monica', [europeo, criollo, asiatico], [clase_media], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Miriam', [asiatico, afrodescendiente], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Mirta', [mestizo], [clase_media], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Nadia', [europeo, asiatico], [clase_media], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Natalia', [europeo], [clase_media], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Natividad', [asiatico], [clase_media], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Nicole', [europeo], [clase_media], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Norma', [asiatico], [clase_media], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Olga', [asiatico, criollo, europeo], [clase_media], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Olivia', [asiatico], [clase_media], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Paola', [mestizo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Patricia', [afrodescendiente, europeo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Paula', [afrodescendiente], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Paulina', [afrodescendiente, europeo, criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Paz', [criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Petra', [afrodescendiente, mestizo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Pilar', [afrodescendiente, mestizo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Priscila', [criollo, mestizo, asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Raquel', [criollo, afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Rebeca', [europeo, mestizo, criollo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Regina', [afrodescendiente, mestizo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Renata', [europeo, criollo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Ricarda', [afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Rita', [afrodescendiente, asiatico], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Roberta', [europeo], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Rocio', [asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Rosa', [afrodescendiente], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Rosalia', [europeo, asiatico, criollo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Rosario', [asiatico, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Ruth', [afrodescendiente], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Salome', [criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Sandra', [asiatico, afrodescendiente], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Sara', [afrodescendiente], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Silvia', [europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Socorro', [afrodescendiente, criollo, europeo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Sofia', [afrodescendiente, europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Soledad', [europeo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Susana', [asiatico, afrodescendiente, criollo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Tamara', [asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Tatiana', [criollo, europeo], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Teresa', [mestizo, europeo], [clase_baja], [espanol, chino_mandarin]).
+persona_pertenece_etnicidad_clase_social('Ursula', [europeo], [clase_baja], [espanol, frances]).
+persona_pertenece_etnicidad_clase_social('Vanesa', [europeo], [clase_baja], [espanol, ingles]).
+persona_pertenece_etnicidad_clase_social('Victoria', [mestizo, criollo], [clase_baja], [espanol, italiano]).
+persona_pertenece_etnicidad_clase_social('Violeta', [asiatico, europeo], [clase_baja], [espanol, japones]).
+persona_pertenece_etnicidad_clase_social('Virginia', [afrodescendiente, criollo, asiatico], [clase_baja], [espanol, portugues]).
+persona_pertenece_etnicidad_clase_social('Yolanda', [asiatico], [clase_baja], [espanol, aleman]).
+persona_pertenece_etnicidad_clase_social('Zoila', [criollo], [clase_baja], [espanol, chino_mandarin]).
+
+persona_pertenece_etnicidad_clase_social('Anam', [indigenas], ['clase_baja'], [espanol, otomi]).
+persona_pertenece_etnicidad_clase_social('Ariche', [indigenas], ['clase_baja'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Axochitl', [indigenas], ['clase_baja'], [espanol, nahuatl]).
+persona_pertenece_etnicidad_clase_social('Bimori', [indigenas], ['clase_baja'], [espanol, tarahumara]).
+persona_pertenece_etnicidad_clase_social('Citlali', [indigenas], ['clase_baja'], [espanol, nahuatl]).
+persona_pertenece_etnicidad_clase_social('Inda Jani', [indigenas], ['clase_media_baja'], [espanol, otomi]).
+persona_pertenece_etnicidad_clase_social('Itan de hüi', [indigenas], ['clase_media'], [espanol, totonaco]).
+persona_pertenece_etnicidad_clase_social('Ix Chel', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Ix Kaknab', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Kantyi', [indigenas], ['clase_media'], [espanol, mazahua]).
+persona_pertenece_etnicidad_clase_social('Malinalli', [indigenas], ['clase_media'], [espanol, nahuatl]).
+persona_pertenece_etnicidad_clase_social('Nakawe', [indigenas], ['clase_media'], [espanol, huichol]).
+persona_pertenece_etnicidad_clase_social('Sesasi', [indigenas], ['clase_media'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Soona', [indigenas], ['clase_baja'], [espanol, chol]).
+persona_pertenece_etnicidad_clase_social('Xochimitl', [indigenas], ['clase_baja'], [espanol, nahuatl]).
+persona_pertenece_etnicidad_clase_social('Yamanik', [indigenas], ['clase_baja'], [espanol, huasteco]).
+persona_pertenece_etnicidad_clase_social('Yatzil', [indigenas], ['clase_baja'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Yej susen', [indigenas], ['clase_baja'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Atl', [indigenas], ['clase_baja'], [espanol, nahuatl]).
+persona_pertenece_etnicidad_clase_social('Atlahua', [indigenas], ['clase_media'], [espanol, nahuatl]).
+persona_pertenece_etnicidad_clase_social('Canneo', [indigenas], ['clase_media'], [espanol, mazahua]).
+persona_pertenece_etnicidad_clase_social('Danaa', [indigenas], ['clase_media'], [espanol, mazateco]).
+persona_pertenece_etnicidad_clase_social('Hedia', [indigenas], ['clase_media'], [espanol, mazahua]).
+persona_pertenece_etnicidad_clase_social('Ikal', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Irepani', [indigenas], ['clase_media'], [espanol, mazateco]).
+persona_pertenece_etnicidad_clase_social('Kabil', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Kasakir', [indigenas], ['clase_media'], [espanol, tzotzil]).
+persona_pertenece_etnicidad_clase_social('Maatiaak', [indigenas], ['clase_media'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Masawa', [indigenas], ['clase_media'], [espanol, zapoteco]).
+persona_pertenece_etnicidad_clase_social('Polo', [indigenas], ['clase_media'], [espanol, otomi]).
+persona_pertenece_etnicidad_clase_social('Rahui', [indigenas], ['clase_media'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Semeel jak', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Seneca', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Surem', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Tanok', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Tlayolotl', [indigenas], ['clase_media'], [espanol, nahuatl]).
+persona_pertenece_etnicidad_clase_social('Tsijiari', [indigenas], ['clase_media'], [espanol, tzeltal]).
+persona_pertenece_etnicidad_clase_social('Yooko', [indigenas], ['clase_media'], [espanol, mazahua]).
+persona_pertenece_etnicidad_clase_social('Erendirani', [indigenas], ['clase_media'], [espanol, purepecha]).
+persona_pertenece_etnicidad_clase_social('Hasen', [indigenas], ['clase_media'], [espanol, otomi]).
+persona_pertenece_etnicidad_clase_social('Iktan', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Itzamatul', [indigenas], ['clase_media'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Naran', [indigenas], ['clase_media'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Nima', [indigenas], ['clase_media_baja'], [espanol, zapoteco]).
+persona_pertenece_etnicidad_clase_social('Seti', [indigenas], ['clase_media_baja'], [espanol, maya]).
+persona_pertenece_etnicidad_clase_social('Shanarani', [indigenas], ['clase_media_baja'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Sure', [indigenas], ['clase_media_baja'], [espanol, mixteco]).
+persona_pertenece_etnicidad_clase_social('Taiyari', [indigenas], ['clase_media_baja'], [espanol, huichol]).
+
 
 pertenece_etnicidad('Anam', indigenas).
 pertenece_etnicidad('Ariche', indigenas).
@@ -923,80 +1691,8 @@ grupo_indigena('Kiliwa').
 grupo_indigena('Popoluca').
 grupo_indigena('Mayo').
 grupo_indigena('Yaqui').
-grupo_indigena('Tepehuano').
+grupo_indigena('Tepehuano').  
 grupo_indigena('Mazahua').
-
-% Subcategoría de Etnicidad
-% -- indigenas
-subtipo_etnicidad('Guarijio', indigenas).
-subtipo_etnicidad('Huasteco', indigenas).
-subtipo_etnicidad('Tarahumara', indigenas).
-subtipo_etnicidad('Zapoteco', indigenas).
-subtipo_etnicidad('Mixteco', indigenas).
-subtipo_etnicidad('Amuzgo', indigenas).
-subtipo_etnicidad('Huichol',indigenas).
-subtipo_etnicidad('Purepecha', indigenas).
-subtipo_etnicidad('Otomi', indigenas).
-subtipo_etnicidad('Quiche', indigenas).
-subtipo_etnicidad('Nahua', indigenas).
-subtipo_etnicidad('Pame', indigenas).
-subtipo_etnicidad('Maya', indigenas).
-subtipo_etnicidad('Kiliwa', indigenas).
-subtipo_etnicidad('Popoluca', indigenas).
-subtipo_etnicidad('Mayo', indigenas).
-subtipo_etnicidad('Yaqui', indigenas).
-subtipo_etnicidad('Tepehuano', indigenas).
-subtipo_etnicidad('Mazahua', indigenas).
-
-
-subtipo_etnicidad(espanoles, descendientes_de_inmigrantes).
-subtipo_etnicidad(italianos, descendientes_de_inmigrantes).
-subtipo_etnicidad(alemanes, descendientes_de_inmigrantes).
-subtipo_etnicidad(libaneses, descendientes_de_inmigrantes).
-subtipo_etnicidad(chinos, descendientes_de_inmigrantes).
-subtipo_etnicidad(japoneses, descendientes_de_inmigrantes).
-subtipo_etnicidad(coreanos, descendientes_de_inmigrantes).
-subtipo_etnicidad(judios, descendientes_de_inmigrantes).
-subtipo_etnicidad(franceses, descendientes_de_inmigrantes).
-subtipo_etnicidad(ingleses, descendientes_de_inmigrantes).
-subtipo_etnicidad(irlandeses, descendientes_de_inmigrantes).
-subtipo_etnicidad(polacos, descendientes_de_inmigrantes).
-subtipo_etnicidad(rusos, descendientes_de_inmigrantes).
-subtipo_etnicidad(hungaros, descendientes_de_inmigrantes).
-subtipo_etnicidad(checos, descendientes_de_inmigrantes).
-subtipo_etnicidad(austriacos, descendientes_de_inmigrantes).
-subtipo_etnicidad(cubanos, descendientes_de_inmigrantes).
-subtipo_etnicidad(argentinos, descendientes_de_inmigrantes).
-subtipo_etnicidad(chilenos, descendientes_de_inmigrantes).
-subtipo_etnicidad(colombianos, descendientes_de_inmigrantes).
-subtipo_etnicidad(venezolanos, descendientes_de_inmigrantes).
-subtipo_etnicidad(peruanos, descendientes_de_inmigrantes).
-subtipo_etnicidad(brasilenos, descendientes_de_inmigrantes).
-subtipo_etnicidad(ecuatorianos, descendientes_de_inmigrantes).
-subtipo_etnicidad(bolivianos, descendientes_de_inmigrantes).
-subtipo_etnicidad(paraguayos, descendientes_de_inmigrantes).
-subtipo_etnicidad(uruguayos, descendientes_de_inmigrantes).
-subtipo_etnicidad(costarricenses, descendientes_de_inmigrantes).
-subtipo_etnicidad(salvadorenos, descendientes_de_inmigrantes).
-subtipo_etnicidad(hondurenos, descendientes_de_inmigrantes).
-subtipo_etnicidad(nicaraguenses, descendientes_de_inmigrantes).
-subtipo_etnicidad(panamenos, descendientes_de_inmigrantes).
-subtipo_etnicidad(canadienses, descendientes_de_inmigrantes).
-subtipo_etnicidad(estadounidenses, descendientes_de_inmigrantes).
-subtipo_etnicidad(filipinos, descendientes_de_inmigrantes).
-subtipo_etnicidad(indios, descendientes_de_inmigrantes).
-subtipo_etnicidad(pakistanies, descendientes_de_inmigrantes).
-subtipo_etnicidad(iranies, descendientes_de_inmigrantes).
-subtipo_etnicidad(iraquies, descendientes_de_inmigrantes).
-subtipo_etnicidad(sirios, descendientes_de_inmigrantes).
-subtipo_etnicidad(turcos, descendientes_de_inmigrantes).
-subtipo_etnicidad(griegos, descendientes_de_inmigrantes).
-subtipo_etnicidad(egipcios, descendientes_de_inmigrantes).
-subtipo_etnicidad(marroquies, descendientes_de_inmigrantes).
-subtipo_etnicidad(argelinos, descendientes_de_inmigrantes).
-subtipo_etnicidad(senegaleses, descendientes_de_inmigrantes).
-subtipo_etnicidad(sudafricanos, descendientes_de_inmigrantes).
-
 
 % Grupos Indigenas por Region
 
@@ -1164,13 +1860,13 @@ edad_persona('Jose', 40).
 
 % Etapa Edad
 
-etapa_edad('Infacia', [1, 2, 3, 4, 5]).
+etapa_edad('Infancia', [1, 2, 3, 4, 5]).
 etapa_edad('Ninez', [6, 7, 8, 9, 10, 11]).
 etapa_edad('Adolescencia', [12, 13, 14, 15, 16, 17]).
 etapa_edad('Adultez', [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 
     38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55 ,56, 57, 58, 59]).
-etapa_edad('Adulto_mayor'   , [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 
-79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120]).
+etapa_edad('Adulto_mayor'   , [60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87,
+88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120]).
 
 % Situación Económica
 situacion_economica(clase_baja).
@@ -1187,11 +1883,359 @@ nivel_educativo(educacion_media_superior).
 nivel_educativo(educacion_superior).
 nivel_educativo(postgrado).
 
+
 % Definir el nivel educativo de cada persona
 
-pertenece_educacion(juan, educacion_media_superior).
-pertenece_educacion(maria, educacion_basica_completa).
-pertenece_educacion(jose, educacion_superior).
+pertenece_educacion('Juan', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Maria', [educacion_superior, educacion_media_superior]).
+pertenece_educacion('Pedro', [analfabetos, educacion_basica, postgrado]).
+pertenece_educacion('Ana', [educacion_basica, educacion_superior]).
+pertenece_educacion('Aaron', [educacion_superior, analfabetos]).
+pertenece_educacion('Abel', [educacion_basica_completa, educacion_media_superior, postgrado]).
+pertenece_educacion('Arely', [educacion_basica, educacion_media_superior]).
+pertenece_educacion('Alma', [educacion_superior, postgrado]).
+pertenece_educacion('Abelardo', [educacion_superior, postgrado, educacion_basica]).
+pertenece_educacion('Abraham', [educacion_superior, educacion_basica_completa, analfabetos]).
+pertenece_educacion('Adalberto', [educacion_basica, educacion_superior, analfabetos]).
+pertenece_educacion('Adan', [educacion_basica, educacion_media_superior, postgrado]).
+pertenece_educacion('Adolfo', [postgrado, educacion_basica]).
+pertenece_educacion('Adrian', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Agustin', [postgrado, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Alejandro', [educacion_superior, educacion_media_superior, educacion_basica]).
+pertenece_educacion('Alex', [educacion_superior, postgrado, educacion_basica_completa]).
+pertenece_educacion('Alexis', [educacion_basica_completa, analfabetos]).
+pertenece_educacion('Alfonso', [educacion_superior, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Alfredo', [analfabetos, postgrado, educacion_media_superior]).
+pertenece_educacion('Allan', [postgrado, educacion_basica]).
+pertenece_educacion('Alonso', [educacion_superior, educacion_media_superior]).
+pertenece_educacion('Alvaro', [postgrado, educacion_basica_completa]).
+pertenece_educacion('Amado', [educacion_basica_completa, postgrado, educacion_superior]).
+pertenece_educacion('Amador', [educacion_superior, postgrado, educacion_basica_completa]).
+pertenece_educacion('Amando', [educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Amancio', [educacion_basica_completa, educacion_superior]).
+pertenece_educacion('Americo', [postgrado, educacion_media_superior]).
+pertenece_educacion('Amilcar', [postgrado, analfabetos, educacion_media_superior]).
+pertenece_educacion('Anastasio', [educacion_superior, postgrado, educacion_media_superior]).
+pertenece_educacion('Anselmo', [analfabetos, postgrado, educacion_basica]).
+pertenece_educacion('Antonio', [analfabetos, educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Armando', [analfabetos, educacion_basica_completa]).
+pertenece_educacion('Arnoldo', [educacion_basica_completa, analfabetos]).
+pertenece_educacion('Arturo', [educacion_basica, postgrado]).
+pertenece_educacion('Augusto', [postgrado, educacion_media_superior]).
+pertenece_educacion('Aurelio', [educacion_superior, analfabetos, educacion_media_superior]).
+pertenece_educacion('Baltazar', [educacion_media_superior, postgrado]).
+pertenece_educacion('Bartolo', [postgrado, educacion_basica, educacion_superior]).
+pertenece_educacion('Bartolome', [postgrado, analfabetos, educacion_media_superior]).
+pertenece_educacion('Benigno', [educacion_superior, postgrado]).
+pertenece_educacion('Benito', [analfabetos, educacion_superior, educacion_basica]).
+pertenece_educacion('Benjamin', [educacion_basica_completa, postgrado]).
+pertenece_educacion('Brandon', [analfabetos, educacion_superior, educacion_basica]).
+pertenece_educacion('Kevin', [educacion_superior, educacion_basica, educacion_media_superior]).
+pertenece_educacion('Bernardo', [educacion_basica_completa, analfabetos, educacion_media_superior]).
+pertenece_educacion('Braulio', [analfabetos, postgrado]).
+pertenece_educacion('Bruno', [postgrado, educacion_media_superior]).
+pertenece_educacion('Camilo', [educacion_media_superior, postgrado]).
+pertenece_educacion('Carlos', [analfabetos, educacion_basica_completa]).
+pertenece_educacion('Carmelo', [educacion_basica, postgrado, educacion_basica_completa]).
+pertenece_educacion('Cayetano', [postgrado, educacion_basica]).
+pertenece_educacion('Celestino', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Cesar', [educacion_basica_completa, postgrado]).
+pertenece_educacion('Cipriano', [educacion_basica, educacion_media_superior]).
+pertenece_educacion('Ciriaco', [educacion_media_superior, educacion_superior, educacion_basica]).
+pertenece_educacion('Ciro', [postgrado, educacion_basica_completa]).
+pertenece_educacion('Clemente', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Cleto', [educacion_media_superior, postgrado, analfabetos]).
+pertenece_educacion('Cosme', [educacion_media_superior, educacion_superior, analfabetos]).
+pertenece_educacion('Cristian', [postgrado, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Cristobal', [educacion_basica, educacion_media_superior]).
+pertenece_educacion('Damian', [postgrado, educacion_basica]).
+pertenece_educacion('Daniel', [educacion_superior, educacion_basica, analfabetos]).
+pertenece_educacion('David', [postgrado, educacion_media_superior]).
+pertenece_educacion('Demetrio', [analfabetos, educacion_media_superior, postgrado]).
+pertenece_educacion('Dionisio', [educacion_basica, analfabetos]).
+pertenece_educacion('Domingo', [educacion_basica, postgrado]).
+pertenece_educacion('Donato', [educacion_basica, educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Eduardo', [analfabetos, educacion_superior, postgrado]).
+pertenece_educacion('Efrain', [educacion_basica_completa, postgrado, educacion_media_superior]).
+pertenece_educacion('Elias', [educacion_basica, educacion_superior]).
+pertenece_educacion('Eliseo', [analfabetos, educacion_basica]).
+pertenece_educacion('Emiliano', [postgrado, analfabetos, educacion_basica]).
+pertenece_educacion('Emilio', [educacion_basica, educacion_media_superior, educacion_superior]).
+pertenece_educacion('Enrique', [educacion_media_superior, analfabetos, educacion_superior]).
+pertenece_educacion('Ernesto', [educacion_superior, educacion_basica]).
+pertenece_educacion('Esteban', [educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Eugenio', [educacion_basica, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Eusebio', [analfabetos, educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Evaristo', [educacion_superior, educacion_media_superior]).
+pertenece_educacion('Facundo', [educacion_superior, educacion_basica]).
+pertenece_educacion('Federico', [educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Fernando', [analfabetos, educacion_basica_completa, postgrado]).
+pertenece_educacion('Fidel', [analfabetos, educacion_basica, educacion_superior]).
+pertenece_educacion('Firman', [educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Felipe', [analfabetos, educacion_media_superior]).
+pertenece_educacion('Fernando', [educacion_superior, educacion_basica]).
+pertenece_educacion('Fidel', [educacion_basica, postgrado]).
+pertenece_educacion('Francisco', [analfabetos, educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Gabino', [analfabetos, postgrado]).
+pertenece_educacion('Gabriel', [educacion_media_superior, educacion_superior, educacion_basica]).
+pertenece_educacion('Gaspar', [educacion_basica, educacion_media_superior]).
+pertenece_educacion('Gaston', [educacion_basica_completa, analfabetos, educacion_basica]).
+pertenece_educacion('Gaudencio', [postgrado, educacion_basica_completa, educacion_basica]).
+pertenece_educacion('German', [educacion_superior, postgrado]).
+pertenece_educacion('Gerardo', [educacion_basica, educacion_superior]).
+pertenece_educacion('Gilberto', [educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Gines', [educacion_media_superior, postgrado, educacion_basica_completa]).
+pertenece_educacion('Gonzalo', [educacion_basica, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Gregorio', [educacion_basica, postgrado]).
+pertenece_educacion('Gualberto', [educacion_media_superior, educacion_basica_completa, postgrado]).
+pertenece_educacion('Guido', [educacion_media_superior, postgrado]).
+pertenece_educacion('Guillermo', [educacion_superior, analfabetos]).
+pertenece_educacion('Gustavo', [postgrado, educacion_basica, analfabetos]).
+pertenece_educacion('Hector', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Heriberto', [educacion_basica, postgrado]).
+pertenece_educacion('Higinio', [educacion_basica_completa, educacion_basica, educacion_superior]).
+pertenece_educacion('Hilario', [educacion_basica, educacion_media_superior, postgrado]).
+pertenece_educacion('Hipolito', [postgrado, educacion_basica, analfabetos]).
+pertenece_educacion('Horacio', [postgrado, educacion_basica]).
+pertenece_educacion('Hugo', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Humberto', [postgrado, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Ignacio', [educacion_media_superior, postgrado, educacion_superior]).
+pertenece_educacion('Inocencio', [postgrado, analfabetos]).
+pertenece_educacion('Ireneo', [educacion_media_superior, postgrado]).
+pertenece_educacion('Isaias', [postgrado, educacion_superior, analfabetos]).
+pertenece_educacion('Isidro', [educacion_superior, educacion_basica, educacion_basica_completa]).
+pertenece_educacion('Ismael', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Ivan', [educacion_superior, postgrado, analfabetos]).
+pertenece_educacion('Jacobo', [educacion_superior, educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Jaime', [postgrado, educacion_basica_completa]).
+pertenece_educacion('Javier', [postgrado, educacion_basica]).
+pertenece_educacion('Jeronimo', [analfabetos, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Jesus', [postgrado, educacion_media_superior]).
+pertenece_educacion('Joaquin', [educacion_basica_completa, postgrado, educacion_basica]).
+pertenece_educacion('Jonatan', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Jorge', [postgrado, educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Jose', [analfabetos, educacion_media_superior]).
+pertenece_educacion('Josefino', [educacion_superior, educacion_basica]).
+pertenece_educacion('Juan', [educacion_basica, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Julian', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Julio', [postgrado, educacion_basica]).
+pertenece_educacion('Justo', [educacion_media_superior, educacion_basica_completa, postgrado]).
+pertenece_educacion('Laureano', [educacion_media_superior, educacion_basica_completa, educacion_superior]).
+pertenece_educacion('Lauro', [postgrado, educacion_basica]).
+pertenece_educacion('Leandro', [educacion_superior, educacion_basica]).
+pertenece_educacion('Leonardo', [educacion_basica, educacion_media_superior, postgrado]).
+pertenece_educacion('Lino', [postgrado, analfabetos]).
+pertenece_educacion('Lisandro', [educacion_basica, postgrado, educacion_media_superior]).
+pertenece_educacion('Lorenzo', [educacion_basica, analfabetos, educacion_superior]).
+pertenece_educacion('Luis', [analfabetos, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Macedonio', [analfabetos, educacion_superior]).
+pertenece_educacion('Marcelino', [analfabetos, educacion_basica_completa, educacion_superior]).
+pertenece_educacion('Marco', [educacion_basica_completa, educacion_basica, postgrado]).
+pertenece_educacion('Marcus', [educacion_basica, educacion_media_superior]).
+pertenece_educacion('Mario', [educacion_basica, postgrado]).
+pertenece_educacion('Martin', [analfabetos, educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Mateo', [educacion_basica_completa, analfabetos, postgrado]).
+pertenece_educacion('Matias', [postgrado, educacion_media_superior]).
+pertenece_educacion('Mauricio', [analfabetos, educacion_basica_completa]).
+pertenece_educacion('Maximino', [educacion_basica, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Melchor', [postgrado, analfabetos, educacion_basica]).
+pertenece_educacion('Melquiades', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Miguel', [analfabetos, educacion_basica_completa]).
+pertenece_educacion('Modesto', [educacion_superior, educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Moises', [educacion_media_superior, analfabetos]).
+pertenece_educacion('Nahum', [educacion_basica, educacion_basica_completa, educacion_superior]).
+pertenece_educacion('Narciso', [educacion_basica, educacion_superior, analfabetos]).
+pertenece_educacion('Nataniel', [educacion_basica_completa, postgrado, analfabetos]).
+pertenece_educacion('Nicolas', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Oscar', [analfabetos, postgrado, educacion_superior]).
+pertenece_educacion('Pablo', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Pascual', [educacion_superior, educacion_basica]).
+pertenece_educacion('Patricio', [educacion_basica_completa, postgrado]).
+pertenece_educacion('Pedro', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Pio', [postgrado, analfabetos]).
+pertenece_educacion('Rafael', [postgrado, analfabetos]).
+pertenece_educacion('Ramiro', [educacion_basica, educacion_basica_completa, analfabetos]).
+pertenece_educacion('Ramon', [postgrado, analfabetos, educacion_superior]).
+pertenece_educacion('Raul', [analfabetos, educacion_basica, educacion_superior]).
+pertenece_educacion('Renato', [educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Frida', [postgrado, educacion_superior, educacion_basica]).
+pertenece_educacion('Reynaldo', [educacion_media_superior, educacion_basica]).
+pertenece_educacion('Ricardo', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Rigoberto', [educacion_superior, educacion_media_superior]).
+pertenece_educacion('Rogelio', [analfabetos, educacion_superior]).
+pertenece_educacion('Rodrigo', [analfabetos, postgrado, educacion_superior]).
+pertenece_educacion('Roman', [educacion_media_superior, analfabetos]).
+pertenece_educacion('Ruben', [educacion_basica_completa, postgrado, educacion_media_superior]).
+pertenece_educacion('Rufino', [postgrado, educacion_basica, educacion_superior]).
+pertenece_educacion('Salvador', [educacion_basica_completa, analfabetos, postgrado]).
+pertenece_educacion('Samuel', [educacion_superior, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Santiago', [educacion_basica, postgrado, analfabetos]).
+pertenece_educacion('Sebastian', [analfabetos, postgrado, educacion_basica_completa]).
+pertenece_educacion('Sergio', [educacion_basica, educacion_superior, postgrado]).
+pertenece_educacion('Simon', [analfabetos, educacion_superior]).
+pertenece_educacion('Sireno', [educacion_basica_completa, educacion_media_superior, educacion_superior]).
+pertenece_educacion('Socorro', [educacion_basica_completa, analfabetos, educacion_basica]).
+pertenece_educacion('Socrates', [educacion_superior, postgrado]).
+pertenece_educacion('Susano', [educacion_media_superior, educacion_basica]).
+pertenece_educacion('Tadeo', [educacion_superior, educacion_media_superior, postgrado]).
+pertenece_educacion('Teofilo', [educacion_basica, educacion_basica_completa]).
+pertenece_educacion('Tereso', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Thomas', [postgrado, educacion_basica_completa, educacion_superior]).
+pertenece_educacion('Tiburcio', [postgrado, educacion_media_superior, analfabetos]).
+pertenece_educacion('Timoteo', [analfabetos, postgrado]).
+pertenece_educacion('Tomas', [educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Tomas', [educacion_superior, analfabetos, educacion_media_superior]).
+pertenece_educacion('Ulises', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Urbano', [educacion_basica, educacion_superior]).
+pertenece_educacion('Uriel', [educacion_basica, educacion_superior]).
+pertenece_educacion('Ursulo', [analfabetos, educacion_superior]).
+pertenece_educacion('Valentin', [educacion_superior, educacion_basica, educacion_media_superior]).
+pertenece_educacion('Valerio', [educacion_basica_completa, educacion_superior, analfabetos]).
+pertenece_educacion('Vicente', [educacion_basica_completa, analfabetos]).
+pertenece_educacion('Victor', [educacion_superior, postgrado, educacion_basica_completa]).
+pertenece_educacion('Octavio', [postgrado, educacion_superior]).
+pertenece_educacion('Alfonso', [educacion_basica_completa, educacion_superior, educacion_basica]).
+pertenece_educacion('Alfredo', [educacion_superior, analfabetos]).
+pertenece_educacion('Alvaro', [educacion_basica, educacion_basica_completa, analfabetos]).
+pertenece_educacion('Ana', [analfabetos, educacion_basica, educacion_basica_completa]).
+pertenece_educacion('Andrea', [postgrado, educacion_superior]).
+pertenece_educacion('Angelica', [postgrado, educacion_basica]).
+pertenece_educacion('Angela', [educacion_superior, educacion_basica_completa, analfabetos]).
+pertenece_educacion('Antonia', [analfabetos, postgrado]).
+pertenece_educacion('Araceli', [educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Aurora', [educacion_basica, analfabetos]).
+pertenece_educacion('Beatriz', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Belen', [educacion_basica_completa, educacion_superior, postgrado]).
+pertenece_educacion('Bertha', [postgrado, educacion_media_superior, analfabetos]).
+pertenece_educacion('Blanca', [analfabetos, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Brenda', [educacion_media_superior, analfabetos, postgrado]).
+pertenece_educacion('Camila', [educacion_basica_completa, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Caridad', [postgrado, educacion_media_superior]).
+pertenece_educacion('Carina', [analfabetos, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Carla', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Carmen', [educacion_basica_completa, educacion_superior, educacion_basica]).
+pertenece_educacion('Carolina', [educacion_basica, educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Catalina', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Cecilia', [educacion_media_superior, analfabetos, educacion_superior]).
+pertenece_educacion('Celia', [educacion_basica, educacion_basica_completa]).
+pertenece_educacion('Clara', [educacion_basica, analfabetos, postgrado]).
+pertenece_educacion('Claudia', [analfabetos, educacion_basica]).
+pertenece_educacion('Concepcion', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Concha', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Consuelo', [analfabetos, educacion_basica]).
+pertenece_educacion('Diana', [educacion_basica_completa, educacion_superior, educacion_basica]).
+pertenece_educacion('Dolores', [analfabetos, educacion_basica_completa]).
+pertenece_educacion('Dora', [educacion_superior, educacion_media_superior]).
+pertenece_educacion('Dulce', [educacion_media_superior, educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Edith', [analfabetos, educacion_superior]).
+pertenece_educacion('Elena', [educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Elisa', [analfabetos, educacion_basica, educacion_media_superior]).
+pertenece_educacion('Elizabeth', [educacion_basica, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Elvira', [educacion_superior, analfabetos, postgrado]).
+pertenece_educacion('Emilia', [postgrado, educacion_basica_completa]).
+pertenece_educacion('Esperanza', [analfabetos, educacion_media_superior, educacion_superior]).
+pertenece_educacion('Ester', [educacion_superior, educacion_basica, analfabetos]).
+pertenece_educacion('Eugenia', [analfabetos, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Eva', [educacion_basica_completa, analfabetos]).
+pertenece_educacion('Fabiola', [educacion_basica_completa, postgrado, educacion_media_superior]).
+pertenece_educacion('Felipa', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Fernanda', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Flor', [educacion_basica, postgrado]).
+pertenece_educacion('Francisca', [analfabetos, postgrado, educacion_basica]).
+pertenece_educacion('Gabriela', [educacion_basica_completa, educacion_basica, educacion_media_superior]).
+pertenece_educacion('Genoveva', [educacion_superior, postgrado]).
+pertenece_educacion('Georgina', [educacion_basica, postgrado, educacion_media_superior]).
+pertenece_educacion('Gloria', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Graciela', [educacion_media_superior, postgrado, educacion_superior]).
+pertenece_educacion('Guadalupe', [educacion_basica_completa, educacion_basica, educacion_media_superior]).
+pertenece_educacion('Haydee', [educacion_basica, educacion_media_superior, educacion_superior]).
+pertenece_educacion('Helena', [educacion_basica_completa, educacion_superior, postgrado]).
+pertenece_educacion('Hilda', [educacion_superior, educacion_basica]).
+pertenece_educacion('Ines', [analfabetos, educacion_superior]).
+pertenece_educacion('Irma', [analfabetos, educacion_media_superior]).
+pertenece_educacion('Isabel', [educacion_superior, postgrado]).
+pertenece_educacion('Jacinta', [analfabetos, educacion_media_superior]).
+pertenece_educacion('Jacqueline', [educacion_basica_completa, postgrado]).
+pertenece_educacion('Jimena', [analfabetos, postgrado]).
+pertenece_educacion('Josefina', [postgrado, educacion_basica, educacion_superior]).
+pertenece_educacion('Juana', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Juliana', [educacion_basica_completa, analfabetos, educacion_basica]).
+pertenece_educacion('Julia', [analfabetos, educacion_superior]).
+pertenece_educacion('Laura', [analfabetos, postgrado]).
+pertenece_educacion('Leonor', [analfabetos, educacion_superior]).
+pertenece_educacion('Leticia', [educacion_superior, educacion_basica]).
+pertenece_educacion('Lilia', [educacion_basica_completa, educacion_basica, educacion_superior]).
+pertenece_educacion('Liliana', [educacion_media_superior, educacion_basica]).
+pertenece_educacion('Lisandro', [analfabetos, educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Lorena', [educacion_basica_completa, postgrado, educacion_basica]).
+pertenece_educacion('Lourdes', [analfabetos, educacion_media_superior, educacion_basica]).
+pertenece_educacion('Lucia', [analfabetos, educacion_media_superior]).
+pertenece_educacion('Luciana', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Lucinda', [educacion_superior, postgrado, educacion_basica]).
+pertenece_educacion('Luisa', [postgrado, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Luz', [educacion_basica_completa, postgrado]).
+pertenece_educacion('Magdalena', [postgrado, educacion_basica_completa, educacion_superior]).
+pertenece_educacion('Margarita', [postgrado, educacion_basica]).
+pertenece_educacion('Maria', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Mariana', [educacion_superior, educacion_media_superior]).
+pertenece_educacion('Maricela', [analfabetos, postgrado]).
+pertenece_educacion('Marilu', [educacion_basica, analfabetos]).
+pertenece_educacion('Marina', [postgrado, educacion_superior]).
+pertenece_educacion('Marisa', [educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Marta', [educacion_media_superior, educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Martina', [educacion_basica, educacion_superior]).
+pertenece_educacion('Matilde', [educacion_superior, postgrado, educacion_media_superior]).
+pertenece_educacion('Melisa', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Mercedes', [educacion_media_superior, educacion_basica_completa, analfabetos]).
+pertenece_educacion('Monica', [educacion_media_superior, educacion_basica_completa, postgrado]).
+pertenece_educacion('Miriam', [postgrado, educacion_media_superior, analfabetos]).
+pertenece_educacion('Mirta', [educacion_basica, postgrado]).
+pertenece_educacion('Nadia', [educacion_basica, postgrado]).
+pertenece_educacion('Natalia', [educacion_superior, educacion_basica_completa]).
+pertenece_educacion('Natividad', [postgrado, educacion_media_superior, analfabetos]).
+pertenece_educacion('Nicole', [educacion_basica_completa, educacion_media_superior, postgrado]).
+pertenece_educacion('Norma', [educacion_basica, educacion_media_superior, educacion_basica_completa]).
+pertenece_educacion('Olga', [educacion_basica_completa, educacion_superior, educacion_basica]).
+pertenece_educacion('Olivia', [educacion_superior, postgrado, educacion_basica_completa]).
+pertenece_educacion('Paola', [postgrado, educacion_superior, educacion_basica]).
+pertenece_educacion('Patricia', [educacion_superior, analfabetos, educacion_basica_completa]).
+pertenece_educacion('Paula', [educacion_superior, educacion_media_superior, analfabetos]).
+pertenece_educacion('Paulina', [postgrado, educacion_media_superior, educacion_superior]).
+pertenece_educacion('Paz', [educacion_basica_completa, educacion_media_superior, educacion_superior]).
+pertenece_educacion('Petra', [educacion_basica_completa, analfabetos, educacion_basica]).
+pertenece_educacion('Pilar', [postgrado, educacion_basica, educacion_superior]).
+pertenece_educacion('Priscila', [educacion_basica, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Raquel', [postgrado, educacion_media_superior, educacion_basica]).
+pertenece_educacion('Rebeca', [educacion_superior, postgrado, educacion_basica_completa]).
+pertenece_educacion('Regina', [postgrado, educacion_superior, educacion_media_superior]).
+pertenece_educacion('Renata', [educacion_media_superior, educacion_basica_completa, analfabetos]).
+pertenece_educacion('Ricarda', [educacion_basica, postgrado, educacion_superior]).
+pertenece_educacion('Rita', [analfabetos, educacion_basica, educacion_superior]).
+pertenece_educacion('Roberta', [educacion_basica, postgrado]).
+pertenece_educacion('Rocio', [postgrado, analfabetos]).
+pertenece_educacion('Rosa', [educacion_basica, educacion_basica_completa, postgrado]).
+pertenece_educacion('Rosalia', [educacion_basica_completa, educacion_media_superior, educacion_superior]).
+pertenece_educacion('Rosario', [educacion_media_superior, analfabetos, educacion_basica_completa]).
+pertenece_educacion('Ruth', [educacion_basica, postgrado]).
+pertenece_educacion('Salome', [educacion_basica_completa, educacion_basica]).
+pertenece_educacion('Sandra', [educacion_media_superior, educacion_superior, postgrado]).
+pertenece_educacion('Sara', [educacion_media_superior, educacion_superior]).
+pertenece_educacion('Silvia', [analfabetos, educacion_basica_completa]).
+pertenece_educacion('Socorro', [educacion_basica_completa, educacion_media_superior, postgrado]).
+pertenece_educacion('Sofia', [educacion_basica_completa, educacion_basica, educacion_superior]).
+pertenece_educacion('Soledad', [educacion_superior, educacion_media_superior, analfabetos]).
+pertenece_educacion('Susana', [educacion_superior, postgrado, educacion_basica]).
+pertenece_educacion('Tamara', [educacion_basica, postgrado, educacion_superior]).
+pertenece_educacion('Tatiana', [educacion_superior, analfabetos]).
+pertenece_educacion('Teresa', [educacion_basica, postgrado, educacion_superior]).
+pertenece_educacion('Ursula', [postgrado, analfabetos]).
+pertenece_educacion('Vanesa', [educacion_superior, educacion_basica_completa, educacion_media_superior]).
+pertenece_educacion('Victoria', [educacion_basica, postgrado]).
+pertenece_educacion('Violeta', [educacion_media_superior, educacion_superior, analfabetos]).
+pertenece_educacion('Virginia', [educacion_basica_completa, educacion_basica, educacion_media_superior]).
+pertenece_educacion('Yolanda', [educacion_basica, postgrado]).
+pertenece_educacion('Zoila', [educacion_superior, analfabetos, postgrado]).
+
 
 % Definir la situacion economica de cada persona
 
@@ -1213,7 +2257,7 @@ religion(sin_religion).
 pertenece_religion('Juan', [hinduistas, testigos_de_jehova, judios]).
 pertenece_religion('Maria', [hinduistas]).
 pertenece_religion('Pedro', [sin_religion, mormones]).
-pertenece_religion('Ana', [testigos_de_jehova, judios, protestantes_evangelicos]).
+pertenece_religion('Ana', [judios, protestantes_evangelicos]).
 pertenece_religion('Aaron', [protestantes_evangelicos]).
 pertenece_religion('Abel', [budistas]).
 pertenece_religion('Arely', [budistas, sin_religion, hinduistas]).
@@ -1340,7 +2384,6 @@ pertenece_religion('Jonatan', [judios, catolicos]).
 pertenece_religion('Jorge', [catolicos, judios, musulmanes]).
 pertenece_religion('Jose', [musulmanes, sin_religion, budistas]).
 pertenece_religion('Josefino', [catolicos, musulmanes, budistas]).
-pertenece_religion('Juan', [hinduistas, musulmanes, testigos_de_jehova]).
 pertenece_religion('Julian', [musulmanes, testigos_de_jehova]).
 pertenece_religion('Julio', [catolicos, musulmanes, protestantes_evangelicos]).
 pertenece_religion('Justo', [testigos_de_jehova, budistas, catolicos]).
@@ -1375,7 +2418,6 @@ pertenece_religion('Oscar', [budistas, sin_religion, judios]).
 pertenece_religion('Pablo', [budistas, testigos_de_jehova]).
 pertenece_religion('Pascual', [hinduistas, sin_religion, budistas]).
 pertenece_religion('Patricio', [catolicos, protestantes_evangelicos, judios]).
-pertenece_religion('Pedro', [hinduistas, judios, mormones]).
 pertenece_religion('Pio', [sin_religion, testigos_de_jehova, musulmanes]).
 pertenece_religion('Rafael', [catolicos, sin_religion, protestantes_evangelicos]).
 pertenece_religion('Ramiro', [judios, mormones]).
@@ -1421,7 +2463,6 @@ pertenece_religion('Octavio', [hinduistas, protestantes_evangelicos, musulmanes]
 pertenece_religion('Alfonso', [protestantes_evangelicos, catolicos, musulmanes]).
 pertenece_religion('Alfredo', [catolicos, testigos_de_jehova, protestantes_evangelicos]).
 pertenece_religion('Alvaro', [protestantes_evangelicos, hinduistas, testigos_de_jehova]).
-pertenece_religion('Ana', [budistas, mormones, sin_religion]).
 pertenece_religion('Andrea', [testigos_de_jehova, mormones]).
 pertenece_religion('Angelica', [hinduistas, musulmanes, protestantes_evangelicos]).
 pertenece_religion('Angela', [protestantes_evangelicos, budistas, catolicos]).
@@ -1560,6 +2601,29 @@ pertenece_religion('Virginia', [judios, catolicos, hinduistas]).
 pertenece_religion('Yolanda', [testigos_de_jehova, budistas, mormones]).
 pertenece_religion('Zoila', [budistas, judios, sin_religion]).
 
+subtipo_religion(espanol, [judios, catolicos]).
+subtipo_religion(ingles, [budistas, catolicos]).
+subtipo_religion(frances, [catolicos, judios]).
+subtipo_religion(aleman, [judios, mormones]).
+subtipo_religion(italiano, [musulmanes, catolicos]).
+subtipo_religion(portugues, [catolicos, testigos_de_jehova, mormones]).
+subtipo_religion(chino_mandarin, [catolicos, sin_religion]).
+subtipo_religion(japones, [hinduistas, sin_religion]).
+subtipo_religion(nahuatl, [protestantes_evangelicos, hinduistas]).
+subtipo_religion(maya, [sin_religion, hinduistas, catolicos]).
+subtipo_religion(mixteco, [protestantes_evangelicos]).
+subtipo_religion(zapoteco, [musulmanes, hinduistas]).
+subtipo_religion(totonaco, [judios, catolicos]).
+subtipo_religion(otomi, [musulmanes, mormones, catolicos]).
+subtipo_religion(tzotzil, [sin_religion, protestantes_evangelicos]).
+subtipo_religion(tzeltal, [catolicos, mormones]).
+subtipo_religion(mazateco, [musulmanes, catolicos]).
+subtipo_religion(mazahua, [mormones, catolicos, testigos_de_jehova]).
+subtipo_religion(chol, [protestantes_evangelicos, budistas]).
+subtipo_religion(tarahumara, [musulmanes, protestantes_evangelicos]).
+subtipo_religion(huasteco, [protestantes_evangelicos, testigos_de_jehova]).
+subtipo_religion(purepecha, [sin_religion, judios]).
+
 % Definición de idiomas
 idioma(espanol).
 idioma(nahuatl).
@@ -1572,362 +2636,357 @@ idioma(italiano).
 
 % Lenguas (Se Cambio, antes era idiomas, en idomas haremos otros hechos)
 lengua_primaria(espanol).
-lenguas_indigenas([nahuatl, maya, mixteco, zapoteco, totonaco, otomi, tzotzil, tzeltal, mazateco, mazahua, chol, tarahumara, huasteco, purepecha]).
+lenguas_indigenas([nahuatl, maya, mixteco, zapoteco, totonaco, otomi, tzotzil, tzeltal, mazateco,
+mazahua, chol, tarahumara, huasteco, purepecha]).
 lenguas_extranjeras([ingles, frances, aleman, italiano, chino_mandarin, portugues, japones]).
 
 
 % Subcategoria de Idioma, ¿que habla dicha persona?
 
-habla('Juan', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Maria', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Pedro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Aaron', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Abel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Arely', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alma', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Abelardo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Abraham', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Adalberto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Adan', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Adolfo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Adrian', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Agustin', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alejandro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alex', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alexis', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alfonso', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alfredo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Allan', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alonso', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alvaro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Amado', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Amador', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Amando', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Amancio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Amaranto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Americo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Amilcar', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Anastasio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Anselmo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Antonio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Armando', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Arnoldo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Arturo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Augusto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Aurelio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Baltazar', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Bartolo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Bartolome', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Benigno', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Benito', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Benjamin', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Brandon', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Kevin', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Bernardo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Braulio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Bruno', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Camilo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Carlos', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Carmelo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cayetano', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Celestino', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cesar', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cipriano', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ciriaco', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ciro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Clemente', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cleto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cosme', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cristian', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cristobal', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Damian', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Daniel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('David', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Demetrio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Dionisio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Domingo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Donato', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Eduardo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Efrain', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Elias', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Eliseo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Emiliano', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Emilio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Enrique', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ernesto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Esteban', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Eugenio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Eusebio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Evaristo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Facundo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Federico', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Fernando', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Fidel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Firman', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Felipe', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Fernando', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Fidel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Francisco', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gabino', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gabriel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gaspar', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gaston', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gaudencio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('German', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gerardo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gilberto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gines', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gonzalo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gregorio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gualberto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Guido', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Guillermo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gustavo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Hector', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Heriberto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Higinio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Hilario', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Hipolito', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Horacio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Hugo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Humberto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ignacio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Inocencio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ireneo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Isaias', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Isidro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ismael', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ivan', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jacobo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jaime', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Javier', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jeronimo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jesus', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Joaquin', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jonatan', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jorge', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jose', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Josefino', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Juan', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Julian', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Julio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Justo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Laureano', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lauro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Leandro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Leonardo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lino', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lisandro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lorenzo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Luis', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Macedonio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Marcelino', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Marco', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Marcus', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Mario', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Martin', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Mateo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Matias', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Mauricio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Maximino', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Melchor', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Melquiades', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Miguel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Modesto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Moises', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Nahum', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Narciso', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Nataniel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Nicolas', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Oscar', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Pablo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Pascual', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Patricio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Pedro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Pio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rafael', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ramiro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ramon', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Raul', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Renato', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Frida', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Reynaldo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ricardo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rigoberto', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rogelio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rodrigo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Roman', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ruben', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rufino', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Salvador', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Samuel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Santiago', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Sebastian', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Sergio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Simon', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Sireno', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Socorro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Socrates', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Susano', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Tadeo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Teofilo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Tereso', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Thomas', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Tiburcio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Timoteo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Tomas', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Tomas', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ulises', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Urbano', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Uriel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ursulo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Valentin', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Valerio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Vicente', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Victor', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Octavio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alfonso', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alfredo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Alvaro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Andrea', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Angelica', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Angela', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Antonia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Araceli', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Aurora', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Beatriz', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Belen', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Bertha', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Blanca', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Brenda', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Camila', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Caridad', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Carina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Carla', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Carmen', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Carolina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Catalina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Cecilia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Celia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Clara', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Claudia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Concepcion', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Concha', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Consuelo', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Diana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Dolores', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Dora', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Dulce', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Edith', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Elena', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Elisa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Elizabeth', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Elvira', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Emilia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Esperanza', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ester', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Eugenia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Eva', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Fabiola', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Felipa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Fernanda', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Flor', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Francisca', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gabriela', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Genoveva', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Georgina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Gloria', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Graciela', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Guadalupe', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Haydee', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Helena', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Hilda', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ines', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Irma', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Isabel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jacinta', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jacqueline', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Jimena', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Josefina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Juana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Juliana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Julia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Laura', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Leonor', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Leticia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lilia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Liliana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lisandro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lorena', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lourdes', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lucia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Luciana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Lucinda', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Luisa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Luz', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Magdalena', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Margarita', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Maria', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Mariana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Maricela', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Marilu', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Marina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Marisa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Marta', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Martina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Matilde', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Melisa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Mercedes', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Monica', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Miriam', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Mirta', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Nadia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Natalia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Natividad', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Nicole', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Norma', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Olga', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Olivia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Paola', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Patricia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Paula', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Paulina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Paz', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Petra', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Pilar', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Priscila', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Raquel', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rebeca', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Regina', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Renata', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ricarda', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rita', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Roberta', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rocio', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rosa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rosalia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Rosario', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ruth', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Salome', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Sandra', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Sara', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Silvia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Socorro', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Sofia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Soledad', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Susana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Tamara', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Tatiana', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Teresa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Ursula', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Vanesa', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Victoria', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Violeta', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Virginia', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Yolanda', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
-habla('Zoila', [aleman, chino_mandarin, espanol, frances, ingles, italiano, japones, portugues]).
+habla('Juan', [espanol, ingles]).
+habla('Maria', [espanol, italiano]).
+habla('Pedro', [espanol, frances]).
+habla('Ana', [espanol, portugues]).
+habla('Aaron', [espanol, aleman]).
+habla('Abel', [espanol, japones]).
+habla('Arely', [espanol, chino_mandarin]).
+habla('Alma', [espanol, italiano]).
+habla('Abelardo', [espanol, aleman]).
+habla('Abraham', [espanol, ingles]).
+habla('Adalberto', [espanol, portugues]).
+habla('Adan', [espanol, frances]).
+habla('Adolfo', [espanol, chino_mandarin]).
+habla('Adrian', [espanol, italiano]).
+habla('Agustin', [espanol, ingles]).
+habla('Alejandro', [espanol, japones]).
+habla('Alex', [espanol, portugues]).
+habla('Alexis', [espanol, aleman]).
+habla('Alfonso', [espanol, italiano]).
+habla('Alfredo', [espanol, frances]).
+habla('Allan', [espanol, chino_mandarin]).
+habla('Alonso', [espanol, ingles]).
+habla('Alvaro', [espanol, japones]).
+habla('Amado', [espanol, portugues]).
+habla('Amador', [espanol, aleman]).
+habla('Amando', [espanol, italiano]).
+habla('Amancio', [espanol, chino_mandarin]).
+habla('Amaranto', [espanol, frances]).
+habla('Americo', [espanol, ingles]).
+habla('Amilcar', [espanol, portugues]).
+habla('Anastasio', [espanol, aleman]).
+habla('Anselmo', [espanol, japones]).
+habla('Antonio', [espanol, italiano]).
+habla('Armando', [espanol, frances]).
+habla('Arnoldo', [espanol, ingles]).
+habla('Arturo', [espanol, chino_mandarin]).
+habla('Augusto', [espanol, portugues]).
+habla('Aurelio', [espanol, aleman]).
+habla('Baltazar', [espanol, italiano]).
+habla('Bartolo', [espanol, japones]).
+habla('Bartolome', [espanol, ingles]).
+habla('Benigno', [espanol, frances]).
+habla('Benito', [espanol, chino_mandarin]).
+habla('Benjamin', [espanol, portugues]).
+habla('Brandon', [espanol, aleman]).
+habla('Kevin', [espanol, italiano]).
+habla('Bernardo', [espanol, ingles]).
+habla('Braulio', [espanol, japones]).
+habla('Bruno', [espanol, portugues]).
+habla('Camilo', [espanol, aleman]).
+habla('Carlos', [espanol, frances]).
+habla('Carmelo', [espanol, chino_mandarin]).
+habla('Cayetano', [espanol, ingles]).
+habla('Celestino', [espanol, italiano]).
+habla('Cesar', [espanol, japones]).
+habla('Cipriano', [espanol, portugues]).
+habla('Ciriaco', [espanol, aleman]).
+habla('Ciro', [espanol, frances]).
+habla('Clemente', [espanol, ingles]).
+habla('Cleto', [espanol, italiano]).
+habla('Cosme', [espanol, japones]).
+habla('Cristian', [espanol, portugues]).
+habla('Cristobal', [espanol, aleman]).
+habla('Damian', [espanol, chino_mandarin]).
+habla('Daniel', [espanol, frances]).
+habla('David', [espanol, ingles]).
+habla('Demetrio', [espanol, italiano]).
+habla('Dionisio', [espanol, japones]).
+habla('Domingo', [espanol, portugues]).
+habla('Donato', [espanol, aleman]).
+habla('Eduardo', [espanol, ingles]).
+habla('Efrain', [espanol, chino_mandarin]).
+habla('Elias', [espanol, italiano]).
+habla('Eliseo', [espanol, frances]).
+habla('Emiliano', [espanol, portugues]).
+habla('Emilio', [espanol, aleman]).
+habla('Enrique', [espanol, ingles]).
+habla('Ernesto', [espanol, japones]).
+habla('Esteban', [espanol, chino_mandarin]).
+habla('Eugenio', [espanol, portugues]).
+habla('Eusebio', [espanol, aleman]).
+habla('Evaristo', [espanol, italiano]).
+habla('Facundo', [espanol, ingles]).
+habla('Federico', [espanol, japones]).
+habla('Fernando', [espanol, portugues]).
+habla('Fidel', [espanol, aleman]).
+habla('Firman', [espanol, italiano]).
+habla('Felipe', [espanol, frances]).
+habla('Francisco', [espanol, ingles]).
+habla('Gabino', [espanol, japones]).
+habla('Gabriel', [espanol, chino_mandarin]).
+habla('Gaspar', [espanol, portugues]).
+habla('Gaston', [espanol, aleman]).
+habla('Gaudencio', [espanol, italiano]).
+habla('German', [espanol, ingles]).
+habla('Gerardo', [espanol, frances]).
+habla('Gilberto', [espanol, japones]).
+habla('Gines', [espanol, aleman]).
+habla('Gonzalo', [espanol, chino_mandarin]).
+habla('Gregorio', [espanol, frances]).
+habla('Gualberto', [espanol, ingles]).
+habla('Guido', [espanol, italiano]).
+habla('Guillermo', [espanol, japones]).
+habla('Gustavo', [espanol, portugues]).
+habla('Hector', [espanol, aleman]).
+habla('Heriberto', [espanol, chino_mandarin]).
+habla('Higinio', [espanol, frances]).
+habla('Hilario', [espanol, ingles]).
+habla('Hipolito', [espanol, italiano]).
+habla('Horacio', [espanol, japones]).
+habla('Hugo', [espanol, portugues]).
+habla('Humberto', [espanol, aleman]).
+habla('Ignacio', [espanol, chino_mandarin]).
+habla('Inocencio', [espanol, frances]).
+habla('Ireneo', [espanol, ingles]).
+habla('Isaias', [espanol, italiano]).
+habla('Isidro', [espanol, japones]).
+habla('Ismael', [espanol, portugues]).
+habla('Ivan', [espanol, aleman]).
+habla('Jacobo', [espanol, chino_mandarin]).
+habla('Jaime', [espanol, frances]).
+habla('Javier', [espanol, ingles]).
+habla('Jeronimo', [espanol, italiano]).
+habla('Jesus', [espanol, japones]).
+habla('Joaquin', [espanol, portugues]).
+habla('Jonatan', [espanol, aleman]).
+habla('Jorge', [espanol, chino_mandarin]).
+habla('Jose', [espanol, frances]).
+habla('Josefino', [espanol, ingles]).
+habla('Julian', [espanol, japones]).
+habla('Julio', [espanol, portugues]).
+habla('Justo', [espanol, aleman]).
+habla('Laureano', [espanol, chino_mandarin]).
+habla('Lauro', [espanol, frances]).
+habla('Leandro', [espanol, ingles]).
+habla('Leonardo', [espanol, italiano]).
+habla('Lino', [espanol, japones]).
+habla('Lisandro', [espanol, portugues]).
+habla('Lorenzo', [espanol, aleman]).
+habla('Luis', [espanol, chino_mandarin]).
+habla('Macedonio', [espanol, frances]).
+habla('Marcelino', [espanol, ingles]).
+habla('Marco', [espanol, italiano]).
+habla('Marcus', [espanol, japones]).
+habla('Mario', [espanol, portugues]).
+habla('Martin', [espanol, aleman]).
+habla('Mateo', [espanol, chino_mandarin]).
+habla('Matias', [espanol, frances]).
+habla('Mauricio', [espanol, ingles]).
+habla('Maximino', [espanol, italiano]).
+habla('Melchor', [espanol, japones]).
+habla('Melquiades', [espanol, portugues]).
+habla('Miguel', [espanol, aleman]).
+habla('Modesto', [espanol, chino_mandarin]).
+habla('Moises', [espanol, frances]).
+habla('Nahum', [espanol, ingles]).
+habla('Narciso', [espanol, italiano]).
+habla('Nataniel', [espanol, japones]).
+habla('Nicolas', [espanol, portugues]).
+habla('Oscar', [espanol, aleman]).
+habla('Pablo', [espanol, chino_mandarin]).
+habla('Pascual', [espanol, frances]).
+habla('Patricio', [espanol, ingles]).
+habla('Pio', [espanol, japones]).
+habla('Rafael', [espanol, portugues]).
+habla('Ramiro', [espanol, aleman]).
+habla('Ramon', [espanol, chino_mandarin]).
+habla('Raul', [espanol, frances]).
+habla('Renato', [espanol, ingles]).
+habla('Frida', [espanol, italiano]).
+habla('Reynaldo', [espanol, japones]).
+habla('Ricardo', [espanol, portugues]).
+habla('Rigoberto', [espanol, aleman]).
+habla('Rogelio', [espanol, chino_mandarin]).
+habla('Rodrigo', [espanol, frances]).
+habla('Roman', [espanol, ingles]).
+habla('Ruben', [espanol, italiano]).
+habla('Rufino', [espanol, japones]).
+habla('Salvador', [espanol, portugues]).
+habla('Samuel', [espanol, aleman]).
+habla('Santiago', [espanol, chino_mandarin]).
+habla('Sebastian', [espanol, frances]).
+habla('Sergio', [espanol, ingles]).
+habla('Simon', [espanol, italiano]).
+habla('Sireno', [espanol, japones]).
+habla('Socorro', [espanol, portugues]).
+habla('Socrates', [espanol, aleman]).
+habla('Susano', [espanol, chino_mandarin]).
+habla('Tadeo', [espanol, frances]).
+habla('Teofilo', [espanol, ingles]).
+habla('Tereso', [espanol, italiano]).
+habla('Thomas', [espanol, japones]).
+habla('Tiburcio', [espanol, portugues]).
+habla('Timoteo', [espanol, aleman]).
+habla('Tomas', [espanol, chino_mandarin]).
+habla('Ulises', [espanol, frances]).
+habla('Urbano', [espanol, ingles]).
+habla('Uriel', [espanol, italiano]).
+habla('Ursulo', [espanol, japones]).
+habla('Valentin', [espanol, portugues]).
+habla('Valerio', [espanol, aleman]).
+habla('Vicente', [espanol, chino_mandarin]).
+habla('Victor', [espanol, frances]).
+habla('Octavio', [espanol, aleman]).
+habla('Alfonso', [espanol, chino_mandarin]).
+habla('Alfredo', [espanol, frances]).
+habla('Alvaro', [espanol, ingles]).
+habla('Andrea', [espanol, japones]).
+habla('Angelica', [espanol, portugues]).
+habla('Angela', [espanol, aleman]).
+habla('Antonia', [espanol, chino_mandarin]).
+habla('Araceli', [espanol, frances]).
+habla('Aurora', [espanol, ingles]).
+habla('Beatriz', [espanol, italiano]).
+habla('Belen', [espanol, japones]).
+habla('Bertha', [espanol, portugues]).
+habla('Blanca', [espanol, aleman]).
+habla('Brenda', [espanol, chino_mandarin]).
+habla('Camila', [espanol, frances]).
+habla('Caridad', [espanol, ingles]).
+habla('Carina', [espanol, italiano]).
+habla('Carla', [espanol, japones]).
+habla('Carmen', [espanol, portugues]).
+habla('Carolina', [espanol, aleman]).
+habla('Catalina', [espanol, chino_mandarin]).
+habla('Cecilia', [espanol, frances]).
+habla('Celia', [espanol, ingles]).
+habla('Clara', [espanol, italiano]).
+habla('Claudia', [espanol, japones]).
+habla('Concepcion', [espanol, portugues]).
+habla('Concha', [espanol, aleman]).
+habla('Consuelo', [espanol, chino_mandarin]).
+habla('Diana', [espanol, frances]).
+habla('Dolores', [espanol, ingles]).
+habla('Dora', [espanol, italiano]).
+habla('Dulce', [espanol, japones]).
+habla('Edith', [espanol, portugues]).
+habla('Elena', [espanol, aleman]).
+habla('Elisa', [espanol, chino_mandarin]).
+habla('Elizabeth', [espanol, frances]).
+habla('Elvira', [espanol, ingles]).
+habla('Emilia', [espanol, italiano]).
+habla('Esperanza', [espanol, japones]).
+habla('Ester', [espanol, portugues]).
+habla('Eugenia', [espanol, aleman]).
+habla('Eva', [espanol, chino_mandarin]).
+habla('Fabiola', [espanol, frances]).
+habla('Felipa', [espanol, ingles]).
+habla('Fernanda', [espanol, italiano]).
+habla('Flor', [espanol, japones]).
+habla('Francisca', [espanol, portugues]).
+habla('Gabriela', [espanol, aleman]).
+habla('Genoveva', [espanol, chino_mandarin]).
+habla('Georgina', [espanol, frances]).
+habla('Gloria', [espanol, ingles]).
+habla('Graciela', [espanol, italiano]).
+habla('Guadalupe', [espanol, japones]).
+habla('Haydee', [espanol, portugues]).
+habla('Helena', [espanol, aleman]).
+habla('Hilda', [espanol, chino_mandarin]).
+habla('Ines', [espanol, frances]).
+habla('Irma', [espanol, ingles]).
+habla('Isabel', [espanol, italiano]).
+habla('Jacinta', [espanol, japones]).
+habla('Jacqueline', [espanol, portugues]).
+habla('Jimena', [espanol, aleman]).
+habla('Josefina', [espanol, chino_mandarin]).
+habla('Juana', [espanol, frances]).
+habla('Juliana', [espanol, ingles]).
+habla('Julia', [espanol, italiano]).
+habla('Laura', [espanol, japones]).
+habla('Leonor', [espanol, portugues]).
+habla('Leticia', [espanol, aleman]).
+habla('Lilia', [espanol, chino_mandarin]).
+habla('Liliana', [espanol, frances]).
+habla('Lisandro', [espanol, ingles]).
+habla('Lorena', [espanol, italiano]).
+habla('Lourdes', [espanol, japones]).
+habla('Lucia', [espanol, portugues]).
+habla('Luciana', [espanol, aleman]).
+habla('Lucinda', [espanol, chino_mandarin]).
+habla('Luisa', [espanol, frances]).
+habla('Luz', [espanol, ingles]).
+habla('Magdalena', [espanol, italiano]).
+habla('Margarita', [espanol, japones]).
+habla('Maria', [espanol, portugues]).
+habla('Mariana', [espanol, aleman]).
+habla('Maricela', [espanol, chino_mandarin]).
+habla('Marilu', [espanol, frances]).
+habla('Marina', [espanol, ingles]).
+habla('Marisa', [espanol, italiano]).
+habla('Marta', [espanol, japones]).
+habla('Martina', [espanol, portugues]).
+habla('Matilde', [espanol, aleman]).
+habla('Melisa', [espanol, chino_mandarin]).
+habla('Mercedes', [espanol, frances]).
+habla('Monica', [espanol, ingles]).
+habla('Miriam', [espanol, italiano]).
+habla('Mirta', [espanol, japones]).
+habla('Nadia', [espanol, portugues]).
+habla('Natalia', [espanol, aleman]).
+habla('Natividad', [espanol, chino_mandarin]).
+habla('Nicole', [espanol, frances]).
+habla('Norma', [espanol, ingles]).
+habla('Olga', [espanol, italiano]).
+habla('Olivia', [espanol, japones]).
+habla('Paola', [espanol, portugues]).
+habla('Patricia', [espanol, aleman]).
+habla('Paula', [espanol, chino_mandarin]).
+habla('Paulina', [espanol, frances]).
+habla('Paz', [espanol, ingles]).
+habla('Petra', [espanol, italiano]).
+habla('Pilar', [espanol, japones]).
+habla('Priscila', [espanol, portugues]).
+habla('Raquel', [espanol, aleman]).
+habla('Rebeca', [espanol, chino_mandarin]).
+habla('Regina', [espanol, frances]).
+habla('Renata', [espanol, ingles]).
+habla('Ricarda', [espanol, italiano]).
+habla('Rita', [espanol, japones]).
+habla('Roberta', [espanol, portugues]).
+habla('Rocio', [espanol, aleman]).
+habla('Rosa', [espanol, chino_mandarin]).
+habla('Rosalia', [espanol, frances]).
+habla('Rosario', [espanol, ingles]).
+habla('Ruth', [espanol, italiano]).
+habla('Salome', [espanol, japones]).
+habla('Sandra', [espanol, portugues]).
+habla('Sara', [espanol, aleman]).
+habla('Silvia', [espanol, chino_mandarin]).
+habla('Socorro', [espanol, frances]).
+habla('Sofia', [espanol, ingles]).
+habla('Soledad', [espanol, italiano]).
+habla('Susana', [espanol, japones]).
+habla('Tamara', [espanol, portugues]).
+habla('Tatiana', [espanol, aleman]).
+habla('Teresa', [espanol, chino_mandarin]).
+habla('Ursula', [espanol, frances]).
+habla('Vanesa', [espanol, ingles]).
+habla('Victoria', [espanol, italiano]).
+habla('Violeta', [espanol, japones]).
+habla('Virginia', [espanol, portugues]).
+habla('Yolanda', [espanol, aleman]).
+habla('Zoila', [espanol, chino_mandarin]).
 
 % lenguas indigenas
 
@@ -2036,356 +3095,489 @@ estado_civil('viud@').
 estado_civil(en_union_libre).
 
 
-persona_estado_civil('Juan', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Maria', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Pedro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Aaron', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Abel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Arely', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alma', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Abelardo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Abraham', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Adalberto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Adan', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Adolfo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Adrian', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Agustin', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alejandro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alex', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alexis', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alfonso', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alfredo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Allan', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alonso', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alvaro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Amado', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Amador', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Amando', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Amancio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Amaranto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Americo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Amilcar', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Anastasio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Anselmo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Antonio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Armando', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Arnoldo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Arturo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Augusto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Aurelio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Baltazar', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Bartolo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Bartolome', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Benigno', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Benito', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Benjamin', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Brandon', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Kevin', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Bernardo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Braulio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Bruno', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Camilo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Carlos', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Carmelo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cayetano', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Celestino', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cesar', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cipriano', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ciriaco', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ciro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Clemente', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cleto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cosme', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cristian', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cristobal', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Damian', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Daniel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('David', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Demetrio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Dionisio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Domingo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Donato', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Eduardo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Efrain', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Elias', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Eliseo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Emiliano', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Emilio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Enrique', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ernesto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Esteban', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Eugenio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Eusebio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Evaristo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Facundo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Federico', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Fernando', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Fidel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Firman', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Felipe', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Fernando', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Fidel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Francisco', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gabino', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gabriel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gaspar', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gaston', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gaudencio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('German', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gerardo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gilberto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gines', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gonzalo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gregorio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gualberto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Guido', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Guillermo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gustavo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Hector', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Heriberto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Higinio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Hilario', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Hipolito', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Horacio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Hugo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Humberto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ignacio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Inocencio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ireneo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Isaias', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Isidro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ismael', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ivan', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jacobo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jaime', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Javier', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jeronimo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jesus', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Joaquin', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jonatan', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jorge', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jose', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Josefino', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Juan', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Julian', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Julio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Justo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Laureano', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lauro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Leandro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Leonardo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lino', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lisandro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lorenzo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Luis', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Macedonio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Marcelino', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Marco', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Marcus', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Mario', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Martin', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Mateo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Matias', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Mauricio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Maximino', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Melchor', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Melquiades', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Miguel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Modesto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Moises', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Nahum', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Narciso', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Nataniel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Nicolas', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Oscar', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Pablo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Pascual', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Patricio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Pedro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Pio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rafael', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ramiro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ramon', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Raul', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Renato', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Frida', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Reynaldo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ricardo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rigoberto', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rogelio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rodrigo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Roman', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ruben', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rufino', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Salvador', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Samuel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Santiago', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Sebastian', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Sergio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Simon', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Sireno', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Socorro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Socrates', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Susano', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Tadeo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Teofilo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Tereso', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Thomas', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Tiburcio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Timoteo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Tomas', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Tomas', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ulises', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Urbano', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Uriel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ursulo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Valentin', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Valerio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Vicente', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Victor', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Octavio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alfonso', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alfredo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Alvaro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Andrea', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Angelica', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Angela', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Antonia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Araceli', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Aurora', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Beatriz', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Belen', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Bertha', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Blanca', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Brenda', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Camila', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Caridad', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Carina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Carla', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Carmen', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Carolina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Catalina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Cecilia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Celia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Clara', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Claudia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Concepcion', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Concha', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Consuelo', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Diana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Dolores', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Dora', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Dulce', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Edith', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Elena', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Elisa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Elizabeth', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Elvira', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Emilia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Esperanza', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ester', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Eugenia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Eva', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Fabiola', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Felipa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Fernanda', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Flor', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Francisca', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gabriela', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Genoveva', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Georgina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Gloria', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Graciela', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Guadalupe', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Haydee', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Helena', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Hilda', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ines', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Irma', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Isabel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jacinta', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jacqueline', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Jimena', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Josefina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Juana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Juliana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Julia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Laura', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Leonor', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Leticia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lilia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Liliana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lisandro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lorena', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lourdes', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lucia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Luciana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Lucinda', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Luisa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Luz', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Magdalena', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Margarita', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Maria', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Mariana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Maricela', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Marilu', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Marina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Marisa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Marta', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Martina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Matilde', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Melisa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Mercedes', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Monica', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Miriam', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Mirta', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Nadia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Natalia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Natividad', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Nicole', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Norma', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Olga', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Olivia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Paola', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Patricia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Paula', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Paulina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Paz', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Petra', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Pilar', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Priscila', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Raquel', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rebeca', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Regina', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Renata', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ricarda', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rita', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Roberta', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rocio', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rosa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rosalia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Rosario', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ruth', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Salome', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Sandra', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Sara', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Silvia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Socorro', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Sofia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Soledad', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Susana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Tamara', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Tatiana', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Teresa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Ursula', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Vanesa', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Victoria', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Violeta', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Virginia', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Yolanda', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
-persona_estado_civil('Zoila', ['casad@', 'divorciad@', 'solter@', 'union_libre', 'viud@']).
+persona_estado_civil('Juan', ['solter@']).
+persona_estado_civil('Maria', ['union_libre']).
+persona_estado_civil('Pedro', ['viud@']).
+persona_estado_civil('Ana', ['casad@']).
+persona_estado_civil('Aaron', ['divorciad@']).
+persona_estado_civil('Abel', ['solter@']).
+persona_estado_civil('Arely', ['union_libre']).
+persona_estado_civil('Alma', ['viud@']).
+persona_estado_civil('Abelardo', ['casad@']).
+persona_estado_civil('Abraham', ['divorciad@']).
+persona_estado_civil('Adalberto', ['solter@']).
+persona_estado_civil('Adan', ['union_libre']).
+persona_estado_civil('Adolfo', ['viud@']).
+persona_estado_civil('Adrian', ['casad@']).
+persona_estado_civil('Agustin', ['divorciad@']).
+persona_estado_civil('Alejandro', ['solter@']).
+persona_estado_civil('Alex', ['union_libre']).
+persona_estado_civil('Alexis', ['viud@']).
+persona_estado_civil('Alfonso', ['casad@']).
+persona_estado_civil('Alfredo', ['divorciad@']).
+persona_estado_civil('Allan', ['solter@']).
+persona_estado_civil('Alonso', ['union_libre']).
+persona_estado_civil('Alvaro', ['viud@']).
+persona_estado_civil('Amado', ['casad@']).
+persona_estado_civil('Amador', ['divorciad@']).
+persona_estado_civil('Amando', ['solter@']).
+persona_estado_civil('Amancio', ['union_libre']).
+persona_estado_civil('Amaranto', ['viud@']).
+persona_estado_civil('Americo', ['casad@']).
+persona_estado_civil('Amilcar', ['divorciad@']).
+persona_estado_civil('Anastasio', ['solter@']).
+persona_estado_civil('Anselmo', ['union_libre']).
+persona_estado_civil('Antonio', ['viud@']).
+persona_estado_civil('Armando', ['casad@']).
+persona_estado_civil('Arnoldo', ['divorciad@']).
+persona_estado_civil('Arturo', ['solter@']).
+persona_estado_civil('Augusto', ['union_libre']).
+persona_estado_civil('Aurelio', ['viud@']).
+persona_estado_civil('Baltazar', ['casad@']).
+persona_estado_civil('Bartolo', ['divorciad@']).
+persona_estado_civil('Bartolome', ['solter@']).
+persona_estado_civil('Benigno', ['union_libre']).
+persona_estado_civil('Benito', ['viud@']).
+persona_estado_civil('Benjamin', ['casad@']).
+persona_estado_civil('Brandon', ['divorciad@']).
+persona_estado_civil('Kevin', ['solter@']).
+persona_estado_civil('Bernardo', ['union_libre']).
+persona_estado_civil('Braulio', ['viud@']).
+persona_estado_civil('Bruno', ['casad@']).
+persona_estado_civil('Camilo', ['divorciad@']).
+persona_estado_civil('Carlos', ['solter@']).
+persona_estado_civil('Carmelo', ['union_libre']).
+persona_estado_civil('Cayetano', ['viud@']).
+persona_estado_civil('Celestino', ['casad@']).
+persona_estado_civil('Cesar', ['casad@']).
+persona_estado_civil('Cipriano', ['union_libre']).
+persona_estado_civil('Ciriaco', ['divorciad@']).
+persona_estado_civil('Ciro', ['solter@']).
+persona_estado_civil('Clemente', ['viud@']).
+persona_estado_civil('Cleto', ['casad@']).
+persona_estado_civil('Cosme', ['solter@']).
+persona_estado_civil('Cristian', ['union_libre']).
+persona_estado_civil('Cristobal', ['viud@']).
+persona_estado_civil('Damian', ['divorciad@']).
+persona_estado_civil('Daniel', ['casad@']).
+persona_estado_civil('David', ['solter@']).
+persona_estado_civil('Demetrio', ['union_libre']).
+persona_estado_civil('Dionisio', ['viud@']).
+persona_estado_civil('Domingo', ['divorciad@']).
+persona_estado_civil('Donato', ['casad@']).
+persona_estado_civil('Eduardo', ['solter@']).
+persona_estado_civil('Efrain', ['viud@']).
+persona_estado_civil('Elias', ['union_libre']).
+persona_estado_civil('Eliseo', ['divorciad@']).
+persona_estado_civil('Emiliano', ['casad@']).
+persona_estado_civil('Emilio', ['solter@']).
+persona_estado_civil('Enrique', ['viud@']).
+persona_estado_civil('Ernesto', ['union_libre']).
+persona_estado_civil('Esteban', ['divorciad@']).
+persona_estado_civil('Eugenio', ['casad@']).
+persona_estado_civil('Eusebio', ['solter@']).
+persona_estado_civil('Evaristo', ['viud@']).
+persona_estado_civil('Facundo', ['union_libre']).
+persona_estado_civil('Federico', ['divorciad@']).
+persona_estado_civil('Fernando', ['casad@']).
+persona_estado_civil('Fidel', ['solter@']).
+persona_estado_civil('Firman', ['viud@']).
+persona_estado_civil('Felipe', ['union_libre']).
+persona_estado_civil('Francisco', ['divorciad@']).
+persona_estado_civil('Gabino', ['casad@']).
+persona_estado_civil('Gabriel', ['solter@']).
+persona_estado_civil('Gaspar', ['viud@']).
+persona_estado_civil('Gaston', ['union_libre']).
+persona_estado_civil('Gaudencio', ['divorciad@']).
+persona_estado_civil('German', ['casad@']).
+persona_estado_civil('Gerardo', ['solter@']).
+persona_estado_civil('Gilberto', ['viud@']).
+persona_estado_civil('Gines', ['union_libre']).
+persona_estado_civil('Gonzalo', ['divorciad@']).
+persona_estado_civil('Gregorio', ['casad@']).
+persona_estado_civil('Gualberto', ['solter@']).
+persona_estado_civil('Guido', ['viud@']).
+persona_estado_civil('Guillermo', ['union_libre']).
+persona_estado_civil('Gustavo', ['divorciad@']).
+persona_estado_civil('Hector', ['casad@']).
+persona_estado_civil('Heriberto', ['solter@']).
+persona_estado_civil('Higinio', ['viud@']).
+persona_estado_civil('Hilario', ['union_libre']).
+persona_estado_civil('Hipolito', ['divorciad@']).
+persona_estado_civil('Horacio', ['casad@']).
+persona_estado_civil('Hugo', ['solter@']).
+persona_estado_civil('Humberto', ['viud@']).
+persona_estado_civil('Ignacio', ['union_libre']).
+persona_estado_civil('Inocencio', ['divorciad@']).
+persona_estado_civil('Ireneo', ['casad@']).
+persona_estado_civil('Isaias', ['solter@']).
+persona_estado_civil('Isidro', ['viud@']).
+persona_estado_civil('Ismael', ['union_libre']).
+persona_estado_civil('Ivan', ['divorciad@']).
+persona_estado_civil('Jacobo', ['casad@']).
+persona_estado_civil('Jaime', ['solter@']).
+persona_estado_civil('Javier', ['viud@']).
+persona_estado_civil('Jeronimo', ['union_libre']).
+persona_estado_civil('Jesus', ['divorciad@']).
+persona_estado_civil('Joaquin', ['casad@']).
+persona_estado_civil('Jonatan', ['solter@']).
+persona_estado_civil('Jorge', ['viud@']).
+persona_estado_civil('Jose', ['union_libre']).
+persona_estado_civil('Josefino', ['divorciad@']).
+persona_estado_civil('Julian', ['solter@']).
+persona_estado_civil('Julio', ['viud@']).
+persona_estado_civil('Justo', ['union_libre']).
+persona_estado_civil('Laureano', ['divorciad@']).
+persona_estado_civil('Lauro', ['casad@']).
+persona_estado_civil('Leandro', ['solter@']).
+persona_estado_civil('Leonardo', ['viud@']).
+persona_estado_civil('Lino', ['union_libre']).
+persona_estado_civil('Lisandro', ['divorciad@']).
+persona_estado_civil('Lorenzo', ['casad@']).
+persona_estado_civil('Luis', ['solter@']).
+persona_estado_civil('Macedonio', ['viud@']).
+persona_estado_civil('Marcelino', ['union_libre']).
+persona_estado_civil('Marco', ['divorciad@']).
+persona_estado_civil('Marcus', ['casad@']).
+persona_estado_civil('Mario', ['solter@']).
+persona_estado_civil('Martin', ['viud@']).
+persona_estado_civil('Mateo', ['union_libre']).
+persona_estado_civil('Matias', ['divorciad@']).
+persona_estado_civil('Mauricio', ['casad@']).
+persona_estado_civil('Maximino', ['solter@']).
+persona_estado_civil('Melchor', ['viud@']).
+persona_estado_civil('Melquiades', ['union_libre']).
+persona_estado_civil('Miguel', ['divorciad@']).
+persona_estado_civil('Modesto', ['casad@']).
+persona_estado_civil('Moises', ['solter@']).
+persona_estado_civil('Nahum', ['viud@']).
+persona_estado_civil('Narciso', ['union_libre']).
+persona_estado_civil('Nataniel', ['divorciad@']).
+persona_estado_civil('Nicolas', ['casad@']).
+persona_estado_civil('Oscar', ['solter@']).
+persona_estado_civil('Pablo', ['viud@']).
+persona_estado_civil('Pascual', ['union_libre']).
+persona_estado_civil('Patricio', ['divorciad@']).
+persona_estado_civil('Pio', ['solter@']).
+persona_estado_civil('Rafael', ['viud@']).
+persona_estado_civil('Ramiro', ['union_libre']).
+persona_estado_civil('Ramon', ['divorciad@']).
+persona_estado_civil('Raul', ['casad@']).
+persona_estado_civil('Renato', ['solter@']).
+persona_estado_civil('Frida', ['viud@']).
+persona_estado_civil('Reynaldo', ['union_libre']).
+persona_estado_civil('Ricardo', ['divorciad@']).
+persona_estado_civil('Rigoberto', ['casad@']).
+persona_estado_civil('Rogelio', ['solter@']).
+persona_estado_civil('Rodrigo', ['viud@']).
+persona_estado_civil('Roman', ['union_libre']).
+persona_estado_civil('Ruben', ['divorciad@']).
+persona_estado_civil('Rufino', ['casad@']).
+persona_estado_civil('Salvador', ['solter@']).
+persona_estado_civil('Samuel', ['viud@']).
+persona_estado_civil('Santiago', ['union_libre']).
+persona_estado_civil('Sebastian', ['divorciad@']).
+persona_estado_civil('Sergio', ['casad@']).
+persona_estado_civil('Simon', ['solter@']).
+persona_estado_civil('Sireno', ['viud@']).
+persona_estado_civil('Socorro', ['union_libre']).
+persona_estado_civil('Socrates', ['divorciad@']).
+persona_estado_civil('Susano', ['casad@']).
+persona_estado_civil('Tadeo', ['solter@']).
+persona_estado_civil('Teofilo', ['viud@']).
+persona_estado_civil('Tereso', ['union_libre']).
+persona_estado_civil('Tomas', ['divorciad@']).
+persona_estado_civil('Valentin', ['casad@']).
+persona_estado_civil('Valerio', ['solter@']).
+persona_estado_civil('Victor', ['viud@']).
+persona_estado_civil('Vito', ['union_libre']).
+persona_estado_civil('Viviano', ['divorciad@']).
+persona_estado_civil('Wilfredo', ['casad@']).
+persona_estado_civil('Willy', ['solter@']).
+persona_estado_civil('Zenon', ['viud@']).
+persona_estado_civil('Zoroastro', ['union_libre']).
+persona_estado_civil('Zoilo', ['divorciad@']).
+persona_estado_civil('Aarón', ['casad@']).
+persona_estado_civil('Abel', ['solter@']).
+persona_estado_civil('Adrian', ['viud@']).
+persona_estado_civil('Agustin', ['union_libre']).
+persona_estado_civil('Alberto', ['divorciad@']).
+persona_estado_civil('Alejandro', ['casad@']).
+persona_estado_civil('Alfonso', ['solter@']).
+persona_estado_civil('Alfredo', ['viud@']).
+persona_estado_civil('Alonso', ['union_libre']).
+persona_estado_civil('Aurelio', ['divorciad@']).
+persona_estado_civil('Baltazar', ['casad@']).
+persona_estado_civil('Benito', ['solter@']).
+persona_estado_civil('Bernardo', ['viud@']).
+persona_estado_civil('Braulio', ['union_libre']).
+persona_estado_civil('Bruno', ['divorciad@']).
+persona_estado_civil('Camilo', ['casad@']).
+persona_estado_civil('Carlos', ['solter@']).
+persona_estado_civil('Cesar', ['viud@']).
+persona_estado_civil('Cipriano', ['union_libre']).
+persona_estado_civil('Ciriaco', ['divorciad@']).
+persona_estado_civil('Ciro', ['solter@']).
+persona_estado_civil('Clemente', ['viud@']).
+persona_estado_civil('Cleto', ['casad@']).
+persona_estado_civil('Cosme', ['solter@']).
+persona_estado_civil('Cristian', ['union_libre']).
+persona_estado_civil('Cristobal', ['viud@']).
+persona_estado_civil('Damian', ['divorciad@']).
+persona_estado_civil('Daniel', ['casad@']).
+persona_estado_civil('David', ['solter@']).
+persona_estado_civil('Demetrio', ['union_libre']).
+persona_estado_civil('Dionisio', ['viud@']).
+persona_estado_civil('Domingo', ['divorciad@']).
+persona_estado_civil('Donato', ['casad@']).
+persona_estado_civil('Eduardo', ['solter@']).
+persona_estado_civil('Efrain', ['viud@']).
+persona_estado_civil('Elias', ['union_libre']).
+persona_estado_civil('Eliseo', ['divorciad@']).
+persona_estado_civil('Emiliano', ['casad@']).
+persona_estado_civil('Emilio', ['solter@']).
+persona_estado_civil('Enrique', ['viud@']).
+persona_estado_civil('Ernesto', ['union_libre']).
+persona_estado_civil('Esteban', ['divorciad@']).
+persona_estado_civil('Eugenio', ['casad@']).
+persona_estado_civil('Eusebio', ['solter@']).
+persona_estado_civil('Evaristo', ['viud@']).
+persona_estado_civil('Facundo', ['union_libre']).
+persona_estado_civil('Federico', ['divorciad@']).
+persona_estado_civil('Fernando', ['casad@']).
+persona_estado_civil('Fidel', ['solter@']).
+persona_estado_civil('Firman', ['viud@']).
+persona_estado_civil('Felipe', ['union_libre']).
+persona_estado_civil('Francisco', ['divorciad@']).
+persona_estado_civil('Gabino', ['casad@']).
+persona_estado_civil('Gabriel', ['solter@']).
+persona_estado_civil('Gaspar', ['viud@']).
+persona_estado_civil('Gaston', ['union_libre']).
+persona_estado_civil('Gaudencio', ['divorciad@']).
+persona_estado_civil('German', ['casad@']).
+persona_estado_civil('Gerardo', ['solter@']).
+persona_estado_civil('Gilberto', ['viud@']).
+persona_estado_civil('Gines', ['union_libre']).
+persona_estado_civil('Gonzalo', ['divorciad@']).
+persona_estado_civil('Gregorio', ['casad@']).
+persona_estado_civil('Gualberto', ['solter@']).
+persona_estado_civil('Guido', ['viud@']).
+persona_estado_civil('Guillermo', ['union_libre']).
+persona_estado_civil('Gustavo', ['divorciad@']).
+persona_estado_civil('Hector', ['casad@']).
+persona_estado_civil('Heriberto', ['solter@']).
+persona_estado_civil('Higinio', ['viud@']).
+persona_estado_civil('Hilario', ['union_libre']).
+persona_estado_civil('Hipolito', ['divorciad@']).
+persona_estado_civil('Horacio', ['casad@']).
+persona_estado_civil('Hugo', ['solter@']).
+persona_estado_civil('Humberto', ['viud@']).
+persona_estado_civil('Ignacio', ['union_libre']).
+persona_estado_civil('Inocencio', ['divorciad@']).
+persona_estado_civil('Ireneo', ['casad@']).
+persona_estado_civil('Isaias', ['solter@']).
+persona_estado_civil('Isidro', ['viud@']).
+persona_estado_civil('Ismael', ['union_libre']).
+persona_estado_civil('Ivan', ['divorciad@']).
+persona_estado_civil('Jacobo', ['casad@']).
+persona_estado_civil('Jaime', ['solter@']).
+persona_estado_civil('Javier', ['viud@']).
+persona_estado_civil('Jeronimo', ['union_libre']).
+persona_estado_civil('Jesus', ['divorciad@']).
+persona_estado_civil('Joaquin', ['casad@']).
+persona_estado_civil('Jonatan', ['solter@']).
+persona_estado_civil('Jorge', ['viud@']).
+persona_estado_civil('Jose', ['union_libre']).
+persona_estado_civil('Josefino', ['divorciad@']).
+persona_estado_civil('Julian', ['solter@']).
+persona_estado_civil('Julio', ['viud@']).
+persona_estado_civil('Justo', ['union_libre']).
+persona_estado_civil('Laureano', ['divorciad@']).
+persona_estado_civil('Lauro', ['casad@']).
+persona_estado_civil('Leandro', ['solter@']).
+persona_estado_civil('Leonardo', ['viud@']).
+persona_estado_civil('Lino', ['union_libre']).
+persona_estado_civil('Lisandro', ['divorciad@']).
+persona_estado_civil('Lorenzo', ['casad@']).
+persona_estado_civil('Luis', ['solter@']).
+persona_estado_civil('Macedonio', ['viud@']).
+persona_estado_civil('Marcelino', ['union_libre']).
+persona_estado_civil('Marco', ['divorciad@']).
+persona_estado_civil('Marcus', ['casad@']).
+persona_estado_civil('Mario', ['solter@']).
+persona_estado_civil('Martin', ['viud@']).
+persona_estado_civil('Mateo', ['union_libre']).
+persona_estado_civil('Matias', ['divorciad@']).
+persona_estado_civil('Mauricio', ['casad@']).
+persona_estado_civil('Maximino', ['solter@']).
+persona_estado_civil('Melchor', ['viud@']).
+persona_estado_civil('Melquiades', ['union_libre']).
+persona_estado_civil('Miguel', ['divorciad@']).
+persona_estado_civil('Modesto', ['casad@']).
+persona_estado_civil('Moises', ['solter@']).
+persona_estado_civil('Nahum', ['viud@']).
+persona_estado_civil('Narciso', ['union_libre']).
+persona_estado_civil('Nataniel', ['divorciad@']).
+persona_estado_civil('Nicolas', ['casad@']).
+persona_estado_civil('Oscar', ['solter@']).
+persona_estado_civil('Pablo', ['viud@']).
+persona_estado_civil('Pascual', ['union_libre']).
+persona_estado_civil('Patricio', ['divorciad@']).
+persona_estado_civil('Pio', ['solter@']).
+persona_estado_civil('Ramiro', ['viud@']).
+persona_estado_civil('Raul', ['union_libre']).
+persona_estado_civil('Rafael', ['divorciad@']).
+persona_estado_civil('Ramon', ['casad@']).
+persona_estado_civil('Ricardo', ['solter@']).
+persona_estado_civil('Roberto', ['viud@']).
+persona_estado_civil('Rodrigo', ['union_libre']).
+persona_estado_civil('Rodolfo', ['divorciad@']).
+persona_estado_civil('Rogelio', ['casad@']).
+persona_estado_civil('Rubén', ['solter@']).
+persona_estado_civil('Salvador', ['viud@']).
+persona_estado_civil('Samuel', ['union_libre']).
+persona_estado_civil('Sancho', ['divorciad@']).
+persona_estado_civil('Santos', ['casad@']).
+persona_estado_civil('Silvestre', ['solter@']).
+persona_estado_civil('Teodoro', ['viud@']).
+persona_estado_civil('Tomas', ['union_libre']).
+persona_estado_civil('Victoriano', ['divorciad@']).
+persona_estado_civil('Vito', ['casad@']).
+persona_estado_civil('Angela', ['casad@']).
+persona_estado_civil('Antonia', ['divorciad@']).
+persona_estado_civil('Araceli', ['solter@']).
+persona_estado_civil('Aurora', ['union_libre']).
+persona_estado_civil('Beatriz', ['viud@']).
+persona_estado_civil('Belen', ['casad@']).
+persona_estado_civil('Bertha', ['divorciad@']).
+persona_estado_civil('Blanca', ['solter@']).
+persona_estado_civil('Brenda', ['union_libre']).
+persona_estado_civil('Camila', ['viud@']).
+persona_estado_civil('Caridad', ['casad@']).
+persona_estado_civil('Carina', ['divorciad@']).
+persona_estado_civil('Carla', ['solter@']).
+persona_estado_civil('Carmen', ['union_libre']).
+persona_estado_civil('Carolina', ['viud@']).
+persona_estado_civil('Catalina', ['casad@']).
+persona_estado_civil('Cecilia', ['divorciad@']).
+persona_estado_civil('Celia', ['solter@']).
+persona_estado_civil('Clara', ['union_libre']).
+persona_estado_civil('Claudia', ['viud@']).
+persona_estado_civil('Concepcion', ['casad@']).
+persona_estado_civil('Concha', ['divorciad@']).
+persona_estado_civil('Consuelo', ['solter@']).
+persona_estado_civil('Diana', ['union_libre']).
+persona_estado_civil('Dolores', ['viud@']).
+persona_estado_civil('Dora', ['casad@']).
+persona_estado_civil('Dulce', ['divorciad@']).
+persona_estado_civil('Edith', ['solter@']).
+persona_estado_civil('Elena', ['union_libre']).
+persona_estado_civil('Elisa', ['viud@']).
+persona_estado_civil('Elizabeth', ['casad@']).
+persona_estado_civil('Elvira', ['divorciad@']).
+persona_estado_civil('Emilia', ['solter@']).
+persona_estado_civil('Esperanza', ['union_libre']).
+persona_estado_civil('Ester', ['viud@']).
+persona_estado_civil('Eugenia', ['casad@']).
+persona_estado_civil('Eva', ['divorciad@']).
+persona_estado_civil('Fabiola', ['solter@']).
+persona_estado_civil('Felipa', ['union_libre']).
+persona_estado_civil('Fernanda', ['viud@']).
+persona_estado_civil('Flor', ['casad@']).
+persona_estado_civil('Francisca', ['divorciad@']).
+persona_estado_civil('Gabriela', ['solter@']).
+persona_estado_civil('Genoveva', ['union_libre']).
+persona_estado_civil('Georgina', ['viud@']).
+persona_estado_civil('Gloria', ['casad@']).
+persona_estado_civil('Graciela', ['divorciad@']).
+persona_estado_civil('Guadalupe', ['solter@']).
+persona_estado_civil('Haydee', ['union_libre']).
+persona_estado_civil('Helena', ['viud@']).
+persona_estado_civil('Hilda', ['casad@']).
+persona_estado_civil('Ines', ['divorciad@']).
+persona_estado_civil('Irma', ['solter@']).
+persona_estado_civil('Isabel', ['union_libre']).
+persona_estado_civil('Jacinta', ['viud@']).
+persona_estado_civil('Jacqueline', ['casad@']).
+persona_estado_civil('Jimena', ['divorciad@']).
+persona_estado_civil('Josefina', ['solter@']).
+persona_estado_civil('Juana', ['union_libre']).
+persona_estado_civil('Juliana', ['viud@']).
+persona_estado_civil('Julia', ['casad@']).
+persona_estado_civil('Laura', ['divorciad@']).
+persona_estado_civil('Leonor', ['solter@']).
+persona_estado_civil('Leticia', ['union_libre']).
+persona_estado_civil('Lilia', ['viud@']).
+persona_estado_civil('Liliana', ['casad@']).
+persona_estado_civil('Lisandro', ['divorciad@']).
+persona_estado_civil('Lorena', ['solter@']).
+persona_estado_civil('Lourdes', ['union_libre']).
+persona_estado_civil('Lucia', ['viud@']).
+persona_estado_civil('Luciana', ['casad@']).
+persona_estado_civil('Lucinda', ['divorciad@']).
+persona_estado_civil('Luisa', ['solter@']).
+persona_estado_civil('Luz', ['union_libre']).
+persona_estado_civil('Magdalena', ['viud@']).
+persona_estado_civil('Margarita', ['casad@']).
+persona_estado_civil('Maria', ['divorciad@']).
+persona_estado_civil('Mariana', ['solter@']).
+persona_estado_civil('Maricela', ['union_libre']).
+persona_estado_civil('Marilu', ['viud@']).
+persona_estado_civil('Marina', ['casad@']).
+persona_estado_civil('Marisa', ['divorciad@']).
+persona_estado_civil('Marta', ['solter@']).
+persona_estado_civil('Martina', ['union_libre']).
+persona_estado_civil('Matilde', ['viud@']).
+persona_estado_civil('Melisa', ['casad@']).
+persona_estado_civil('Mercedes', ['divorciad@']).
+persona_estado_civil('Monica', ['solter@']).
+persona_estado_civil('Miriam', ['union_libre']).
+persona_estado_civil('Mirta', ['viud@']).
+persona_estado_civil('Nadia', ['casad@']).
+persona_estado_civil('Natalia', ['divorciad@']).
+persona_estado_civil('Natividad', ['solter@']).
+persona_estado_civil('Nicole', ['casad@']).
+persona_estado_civil('Norma', ['solter@']).
+persona_estado_civil('Olga', ['union_libre']).
+persona_estado_civil('Olivia', ['viud@']).
+persona_estado_civil('Paola', ['divorciad@']).
+persona_estado_civil('Patricia', ['solter@']).
+persona_estado_civil('Paula', ['viud@']).
+persona_estado_civil('Paulina', ['union_libre']).
+persona_estado_civil('Paz', ['casad@']).
+persona_estado_civil('Petra', ['viud@']).
+persona_estado_civil('Pilar', ['solter@']).
+persona_estado_civil('Priscila', ['divorciad@']).
+persona_estado_civil('Raquel', ['union_libre']).
+persona_estado_civil('Rebeca', ['viud@']).
+persona_estado_civil('Regina', ['solter@']).
+persona_estado_civil('Renata', ['casad@']).
+persona_estado_civil('Ricarda', ['divorciad@']).
+persona_estado_civil('Rita', ['solter@']).
+persona_estado_civil('Roberta', ['union_libre']).
+persona_estado_civil('Rocio', ['viud@']).
+persona_estado_civil('Rosa', ['casad@']).
+persona_estado_civil('Rosalia', ['divorciad@']).
+persona_estado_civil('Rosario', ['union_libre']).
+persona_estado_civil('Ruth', ['viud@']).
+persona_estado_civil('Salome', ['solter@']).
+persona_estado_civil('Sandra', ['casad@']).
+persona_estado_civil('Sara', ['divorciad@']).
+persona_estado_civil('Silvia', ['viud@']).
+persona_estado_civil('Socorro', ['union_libre']).
+persona_estado_civil('Sofia', ['solter@']).
+persona_estado_civil('Soledad', ['casad@']).
+persona_estado_civil('Susana', ['viud@']).
+persona_estado_civil('Tamara', ['divorciad@']).
+persona_estado_civil('Tatiana', ['solter@']).
+persona_estado_civil('Teresa', ['casad@']).
+persona_estado_civil('Ursula', ['viud@']).
+persona_estado_civil('Vanesa', ['union_libre']).
+persona_estado_civil('Victoria', ['solter@']).
+persona_estado_civil('Violeta', ['divorciad@']).
+persona_estado_civil('Virginia', ['casad@']).
+persona_estado_civil('Yolanda', ['viud@']).
+persona_estado_civil('Zoila', ['solter@']).
 
 
 % Géneros
@@ -2397,356 +3589,350 @@ genero('Agenero').
 genero('Bigenero').
 genero('Fluido').
 
-pertenece_genero('Juan', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Maria', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Pedro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Aaron', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Abel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Arely', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alma', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Abelardo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Abraham', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Adalberto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Adan', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Adolfo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Adrian', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Agustin', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alejandro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alex', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alexis', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alfonso', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alfredo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Allan', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alonso', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alvaro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Amado', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Amador', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Amando', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Amancio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Amaranto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Americo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Amilcar', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Anastasio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Anselmo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Antonio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Armando', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Arnoldo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Arturo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Augusto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Aurelio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Baltazar', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Bartolo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Bartolome', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Benigno', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Benito', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Benjamin', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Brandon', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Kevin', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Bernardo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Braulio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Bruno', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Camilo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Carlos', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Carmelo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cayetano', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Celestino', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cesar', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cipriano', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ciriaco', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ciro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Clemente', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cleto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cosme', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cristian', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cristobal', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Damian', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Daniel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('David', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Demetrio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Dionisio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Domingo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Donato', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Eduardo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Efrain', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Elias', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Eliseo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Emiliano', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Emilio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Enrique', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ernesto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Esteban', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Eugenio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Eusebio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Evaristo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Facundo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Federico', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Fernando', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Fidel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Firman', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Felipe', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Fernando', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Fidel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Francisco', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gabino', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gabriel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gaspar', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gaston', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gaudencio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('German', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gerardo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gilberto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gines', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gonzalo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gregorio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gualberto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Guido', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Guillermo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gustavo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Hector', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Heriberto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Higinio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Hilario', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Hipolito', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Horacio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Hugo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Humberto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ignacio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Inocencio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ireneo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Isaias', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Isidro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ismael', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ivan', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jacobo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jaime', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Javier', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jeronimo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jesus', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Joaquin', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jonatan', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jorge', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jose', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Josefino', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Juan', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Julian', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Julio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Justo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Laureano', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lauro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Leandro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Leonardo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lino', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lisandro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lorenzo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Luis', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Macedonio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Marcelino', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Marco', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Marcus', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Mario', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Martin', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Mateo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Matias', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Mauricio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Maximino', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Melchor', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Melquiades', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Miguel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Modesto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Moises', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Nahum', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Narciso', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Nataniel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Nicolas', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Oscar', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Pablo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Pascual', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Patricio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Pedro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Pio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rafael', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ramiro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ramon', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Raul', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Renato', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Frida', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Reynaldo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ricardo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rigoberto', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rogelio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rodrigo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Roman', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ruben', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rufino', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Salvador', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Samuel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Santiago', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Sebastian', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Sergio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Simon', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Sireno', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Socorro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Socrates', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Susano', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Tadeo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Teofilo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Tereso', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Thomas', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Tiburcio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Timoteo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Tomas', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Tomas', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ulises', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Urbano', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Uriel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ursulo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Valentin', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Valerio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Vicente', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Victor', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Octavio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alfonso', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alfredo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Alvaro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Andrea', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Angelica', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Angela', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Antonia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Araceli', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Aurora', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Beatriz', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Belen', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Bertha', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Blanca', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Brenda', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Camila', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Caridad', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Carina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Carla', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Carmen', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Carolina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Catalina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Cecilia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Celia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Clara', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Claudia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Concepcion', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Concha', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Consuelo', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Diana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Dolores', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Dora', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Dulce', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Edith', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Elena', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Elisa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Elizabeth', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Elvira', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Emilia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Esperanza', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ester', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Eugenia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Eva', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Fabiola', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Felipa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Fernanda', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Flor', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Francisca', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gabriela', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Genoveva', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Georgina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Gloria', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Graciela', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Guadalupe', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Haydee', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Helena', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Hilda', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ines', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Irma', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Isabel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jacinta', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jacqueline', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Jimena', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Josefina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Juana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Juliana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Julia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Laura', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Leonor', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Leticia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lilia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Liliana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lisandro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lorena', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lourdes', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lucia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Luciana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Lucinda', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Luisa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Luz', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Magdalena', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Margarita', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Maria', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Mariana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Maricela', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Marilu', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Marina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Marisa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Marta', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Martina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Matilde', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Melisa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Mercedes', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Monica', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Miriam', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Mirta', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Nadia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Natalia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Natividad', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Nicole', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Norma', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Olga', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Olivia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Paola', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Patricia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Paula', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Paulina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Paz', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Petra', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Pilar', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Priscila', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Raquel', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rebeca', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Regina', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Renata', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ricarda', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rita', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Roberta', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rocio', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rosa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rosalia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Rosario', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ruth', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Salome', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Sandra', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Sara', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Silvia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Socorro', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Sofia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Soledad', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Susana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Tamara', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Tatiana', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Teresa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Ursula', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Vanesa', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Victoria', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Violeta', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Virginia', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Yolanda', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
-pertenece_genero('Zoila', ['Agenero', 'Bigenero', 'Fluido', 'Hombre', 'Mujer', 'NoBinaria', 'Transgenero']).
+pertenece_genero('Juan', ['Hombre']).
+pertenece_genero('Maria', ['Mujer']).
+pertenece_genero('Pedro', ['NoBinaria']).
+pertenece_genero('Ana', ['Mujer']).
+pertenece_genero('Aaron', ['Hombre']).
+pertenece_genero('Abel', ['Transgenero']).
+pertenece_genero('Arely', ['Mujer']).
+pertenece_genero('Alma', ['Mujer']).
+pertenece_genero('Abelardo', ['Hombre']).
+pertenece_genero('Abraham', ['Hombre']).
+pertenece_genero('Adalberto', ['Hombre']).
+pertenece_genero('Adan', ['Hombre']).
+pertenece_genero('Adolfo', ['Hombre']).
+pertenece_genero('Adrian', ['Transgenero']).
+pertenece_genero('Agustin', ['Hombre']).
+pertenece_genero('Alejandro', ['Hombre']).
+pertenece_genero('Alex', ['NoBinaria']).
+pertenece_genero('Alexis', ['Hombre']).
+pertenece_genero('Alfonso', ['Hombre']).
+pertenece_genero('Alfredo', ['Hombre']).
+pertenece_genero('Allan', ['Hombre']).
+pertenece_genero('Alonso', ['Hombre']).
+pertenece_genero('Alvaro', ['Hombre']).
+pertenece_genero('Amado', ['Hombre']).
+pertenece_genero('Amador', ['Hombre']).
+pertenece_genero('Amando', ['Hombre']).
+pertenece_genero('Amancio', ['Hombre']).
+pertenece_genero('Amaranto', ['Hombre']).
+pertenece_genero('Americo', ['Hombre']).
+pertenece_genero('Amilcar', ['Hombre']).
+pertenece_genero('Anastasio', ['Hombre']).
+pertenece_genero('Anselmo', ['Hombre']).
+pertenece_genero('Antonio', ['Hombre']).
+pertenece_genero('Armando', ['Hombre']).
+pertenece_genero('Arnoldo', ['Hombre']).
+pertenece_genero('Arturo', ['Hombre']).
+pertenece_genero('Augusto', ['Hombre']).
+pertenece_genero('Aurelio', ['Hombre']).
+pertenece_genero('Baltazar', ['Hombre']).
+pertenece_genero('Bartolo', ['Hombre']).
+pertenece_genero('Bartolome', ['Hombre']).
+pertenece_genero('Benigno', ['Hombre']).
+pertenece_genero('Benito', ['Hombre']).
+pertenece_genero('Benjamin', ['Hombre']).
+pertenece_genero('Brandon', ['Hombre']).
+pertenece_genero('Kevin', ['NoBinaria']).
+pertenece_genero('Bernardo', ['Hombre']).
+pertenece_genero('Braulio', ['Hombre']).
+pertenece_genero('Bruno', ['Hombre']).
+pertenece_genero('Camilo', ['Hombre']).
+pertenece_genero('Carlos', ['Hombre']).
+pertenece_genero('Carmelo', ['Hombre']).
+pertenece_genero('Cayetano', ['Hombre']).
+pertenece_genero('Celestino', ['Hombre']).
+pertenece_genero('Cesar', ['Hombre']).
+pertenece_genero('Cipriano', ['Hombre']).
+pertenece_genero('Ciriaco', ['Hombre']).
+pertenece_genero('Ciro', ['Hombre']).
+pertenece_genero('Clemente', ['Hombre']).
+pertenece_genero('Cleto', ['Hombre']).
+pertenece_genero('Cosme', ['Hombre']).
+pertenece_genero('Cristian', ['Hombre']).
+pertenece_genero('Cristobal', ['NoBinaria']).
+pertenece_genero('Damian', ['Transgenero']).
+pertenece_genero('Daniel', ['Hombre']).
+pertenece_genero('David', ['Fluido']).
+pertenece_genero('Demetrio', ['Mujer']).
+pertenece_genero('Dionisio', ['Hombre']).
+pertenece_genero('Domingo', ['NoBinaria']).
+pertenece_genero('Donato', ['Agenero']).
+pertenece_genero('Eduardo', ['Hombre']).
+pertenece_genero('Efrain', ['Mujer']).
+pertenece_genero('Elias', ['Fluido']).
+pertenece_genero('Eliseo', ['Transgenero']).
+pertenece_genero('Emiliano', ['Hombre']).
+pertenece_genero('Emilio', ['NoBinaria']).
+pertenece_genero('Enrique', ['Bigenero']).
+pertenece_genero('Ernesto', ['Hombre']).
+pertenece_genero('Esteban', ['Mujer']).
+pertenece_genero('Eugenio', ['Fluido']).
+pertenece_genero('Eusebio', ['Transgenero']).
+pertenece_genero('Evaristo', ['NoBinaria']).
+pertenece_genero('Facundo', ['Hombre']).
+pertenece_genero('Federico', ['Bigenero']).
+pertenece_genero('Fernando', ['Hombre']).
+pertenece_genero('Fidel', ['Mujer']).
+pertenece_genero('Firman', ['Hombre']).
+pertenece_genero('Felipe', ['Transgenero']).
+pertenece_genero('Francisco', ['NoBinaria']).
+pertenece_genero('Gabino', ['Hombre']).
+pertenece_genero('Gabriel', ['Fluido']).
+pertenece_genero('Gaspar', ['Mujer']).
+pertenece_genero('Gaston', ['Agenero']).
+pertenece_genero('Gaudencio', ['Hombre']).
+pertenece_genero('German', ['NoBinaria']).
+pertenece_genero('Gerardo', ['Hombre']).
+pertenece_genero('Gilberto', ['Fluido']).
+pertenece_genero('Gines', ['Hombre']).
+pertenece_genero('Gonzalo', ['Transgenero']).
+pertenece_genero('Gregorio', ['Hombre']).
+pertenece_genero('Gualberto', ['Mujer']).
+pertenece_genero('Guido', ['NoBinaria']).
+pertenece_genero('Guillermo', ['Hombre']).
+pertenece_genero('Gustavo', ['Fluido']).
+pertenece_genero('Hector', ['Agenero']).
+pertenece_genero('Heriberto', ['Hombre']).
+pertenece_genero('Higinio', ['Mujer']).
+pertenece_genero('Hilario', ['Hombre']).
+pertenece_genero('Hipolito', ['Transgenero']).
+pertenece_genero('Horacio', ['Hombre']).
+pertenece_genero('Hugo', ['Fluido']).
+pertenece_genero('Humberto', ['NoBinaria']).
+pertenece_genero('Ignacio', ['Hombre']).
+pertenece_genero('Inocencio', ['Mujer']).
+pertenece_genero('Ireneo', ['Hombre']).
+pertenece_genero('Isaias', ['Transgenero']).
+pertenece_genero('Isidro', ['Hombre']).
+pertenece_genero('Ismael', ['NoBinaria']).
+pertenece_genero('Ivan', ['Fluido']).
+pertenece_genero('Jacobo', ['Hombre']).
+pertenece_genero('Jaime', ['Mujer']).
+pertenece_genero('Javier', ['Hombre']).
+pertenece_genero('Jeronimo', ['Fluido']).
+pertenece_genero('Jesus', ['Hombre']).
+pertenece_genero('Joaquin', ['Transgenero']).
+pertenece_genero('Jonatan', ['Hombre']).
+pertenece_genero('Jorge', ['Mujer']).
+pertenece_genero('Jose', ['NoBinaria']).
+pertenece_genero('Josefino', ['Hombre']).
+pertenece_genero('Julian', ['Mujer']).
+pertenece_genero('Julio', ['Hombre']).
+pertenece_genero('Justo', ['NoBinaria']).
+pertenece_genero('Laureano', ['Hombre']).
+pertenece_genero('Lauro', ['Fluido']).
+pertenece_genero('Leandro', ['Mujer']).
+pertenece_genero('Leonardo', ['Hombre']).
+pertenece_genero('Lino', ['Transgenero']).
+pertenece_genero('Lisandro', ['NoBinaria']).
+pertenece_genero('Lorenzo', ['Hombre']).
+pertenece_genero('Luis', ['Hombre']).
+pertenece_genero('Macedonio', ['NoBinaria']).
+pertenece_genero('Marcelino', ['Mujer']).
+pertenece_genero('Marco', ['Hombre']).
+pertenece_genero('Marcus', ['Hombre']).
+pertenece_genero('Mario', ['Fluido']).
+pertenece_genero('Martin', ['NoBinaria']).
+pertenece_genero('Mateo', ['Hombre']).
+pertenece_genero('Matias', ['Transgenero']).
+pertenece_genero('Mauricio', ['Hombre']).
+pertenece_genero('Maximino', ['Agenero']).
+pertenece_genero('Melchor', ['Hombre']).
+pertenece_genero('Melquiades', ['NoBinaria']).
+pertenece_genero('Miguel', ['Hombre']).
+pertenece_genero('Modesto', ['Fluido']).
+pertenece_genero('Moises', ['Hombre']).
+pertenece_genero('Nahum', ['Mujer']).
+pertenece_genero('Narciso', ['Hombre']).
+pertenece_genero('Nataniel', ['Transgenero']).
+pertenece_genero('Nicolas', ['Hombre']).
+pertenece_genero('Oscar', ['Agenero']).
+pertenece_genero('Pablo', ['Hombre']).
+pertenece_genero('Pascual', ['Hombre']).
+pertenece_genero('Patricio', ['Hombre']).
+pertenece_genero('Pio', ['Hombre']).
+pertenece_genero('Rafael', ['NoBinaria']).
+pertenece_genero('Ramiro', ['Hombre']).
+pertenece_genero('Ramon', ['Hombre']).
+pertenece_genero('Raul', ['Hombre']).
+pertenece_genero('Renato', ['Hombre']).
+pertenece_genero('Frida', ['NoBinaria']).
+pertenece_genero('Reynaldo', ['Hombre']).
+pertenece_genero('Ricardo', ['Hombre']).
+pertenece_genero('Rigoberto', ['Hombre']).
+pertenece_genero('Rogelio', ['Hombre']).
+pertenece_genero('Rodrigo', ['Hombre']).
+pertenece_genero('Roman', ['Hombre']).
+pertenece_genero('Ruben', ['Hombre']).
+pertenece_genero('Rufino', ['Hombre']).
+pertenece_genero('Salvador', ['NoBinaria']).
+pertenece_genero('Samuel', ['Hombre']).
+pertenece_genero('Santiago', ['Hombre']).
+pertenece_genero('Sebastian', ['Hombre']).
+pertenece_genero('Sergio', ['NoBinaria']).
+pertenece_genero('Simon', ['Hombre']).
+pertenece_genero('Sireno', ['Hombre']).
+pertenece_genero('Socorro', ['Mujer']).
+pertenece_genero('Socrates', ['Hombre']).
+pertenece_genero('Susano', ['Hombre']).
+pertenece_genero('Tadeo', ['Hombre']).
+pertenece_genero('Teofilo', ['Hombre']).
+pertenece_genero('Tereso', ['Hombre']).
+pertenece_genero('Thomas', ['Hombre']).
+pertenece_genero('Tiburcio', ['Hombre']).
+pertenece_genero('Timoteo', ['Hombre']).
+pertenece_genero('Tomas', ['NoBinaria']).
+pertenece_genero('Ulises', ['Hombre']).
+pertenece_genero('Urbano', ['Hombre']).
+pertenece_genero('Uriel', ['Hombre']).
+pertenece_genero('Ursulo', ['NoBinaria']).
+pertenece_genero('Valentin', ['Hombre']).
+pertenece_genero('Valerio', ['Hombre']).
+pertenece_genero('Vicente', ['Hombre']).
+pertenece_genero('Victor', ['NoBinaria']).
+pertenece_genero('Octavio', ['Hombre']).
+pertenece_genero('Alfonso', ['Hombre']).
+pertenece_genero('Alfredo', ['Hombre']).
+pertenece_genero('Alvaro', ['NoBinaria']).
+pertenece_genero('Andrea', ['Transgenero']).
+pertenece_genero('Angelica', ['Fluido']).
+pertenece_genero('Angela', ['Bigenero']).
+pertenece_genero('Antonia', ['Agenero']).
+pertenece_genero('Araceli', ['Mujer']).
+pertenece_genero('Aurora', ['Hombre']).
+pertenece_genero('Beatriz', ['NoBinaria']).
+pertenece_genero('Belen', ['Transgenero']).
+pertenece_genero('Bertha', ['Fluido']).
+pertenece_genero('Blanca', ['Bigenero']).
+pertenece_genero('Brenda', ['Agenero']).
+pertenece_genero('Camila', ['Mujer']).
+pertenece_genero('Caridad', ['Hombre']).
+pertenece_genero('Carina', ['NoBinaria']).
+pertenece_genero('Carla', ['Transgenero']).
+pertenece_genero('Carmen', ['Fluido']).
+pertenece_genero('Carolina', ['Bigenero']).
+pertenece_genero('Catalina', ['Agenero']).
+pertenece_genero('Cecilia', ['Mujer']).
+pertenece_genero('Celia', ['Hombre']).
+pertenece_genero('Clara', ['NoBinaria']).
+pertenece_genero('Claudia', ['Transgenero']).
+pertenece_genero('Concepcion', ['Fluido']).
+pertenece_genero('Concha', ['Bigenero']).
+pertenece_genero('Consuelo', ['Agenero']).
+pertenece_genero('Diana', ['Mujer']).
+pertenece_genero('Dolores', ['Hombre']).
+pertenece_genero('Dora', ['NoBinaria']).
+pertenece_genero('Dulce', ['Transgenero']).
+pertenece_genero('Edith', ['Fluido']).
+pertenece_genero('Elena', ['Bigenero']).
+pertenece_genero('Elisa', ['Agenero']).
+pertenece_genero('Elizabeth', ['Mujer']).
+pertenece_genero('Elvira', ['Hombre']).
+pertenece_genero('Emilia', ['NoBinaria']).
+pertenece_genero('Esperanza', ['Transgenero']).
+pertenece_genero('Ester', ['Fluido']).
+pertenece_genero('Eugenia', ['Bigenero']).
+pertenece_genero('Eva', ['Agenero']).
+pertenece_genero('Fabiola', ['Mujer']).
+pertenece_genero('Felipa', ['Hombre']).
+pertenece_genero('Fernanda', ['NoBinaria']).
+pertenece_genero('Flor', ['Transgenero']).
+pertenece_genero('Francisca', ['Fluido']).
+pertenece_genero('Gabriela', ['Bigenero']).
+pertenece_genero('Genoveva', ['Agenero']).
+pertenece_genero('Georgina', ['Mujer']).
+pertenece_genero('Gloria', ['Hombre']).
+pertenece_genero('Graciela', ['NoBinaria']).
+pertenece_genero('Guadalupe', ['Transgenero']).
+pertenece_genero('Haydee', ['Fluido']).
+pertenece_genero('Helena', ['Bigenero']).
+pertenece_genero('Hilda', ['Agenero']).
+pertenece_genero('Ines', ['Mujer']).
+pertenece_genero('Irma', ['Hombre']).
+pertenece_genero('Isabel', ['NoBinaria']).
+pertenece_genero('Jacinta', ['Transgenero']).
+pertenece_genero('Jacqueline', ['Fluido']).
+pertenece_genero('Jimena', ['Bigenero']).
+pertenece_genero('Josefina', ['Agenero']).
+pertenece_genero('Juana', ['Mujer']).
+pertenece_genero('Juliana', ['Hombre']).
+pertenece_genero('Julia', ['NoBinaria']).
+pertenece_genero('Laura', ['Transgenero']).
+pertenece_genero('Leonor', ['Fluido']).
+pertenece_genero('Leticia', ['Bigenero']).
+pertenece_genero('Lilia', ['Agenero']).
+pertenece_genero('Liliana', ['Mujer']).
+pertenece_genero('Lisandro', ['Hombre']).
+pertenece_genero('Lorena', ['NoBinaria']).
+pertenece_genero('Lourdes', ['Transgenero']).
+pertenece_genero('Lucia', ['Fluido']).
+pertenece_genero('Luciana', ['Bigenero']).
+pertenece_genero('Lucinda', ['Agenero']).
+pertenece_genero('Luisa', ['Mujer']).
+pertenece_genero('Luz', ['Hombre']).
+pertenece_genero('Magdalena', ['NoBinaria']).
+pertenece_genero('Margarita', ['Transgenero']).
+pertenece_genero('Maria', ['Fluido']).
+pertenece_genero('Mariana', ['Bigenero']).
+pertenece_genero('Maricela', ['Agenero']).
+pertenece_genero('Marilu', ['Mujer']).
+pertenece_genero('Marina', ['Hombre']).
+pertenece_genero('Marisa', ['NoBinaria']).
+pertenece_genero('Marta', ['Transgenero']).
+pertenece_genero('Martina', ['Fluido']).
+pertenece_genero('Matilde', ['Bigenero']).
+pertenece_genero('Melisa', ['Agenero']).
+pertenece_genero('Mercedes', ['Mujer']).
+pertenece_genero('Monica', ['Hombre']).
+pertenece_genero('Miriam', ['NoBinaria']).
+pertenece_genero('Mirta', ['Transgenero']).
+pertenece_genero('Nadia', ['Fluido']).
+pertenece_genero('Natalia', ['Bigenero']).
+pertenece_genero('Natividad', ['Agenero']).
+pertenece_genero('Nicole', ['Mujer']).
+pertenece_genero('Norma', ['Hombre']).
+pertenece_genero('Olga', ['NoBinaria']).
+pertenece_genero('Olivia', ['Transgenero']).
+pertenece_genero('Paola', ['Fluido']).
+pertenece_genero('Patricia', ['Bigenero']).
+pertenece_genero('Paula', ['Agenero']).
+pertenece_genero('Paulina', ['Mujer']).
+pertenece_genero('Paz', ['Hombre']).
+pertenece_genero('Petra', ['NoBinaria']).
+pertenece_genero('Pilar', ['Transgenero']).
+pertenece_genero('Priscila', ['Fluido']).
+pertenece_genero('Raquel', ['Bigenero']).
+pertenece_genero('Rebeca', ['Agenero']).
+pertenece_genero('Regina', ['Mujer']).
+pertenece_genero('Renata', ['Hombre']).
+pertenece_genero('Ricarda', ['NoBinaria']).
+pertenece_genero('Rita', ['Transgenero']).
+pertenece_genero('Roberta', ['Fluido']).
+pertenece_genero('Rocio', ['Bigenero']).
+pertenece_genero('Rosa', ['Agenero']).
+pertenece_genero('Rosalia', ['Mujer']).
+pertenece_genero('Rosario', ['Hombre']).
+pertenece_genero('Ruth', ['NoBinaria']).
+pertenece_genero('Salome', ['Transgenero']).
+pertenece_genero('Sandra', ['Fluido']).
+pertenece_genero('Sara', 'Mujer').
+pertenece_genero('Silvia', 'NoBinaria').
+pertenece_genero('Socorro', 'Transgenero').
+pertenece_genero('Sofia', 'Fluido').
+pertenece_genero('Soledad', 'Hombre').
+pertenece_genero('Susana', 'Mujer').
+pertenece_genero('Tamara', 'Agenero').
+pertenece_genero('Tatiana', 'Bigenero').
+pertenece_genero('Teresa', 'Hombre').
+pertenece_genero('Ursula', 'NoBinaria').
+pertenece_genero('Vanesa', 'Transgenero').
+pertenece_genero('Victoria', 'Fluido').
+pertenece_genero('Violeta', 'Mujer').
+pertenece_genero('Virginia', 'Agenero').
+pertenece_genero('Yolanda', 'Bigenero').
+pertenece_genero('Zoila', 'Transgenero').
 
 % nombres indigenas
 
@@ -2812,7 +3998,403 @@ residencia(migrantes).
 participacion_politica(activos_politicamente).
 participacion_politica(no_activos_politicamente).
 participacion_politica(militantes_de_partidos_politicos).
-participacion_politica(independientes).
+participacion_politica(apoliticos).
+
+persona_residencia_posicion_politica('Juan', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Maria', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Pedro', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Ana', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Aaron', suburbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Abel', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Arely', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Alma', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Abelardo', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Abraham', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Adalberto', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Adan', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Adolfo', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Adrian', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Agustin', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Alejandro', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Alex', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Alexis', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Alfonso', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Alfredo', suburbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Allan', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Alonso', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Alvaro', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Amado', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Amador', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Amando', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Amancio', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Americo', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Amilcar', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Anastasio', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Anselmo', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Antonio', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Armando', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Arnoldo', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Arturo', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Augusto', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Aurelio', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Baltazar', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Bartolo', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Bartolome', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Benigno', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Benito', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Benjamin', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Brandon', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Kevin', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Bernardo', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Braulio', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Bruno', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Camilo', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Carlos', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Carmelo', urbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Cayetano', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Celestino', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Cesar', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Cipriano', suburbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Ciriaco', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Ciro', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Clemente', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Cleto', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Cosme', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Cristian', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Cristobal', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Damian', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Daniel', suburbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('David', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Demetrio', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Dionisio', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Domingo', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Donato', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Eduardo', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Efrain', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Elias', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Eliseo', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Emiliano', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Emilio', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Enrique', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Ernesto', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Esteban', urbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Eugenio', suburbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Eusebio', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Evaristo', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Facundo', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Federico', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Fernando', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Fidel', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Firman', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Felipe', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Fernando', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Fidel', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Francisco', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Gabino', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Gabriel', suburbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Gaspar', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Gaston', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Gaudencio', suburbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('German', suburbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Gerardo', urbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Gilberto', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Gines', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Gonzalo', urbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Gregorio', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Gualberto', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Guido', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Guillermo', suburbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Gustavo', suburbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Hector', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Heriberto', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Higinio', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Hilario', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Hipolito', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Horacio', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Hugo', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Humberto', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Ignacio', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Inocencio', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Ireneo', urbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Isaias', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Isidro', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Ismael', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Ivan', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Jacobo', urbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Jaime', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Javier', suburbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Jeronimo', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Jesus', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Joaquin', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Jonatan', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Jorge', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Jose', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Josefino', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Julian', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Julio', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Justo', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Laureano', suburbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Lauro', urbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Leandro', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Leonardo', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Lino', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Lisandro', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Lorenzo', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Luis', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Macedonio', suburbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Marcelino', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Marco', suburbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Marcus', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Mario', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Martin', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Mateo', urbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Matias', suburbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Mauricio', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Maximino', suburbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Melchor', suburbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Melquiades', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Miguel', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Modesto', suburbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Moises', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Nahum', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Narciso', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Nataniel', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Nicolas', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Oscar', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Pablo', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Pascual', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Patricio', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Pio', urbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Rafael', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Ramiro', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Ramon', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Raul', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Renato', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Frida', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Reynaldo', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Ricardo', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Rigoberto', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Rogelio', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Rodrigo', suburbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Roman', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Ruben', urbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Rufino', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Salvador', suburbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Samuel', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Santiago', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Sebastian', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Sergio', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Simon', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Sireno', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Socorro', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Socrates', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Susano', suburbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Tadeo', suburbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Teofilo', suburbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Tereso', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Thomas', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Tiburcio', suburbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Timoteo', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Tomas', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Tomas', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Ulises', suburbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Urbano', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Uriel', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Ursulo', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Valentin', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Valerio', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Vicente', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Victor', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Octavio', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Alfonso', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Alfredo', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Alvaro', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Andrea', suburbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Angelica', suburbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Angela', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Antonia', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Araceli', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Aurora', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Beatriz', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Belen', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Bertha', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Blanca', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Brenda', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Camila', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Caridad', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Carina', suburbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Carla', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Carmen', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Carolina', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Catalina', suburbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Cecilia', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Celia', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Clara', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Claudia', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Concepcion', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Concha', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Consuelo', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Diana', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Dolores', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Dora', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Dulce', urbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Edith', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Elena', suburbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Elisa', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Elizabeth', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Elvira', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Emilia', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Esperanza', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Ester', suburbanos, [activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Eugenia', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Eva', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Fabiola', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Felipa', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Fernanda', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Flor', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Francisca', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Gabriela', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Genoveva', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Georgina', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Gloria', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Graciela', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Guadalupe', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Haydee', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Helena', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Hilda', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Ines', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Irma', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Isabel', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Jacinta', urbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Jacqueline', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Jimena', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Josefina', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Juana', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Juliana', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Julia', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Laura', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Leonor', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Leticia', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Lilia', suburbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Liliana', urbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Lisandro', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Lorena', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Lourdes', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Lucia', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Luciana', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Lucinda', suburbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Luisa', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Luz', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Magdalena', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Margarita', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Maria', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Mariana', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Maricela', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Marilu', urbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Marina', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Marisa', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Marta', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Martina', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Matilde', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Melisa', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Mercedes', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Monica', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Miriam', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Mirta', suburbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Nadia', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Natalia', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Natividad', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Nicole', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Norma', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Olga', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Olivia', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Paola', urbanos, [apoliticos]).
+persona_residencia_posicion_politica('Patricia', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Paula', urbanos, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Paulina', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Paz', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Petra', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Pilar', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Priscila', suburbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Raquel', suburbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Rebeca', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Regina', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Renata', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Ricarda', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Rita', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Roberta', urbanos, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Rocio', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Rosa', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Rosalia', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Rosario', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Ruth', suburbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Salome', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Sandra', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Sara', suburbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Silvia', suburbanos, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Socorro', suburbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Sofia', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Soledad', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Susana', urbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Tamara', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Tatiana', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Teresa', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Ursula', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Vanesa', urbanos, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Victoria', suburbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Violeta', urbanos, [militantes_de_partidos_politicos, apoliticos]).
+persona_residencia_posicion_politica('Virginia', urbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Yolanda', suburbanos, [apoliticos]).
+persona_residencia_posicion_politica('Zoila', suburbanos, [militantes_de_partidos_politicos, no_activos_politicamente]). 
+
+persona_residencia_posicion_politica('Anam', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Ariché', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Axochitl', suburbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Bimorí', migrantes, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Citlali', rurales, [apoliticos]).
+persona_residencia_posicion_politica('Inda Jani', rurales, [apoliticos]).
+persona_residencia_posicion_politica('Itan de hüi', migrantes, [activos_politicamente]).
+persona_residencia_posicion_politica('Ix Chel', migrantes, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Ix Kaknab', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Kantyi', rurales, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Malinalli', suburbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Nakawé', suburbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Sesasi', rurales, [no_activos_politicamente, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Soona', migrantes, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Xochimitl', migrantes, [apoliticos]).
+persona_residencia_posicion_politica('Yamanik', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Yatzil', urbanos, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Yej susen', urbanos, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Atl', migrantes, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Atlahua', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Canneo', migrantes, [activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Danaá', suburbanos, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Hedía', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Ikal', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Irepani', rurales, [apoliticos, militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Kabil', urbanos, [no_activos_politicamente, activos_politicamente]).
+persona_residencia_posicion_politica('Kasakir', rurales, [activos_politicamente]).
+persona_residencia_posicion_politica('Maatiaak', rurales, [militantes_de_partidos_politicos, activos_politicamente]).
+persona_residencia_posicion_politica('Masawa', suburbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Polo', rurales, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Rahui', migrantes, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Semeel jak', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Séneca', urbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Surem', migrantes, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Tanok', suburbanos, [activos_politicamente, no_activos_politicamente]).
+persona_residencia_posicion_politica('Tlayolotl', migrantes, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Tsijiari', migrantes, [activos_politicamente]).
+persona_residencia_posicion_politica('Yooko', urbanos, [no_activos_politicamente, apoliticos]).
+persona_residencia_posicion_politica('Erendirani', migrantes, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Hasen', urbanos, [militantes_de_partidos_politicos]).
+persona_residencia_posicion_politica('Iktan', migrantes, [no_activos_politicamente]).
+persona_residencia_posicion_politica('Itzamatul', rurales, [militantes_de_partidos_politicos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Naran', rurales, [apoliticos, no_activos_politicamente]).
+persona_residencia_posicion_politica('Nima', urbanos, [activos_politicamente]).
+persona_residencia_posicion_politica('Seti', migrantes, [apoliticos]).
+persona_residencia_posicion_politica('Shanarani', migrantes, [activos_politicamente]).
+persona_residencia_posicion_politica('Suré', suburbanos, [apoliticos, activos_politicamente]).
+persona_residencia_posicion_politica('Taiyari', rurales, [activos_politicamente]).
 
 % Condición de Salud
 condicion_de_salud(personas_con_discapacidad).
@@ -2827,34 +4409,408 @@ preferencia_alimentaria(veganos).
 preferencia_alimentaria(pescetarianos).
 preferencia_alimentaria(flexitarianos).
 
+
 % Actividad Física
 actividad_fisica(activos_fisicamente).
 actividad_fisica(sedentarios).
 actividad_fisica(deportistas_profesionales).
 actividad_fisica(aficionados_al_fitness).
 
-% Lugar actividad fisica
+persona_salud_alimentacion('Juan', personas_con_enfermedades_cronicas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Maria', personas_sanas, aficionados_al_fitness, [veganos, vegetarianos]).
+persona_salud_alimentacion('Pedro', persnas_con_enfermedades_mentales, aficionados_al_fitness, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Ana', personas_con_enfermedades_cronicas, aficionados_al_fitness, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Aaron', personas_con_enfermedades_cronicas, sedentarios, [pescaterianos, veganos]).
+persona_salud_alimentacion('Abel', personas_sanas, sedentarios, [omnivoros, veganos]).
+persona_salud_alimentacion('Arely', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Alma', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Abelardo', personas_con_discapacidad, activos_fisicamente, [veganos, flexiterianos]).
+persona_salud_alimentacion('Abraham', persnas_con_enfermedades_mentales, sedentarios, [veganos, vegetarianos]).
+persona_salud_alimentacion('Adalberto', personas_con_discapacidad, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Adan', personas_sanas, sedentarios, [veganos, flexiterianos]).
+persona_salud_alimentacion('Adolfo', persnas_con_enfermedades_mentales, activos_fisicamente, [veganos, flexiterianos]).
+persona_salud_alimentacion('Adrian', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Agustin', personas_con_discapacidad, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Alejandro', personas_sanas, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Alex', persnas_con_enfermedades_mentales, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Alexis', personas_sanas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Alfonso', personas_sanas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Alfredo', persnas_con_enfermedades_mentales, activos_fisicamente, [vegetarianos, pescaterianos]).
+persona_salud_alimentacion('Allan', personas_con_discapacidad, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Alonso', personas_con_enfermedades_cronicas, sedentarios, [veganos]).
+persona_salud_alimentacion('Alvaro', personas_con_enfermedades_cronicas, sedentarios, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Amado', personas_sanas, activos_fisicamente, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Amador', personas_con_enfermedades_cronicas, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Amando', personas_con_discapacidad, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Amancio', personas_con_discapacidad, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Americo', personas_con_enfermedades_cronicas, sedentarios, [veganos]).
+persona_salud_alimentacion('Amilcar', personas_con_enfermedades_cronicas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Anastasio', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Anselmo', personas_con_enfermedades_cronicas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Antonio', personas_con_discapacidad, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Armando', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos, omnivoros]).
+persona_salud_alimentacion('Arnoldo', personas_sanas, sedentarios, [pescaterianos, veganos]).
+persona_salud_alimentacion('Arturo', persnas_con_enfermedades_mentales, sedentarios, [veganos, pescaterianos]).
+persona_salud_alimentacion('Augusto', personas_con_discapacidad, activos_fisicamente, [veganos, pescaterianos]).
+persona_salud_alimentacion('Aurelio', personas_con_enfermedades_cronicas, sedentarios, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Baltazar', personas_con_enfermedades_cronicas, activos_fisicamente, [veganos, omnivoros]).
+persona_salud_alimentacion('Bartolo', personas_con_discapacidad, sedentarios, [pescaterianos, veganos]).
+persona_salud_alimentacion('Bartolome', personas_sanas, sedentarios, [pescaterianos, veganos]).
+persona_salud_alimentacion('Benigno', personas_con_enfermedades_cronicas, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Benito', personas_con_discapacidad, sedentarios, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Benjamin', personas_con_discapacidad, aficionados_al_fitness, [vegetarianos, pescaterianos]).
+persona_salud_alimentacion('Brandon', personas_sanas, sedentarios, [veganos]).
+persona_salud_alimentacion('Kevin', personas_con_discapacidad, aficionados_al_fitness, [veganos, omnivoros]).
+persona_salud_alimentacion('Bernardo', persnas_con_enfermedades_mentales, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Braulio', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Bruno', persnas_con_enfermedades_mentales, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Camilo', personas_con_enfermedades_cronicas, aficionados_al_fitness, [veganos, pescaterianos]).
+persona_salud_alimentacion('Carlos', personas_con_discapacidad, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Carmelo', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Cayetano', personas_sanas, sedentarios, [vegetarianos, pescaterianos]).
+persona_salud_alimentacion('Celestino', personas_con_discapacidad, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Cesar', personas_con_discapacidad, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Cipriano', persnas_con_enfermedades_mentales, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Ciriaco', persnas_con_enfermedades_mentales, aficionados_al_fitness, [vegetarianos, veganos]).
+persona_salud_alimentacion('Ciro', personas_con_discapacidad, sedentarios, [veganos, flexiterianos]).
+persona_salud_alimentacion('Clemente', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Cleto', personas_con_discapacidad, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Cosme', personas_con_enfermedades_cronicas, sedentarios, [veganos, vegetarianos]).
+persona_salud_alimentacion('Cristian', personas_con_enfermedades_cronicas, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Cristobal', personas_sanas, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Damian', personas_sanas, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Daniel', personas_con_discapacidad, sedentarios, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('David', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros, veganos]).
+persona_salud_alimentacion('Demetrio', personas_con_discapacidad, aficionados_al_fitness, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Dionisio', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Domingo', personas_sanas, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Donato', persnas_con_enfermedades_mentales, sedentarios, [vegetarianos, veganos]).
+persona_salud_alimentacion('Eduardo', personas_con_discapacidad, aficionados_al_fitness, [veganos, flexiterianos]).
+persona_salud_alimentacion('Efrain', personas_con_discapacidad, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Elias', persnas_con_enfermedades_mentales, sedentarios, [veganos, pescaterianos]).
+persona_salud_alimentacion('Eliseo', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, veganos]).
+persona_salud_alimentacion('Emiliano', personas_con_enfermedades_cronicas, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Emilio', personas_con_enfermedades_cronicas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Enrique', personas_sanas, sedentarios, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Ernesto', personas_con_discapacidad, aficionados_al_fitness, [vegetarianos, veganos]).
+persona_salud_alimentacion('Esteban', personas_sanas, activos_fisicamente, [veganos, vegetarianos]).
+persona_salud_alimentacion('Eugenio', persnas_con_enfermedades_mentales, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Eusebio', personas_con_enfermedades_cronicas, activos_fisicamente, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Evaristo', personas_con_discapacidad, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Facundo', personas_con_enfermedades_cronicas, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Federico', personas_con_discapacidad, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Fernando', personas_con_enfermedades_cronicas, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Fidel', personas_con_enfermedades_cronicas, aficionados_al_fitness, [vegetarianos, omnivoros]).
+persona_salud_alimentacion('Firman', personas_sanas, activos_fisicamente, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Felipe', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Fernando', personas_con_enfermedades_cronicas, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Fidel', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Francisco', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, omnivoros]).
+persona_salud_alimentacion('Gabino', personas_con_enfermedades_cronicas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Gabriel', personas_con_discapacidad, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Gaspar', personas_con_enfermedades_cronicas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Gaston', personas_con_enfermedades_cronicas, activos_fisicamente, [veganos, vegetarianos]).
+persona_salud_alimentacion('Gaudencio', personas_con_discapacidad, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('German', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Gerardo', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Gilberto', personas_sanas, aficionados_al_fitness, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Gines', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Gonzalo', personas_con_discapacidad, aficionados_al_fitness, [pescaterianos, omnivoros]).
+persona_salud_alimentacion('Gregorio', personas_con_discapacidad, aficionados_al_fitness, [pescaterianos, veganos]).
+persona_salud_alimentacion('Gualberto', personas_con_enfermedades_cronicas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Guido', personas_sanas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Guillermo', personas_con_discapacidad, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Gustavo', personas_con_discapacidad, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Hector', persnas_con_enfermedades_mentales, activos_fisicamente, [veganos, pescaterianos]).
+persona_salud_alimentacion('Heriberto', personas_sanas, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Higinio', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Hilario', personas_con_discapacidad, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Hipolito', personas_con_enfermedades_cronicas, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Horacio', personas_sanas, activos_fisicamente, [pescaterianos, veganos]).
+persona_salud_alimentacion('Hugo', personas_sanas, aficionados_al_fitness, [flexiterianos, veganos]).
+persona_salud_alimentacion('Humberto', personas_con_discapacidad, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Ignacio', personas_sanas, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Inocencio', personas_con_enfermedades_cronicas, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Ireneo', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Isaias', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Isidro', personas_sanas, aficionados_al_fitness, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Ismael', persnas_con_enfermedades_mentales, activos_fisicamente, [veganos, omnivoros]).
+persona_salud_alimentacion('Ivan', personas_sanas, sedentarios, [veganos, flexiterianos]).
+persona_salud_alimentacion('Jacobo', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Jaime', persnas_con_enfermedades_mentales, sedentarios, [veganos]).
+persona_salud_alimentacion('Javier', personas_con_discapacidad, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Jeronimo', personas_con_enfermedades_cronicas, activos_fisicamente, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Jesus', personas_con_discapacidad, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Joaquin', personas_sanas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Jonatan', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Jorge', persnas_con_enfermedades_mentales, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Jose', personas_con_discapacidad, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Josefino', personas_sanas, aficionados_al_fitness, [pescaterianos, veganos]).
+persona_salud_alimentacion('Julian', personas_con_discapacidad, activos_fisicamente, [veganos, omnivoros]).
+persona_salud_alimentacion('Julio', personas_con_discapacidad, sedentarios, [veganos]).
+persona_salud_alimentacion('Justo', personas_con_enfermedades_cronicas, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Laureano', personas_sanas, sedentarios, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Lauro', personas_sanas, activos_fisicamente, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Leandro', personas_con_discapacidad, sedentarios, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Leonardo', persnas_con_enfermedades_mentales, sedentarios, [veganos, vegetarianos]).
+persona_salud_alimentacion('Lino', persnas_con_enfermedades_mentales, sedentarios, [veganos]).
+persona_salud_alimentacion('Lisandro', personas_con_discapacidad, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Lorenzo', personas_con_enfermedades_cronicas, activos_fisicamente, [veganos, pescaterianos]).
+persona_salud_alimentacion('Luis', personas_con_discapacidad, sedentarios, [veganos]).
+persona_salud_alimentacion('Macedonio', personas_con_enfermedades_cronicas, aficionados_al_fitness, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Marcelino', persnas_con_enfermedades_mentales, activos_fisicamente, [vegetarianos, veganos]).
+persona_salud_alimentacion('Marco', personas_sanas, aficionados_al_fitness, [flexiterianos, veganos]).
+persona_salud_alimentacion('Marcus', personas_con_enfermedades_cronicas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Mario', personas_con_enfermedades_cronicas, aficionados_al_fitness, [flexiterianos, veganos]).
+persona_salud_alimentacion('Martin', personas_sanas, aficionados_al_fitness, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Mateo', personas_sanas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Matias', personas_con_discapacidad, sedentarios, [vegetarianos, omnivoros]).
+persona_salud_alimentacion('Mauricio', personas_sanas, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Maximino', personas_sanas, activos_fisicamente, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Melchor', personas_con_enfermedades_cronicas, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Melquiades', personas_con_discapacidad, sedentarios, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Miguel', personas_sanas, activos_fisicamente, [flexiterianos, veganos]).
+persona_salud_alimentacion('Modesto', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Moises', personas_con_discapacidad, sedentarios, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Nahum', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Narciso', personas_con_discapacidad, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Nataniel', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Nicolas', persnas_con_enfermedades_mentales, sedentarios, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Oscar', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Pablo', personas_sanas, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Pascual', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, omnivoros]).
+persona_salud_alimentacion('Patricio', personas_con_enfermedades_cronicas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Pio', persnas_con_enfermedades_mentales, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Rafael', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Ramiro', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Ramon', personas_con_discapacidad, aficionados_al_fitness, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Raul', persnas_con_enfermedades_mentales, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Renato', personas_con_discapacidad, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Frida', personas_con_enfermedades_cronicas, sedentarios, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Reynaldo', personas_con_discapacidad, aficionados_al_fitness, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Ricardo', personas_sanas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Rigoberto', persnas_con_enfermedades_mentales, sedentarios, [veganos, omnivoros]).
+persona_salud_alimentacion('Rogelio', personas_con_discapacidad, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Rodrigo', personas_con_discapacidad, aficionados_al_fitness, [veganos, pescaterianos]).
+persona_salud_alimentacion('Roman', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Ruben', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos, veganos]).
+persona_salud_alimentacion('Rufino', personas_con_discapacidad, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Salvador', personas_sanas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Samuel', personas_con_discapacidad, sedentarios, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Santiago', personas_con_discapacidad, activos_fisicamente, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Sebastian', personas_sanas, sedentarios, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Sergio', personas_sanas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Simon', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Sireno', personas_sanas, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Socorro', personas_sanas, sedentarios, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Socrates', personas_con_discapacidad, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Susano', persnas_con_enfermedades_mentales, aficionados_al_fitness, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Tadeo', personas_sanas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Teofilo', personas_sanas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Tereso', personas_sanas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Thomas', personas_con_discapacidad, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Tiburcio', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Timoteo', personas_con_enfermedades_cronicas, sedentarios, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Tomas', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Tomas', personas_sanas, aficionados_al_fitness, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Ulises', persnas_con_enfermedades_mentales, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Urbano', personas_con_enfermedades_cronicas, aficionados_al_fitness, [veganos, vegetarianos]).
+persona_salud_alimentacion('Uriel', personas_con_enfermedades_cronicas, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Ursulo', persnas_con_enfermedades_mentales, sedentarios, [omnivoros, veganos]).
+persona_salud_alimentacion('Valentin', personas_sanas, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Valerio', personas_sanas, activos_fisicamente, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Vicente', personas_con_discapacidad, sedentarios, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Victor', personas_con_enfermedades_cronicas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Octavio', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Alfonso', personas_sanas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Alfredo', persnas_con_enfermedades_mentales, sedentarios, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Alvaro', personas_sanas, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Andrea', personas_sanas, sedentarios, [veganos, flexiterianos]).
+persona_salud_alimentacion('Angelica', personas_con_discapacidad, aficionados_al_fitness, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Angela', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Antonia', persnas_con_enfermedades_mentales, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Araceli', personas_con_discapacidad, aficionados_al_fitness, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Aurora', personas_con_discapacidad, aficionados_al_fitness, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Beatriz', personas_con_discapacidad, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Belen', persnas_con_enfermedades_mentales, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Bertha', personas_con_discapacidad, sedentarios, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Blanca', personas_con_enfermedades_cronicas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Brenda', persnas_con_enfermedades_mentales, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Camila', personas_sanas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Caridad', personas_con_discapacidad, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Carina', persnas_con_enfermedades_mentales, sedentarios, [omnivoros, veganos]).
+persona_salud_alimentacion('Carla', persnas_con_enfermedades_mentales, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Carmen', personas_con_discapacidad, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Carolina', personas_sanas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Catalina', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Cecilia', persnas_con_enfermedades_mentales, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Celia', personas_sanas, activos_fisicamente, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Clara', personas_con_discapacidad, sedentarios, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Claudia', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Concepcion', personas_sanas, aficionados_al_fitness, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Concha', personas_con_discapacidad, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Consuelo', personas_sanas, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Diana', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Dolores', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Dora', personas_sanas, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Dulce', personas_sanas, sedentarios, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Edith', personas_sanas, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Elena', personas_sanas, aficionados_al_fitness, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Elisa', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, omnivoros]).
+persona_salud_alimentacion('Elizabeth', personas_con_enfermedades_cronicas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Elvira', personas_con_enfermedades_cronicas, aficionados_al_fitness, [flexiterianos, veganos]).
+persona_salud_alimentacion('Emilia', persnas_con_enfermedades_mentales, sedentarios, [veganos]).
+persona_salud_alimentacion('Esperanza', personas_sanas, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Ester', personas_con_enfermedades_cronicas, aficionados_al_fitness, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Eugenia', persnas_con_enfermedades_mentales, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Eva', personas_con_enfermedades_cronicas, aficionados_al_fitness, [veganos, vegetarianos]).
+persona_salud_alimentacion('Fabiola', persnas_con_enfermedades_mentales, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Felipa', persnas_con_enfermedades_mentales, sedentarios, [veganos]).
+persona_salud_alimentacion('Fernanda', personas_con_discapacidad, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Flor', personas_sanas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Francisca', personas_con_enfermedades_cronicas, sedentarios, [veganos]).
+persona_salud_alimentacion('Gabriela', personas_con_enfermedades_cronicas, aficionados_al_fitness, [veganos, vegetarianos]).
+persona_salud_alimentacion('Genoveva', persnas_con_enfermedades_mentales, aficionados_al_fitness, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Georgina', personas_sanas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Gloria', personas_con_enfermedades_cronicas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Graciela', personas_con_discapacidad, sedentarios, [flexiterianos, veganos]).
+persona_salud_alimentacion('Guadalupe', personas_sanas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Haydee', personas_con_discapacidad, aficionados_al_fitness, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Helena', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Hilda', personas_sanas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Ines', personas_con_discapacidad, sedentarios, [veganos, omnivoros]).
+persona_salud_alimentacion('Irma', personas_con_discapacidad, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Isabel', personas_con_discapacidad, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Jacinta', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Jacqueline', personas_con_discapacidad, aficionados_al_fitness, [omnivoros, veganos]).
+persona_salud_alimentacion('Jimena', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Josefina', personas_sanas, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Juana', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Juliana', persnas_con_enfermedades_mentales, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Julia', personas_con_discapacidad, activos_fisicamente, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Laura', personas_con_discapacidad, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Leonor', personas_sanas, activos_fisicamente, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Leticia', personas_sanas, aficionados_al_fitness, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Lilia', personas_sanas, activos_fisicamente, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Liliana', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Lisandro', personas_con_enfermedades_cronicas, aficionados_al_fitness, [pescaterianos, veganos]).
+persona_salud_alimentacion('Lorena', personas_con_discapacidad, activos_fisicamente, [vegetarianos, pescaterianos]).
+persona_salud_alimentacion('Lourdes', persnas_con_enfermedades_mentales, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Lucia', persnas_con_enfermedades_mentales, sedentarios, [veganos, pescaterianos]).
+persona_salud_alimentacion('Luciana', personas_con_discapacidad, activos_fisicamente, [pescaterianos, veganos]).
+persona_salud_alimentacion('Lucinda', personas_con_enfermedades_cronicas, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Luisa', personas_sanas, aficionados_al_fitness, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Luz', persnas_con_enfermedades_mentales, aficionados_al_fitness, [veganos, pescaterianos]).
+persona_salud_alimentacion('Magdalena', personas_con_discapacidad, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Margarita', personas_sanas, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Maria', personas_sanas, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Mariana', personas_con_discapacidad, activos_fisicamente, [flexiterianos, veganos]).
+persona_salud_alimentacion('Maricela', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Marilu', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Marina', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Marisa', personas_sanas, sedentarios, [vegetarianos, veganos]).
+persona_salud_alimentacion('Marta', personas_sanas, sedentarios, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Martina', personas_con_enfermedades_cronicas, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Matilde', personas_sanas, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Melisa', personas_con_discapacidad, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Mercedes', persnas_con_enfermedades_mentales, sedentarios, [veganos]).
+persona_salud_alimentacion('Monica', personas_con_discapacidad, aficionados_al_fitness, [pescaterianos, veganos]).
+persona_salud_alimentacion('Miriam', personas_con_discapacidad, activos_fisicamente, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Mirta', personas_con_discapacidad, aficionados_al_fitness, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Nadia', personas_con_discapacidad, activos_fisicamente, [veganos, omnivoros]).
+persona_salud_alimentacion('Natalia', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Natividad', personas_con_discapacidad, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Nicole', personas_sanas, aficionados_al_fitness, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Norma', personas_con_enfermedades_cronicas, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Olga', personas_sanas, aficionados_al_fitness, [veganos, pescaterianos]).
+persona_salud_alimentacion('Olivia', personas_sanas, aficionados_al_fitness, [veganos, flexiterianos]).
+persona_salud_alimentacion('Paola', personas_con_discapacidad, sedentarios, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Patricia', personas_con_enfermedades_cronicas, activos_fisicamente, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Paula', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Paulina', personas_sanas, activos_fisicamente, [veganos, flexiterianos]).
+persona_salud_alimentacion('Paz', personas_con_enfermedades_cronicas, sedentarios, [veganos, pescaterianos]).
+persona_salud_alimentacion('Petra', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos, omnivoros]).
+persona_salud_alimentacion('Pilar', personas_con_enfermedades_cronicas, activos_fisicamente, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Priscila', personas_con_discapacidad, sedentarios, [vegetarianos, omnivoros]).
+persona_salud_alimentacion('Raquel', personas_con_enfermedades_cronicas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Rebeca', persnas_con_enfermedades_mentales, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Regina', personas_con_discapacidad, aficionados_al_fitness, [vegetarianos, flexiterianos]).
+persona_salud_alimentacion('Renata', persnas_con_enfermedades_mentales, aficionados_al_fitness, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Ricarda', personas_sanas, activos_fisicamente, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Rita', personas_con_enfermedades_cronicas, sedentarios, [omnivoros, veganos]).
+persona_salud_alimentacion('Roberta', persnas_con_enfermedades_mentales, activos_fisicamente, [veganos, flexiterianos]).
+persona_salud_alimentacion('Rocio', personas_sanas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Rosa', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Rosalia', personas_sanas, aficionados_al_fitness, [veganos, omnivoros]).
+persona_salud_alimentacion('Rosario', personas_con_enfermedades_cronicas, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Ruth', personas_con_discapacidad, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Salome', personas_con_discapacidad, sedentarios, [omnivoros, veganos]).
+persona_salud_alimentacion('Sandra', persnas_con_enfermedades_mentales, sedentarios, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Sara', personas_sanas, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Silvia', personas_con_discapacidad, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Socorro', persnas_con_enfermedades_mentales, aficionados_al_fitness, [veganos, flexiterianos]).
+persona_salud_alimentacion('Sofia', personas_con_discapacidad, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Soledad', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos, omnivoros]).
+persona_salud_alimentacion('Susana', persnas_con_enfermedades_mentales, activos_fisicamente, [omnivoros, veganos]).
+persona_salud_alimentacion('Tamara', personas_sanas, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Tatiana', personas_con_discapacidad, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Teresa', personas_con_discapacidad, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Ursula', personas_con_discapacidad, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Vanesa', persnas_con_enfermedades_mentales, sedentarios, [veganos, omnivoros]).
+persona_salud_alimentacion('Victoria', personas_sanas, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Violeta', personas_con_enfermedades_cronicas, activos_fisicamente, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Virginia', personas_sanas, sedentarios, [flexiterianos]).
+persona_salud_alimentacion('Yolanda', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Zoila', personas_con_enfermedades_cronicas, aficionados_al_fitness, [vegetarianos]).
 
-lugar_actividad_fisica(activos_fisicamente, al_aire_libre).
-lugar_actividad_fisica(deportistas_profesionales, instalaciones_deportivas).
-
-% Tiempo a la actividad fisica
-
-tiempo_dedicado_actividad_fisica(aficionados_al_fitness, alta).
-tiempo_dedicado_actividad_fisica(sedentarios, baja).
-
-% Tiempo preferido 
-
-tiempo_contenido_pregerido(consumidores_de_television, series_y_peliculas).
-tiempo_contenido_preferido(lectores_de_periodicos_y_revistas).
-
-
-% Consumo de Medios
-consumo_de_medios(consumidores_de_television).
-consumo_de_medios(usuarios_de_redes_sociales).
-consumo_de_medios(lectores_de_periodicos_y_revistas).
-consumo_de_medios(radioescuchas).
-consumo_de_medios(consumidores_de_contenido_digital).
+persona_salud_alimentacion('Anam', personas_con_discapacidad, activos_fisicamente, [omnivoros, veganos]).
+persona_salud_alimentacion('Ariché', personas_sanas, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Axochitl', personas_con_enfermedades_cronicas, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Bimorí', personas_con_enfermedades_cronicas, aficionados_al_fitness, [pescaterianos]).
+persona_salud_alimentacion('Citlali', personas_con_enfermedades_cronicas, sedentarios, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Inda Jani', personas_con_enfermedades_cronicas, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Itan de hüi', persnas_con_enfermedades_mentales, aficionados_al_fitness, [veganos, pescaterianos]).
+persona_salud_alimentacion('Ix Chel', personas_con_discapacidad, sedentarios, [flexiterianos, vegetarianos]).
+persona_salud_alimentacion('Ix Kaknab', personas_con_discapacidad, sedentarios, [vegetarianos, omnivoros]).
+persona_salud_alimentacion('Kantyi', personas_sanas, aficionados_al_fitness, [veganos, flexiterianos]).
+persona_salud_alimentacion('Malinalli', personas_con_enfermedades_cronicas, activos_fisicamente, [flexiterianos]).
+persona_salud_alimentacion('Nakawé', personas_con_discapacidad, sedentarios, [veganos]).
+persona_salud_alimentacion('Sesasi', personas_con_enfermedades_cronicas, aficionados_al_fitness, [omnivoros, flexiterianos]).
+persona_salud_alimentacion('Soona', personas_con_enfermedades_cronicas, sedentarios, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Xochimitl', personas_sanas, activos_fisicamente, [vegetarianos]).
+persona_salud_alimentacion('Yamanik', personas_sanas, activos_fisicamente, [vegetarianos, veganos]).
+persona_salud_alimentacion('Yatzil', personas_con_discapacidad, aficionados_al_fitness, [vegetarianos]).
+persona_salud_alimentacion('Yej susen', persnas_con_enfermedades_mentales, activos_fisicamente, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Atl', personas_sanas, activos_fisicamente, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Atlahua', persnas_con_enfermedades_mentales, aficionados_al_fitness, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Canneo', persnas_con_enfermedades_mentales, aficionados_al_fitness, [flexiterianos]).
+persona_salud_alimentacion('Danaá', personas_con_discapacidad, activos_fisicamente, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Hedía', persnas_con_enfermedades_mentales, activos_fisicamente, [flexiterianos, veganos]).
+persona_salud_alimentacion('Ikal', personas_sanas, aficionados_al_fitness, [vegetarianos, omnivoros]).
+persona_salud_alimentacion('Irepani', personas_con_discapacidad, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Kabil', personas_con_discapacidad, sedentarios, [omnivoros, pescaterianos]).
+persona_salud_alimentacion('Kasakir', personas_con_enfermedades_cronicas, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Maatiaak', personas_con_enfermedades_cronicas, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Masawa', personas_sanas, sedentarios, [veganos]).
+persona_salud_alimentacion('Polo', persnas_con_enfermedades_mentales, sedentarios, [omnivoros, vegetarianos]).
+persona_salud_alimentacion('Rahui', personas_sanas, sedentarios, [veganos, flexiterianos]).
+persona_salud_alimentacion('Semeel jak', persnas_con_enfermedades_mentales, sedentarios, [vegetarianos]).
+persona_salud_alimentacion('Séneca', persnas_con_enfermedades_mentales, sedentarios, [pescaterianos]).
+persona_salud_alimentacion('Surem', personas_con_discapacidad, aficionados_al_fitness, [veganos]).
+persona_salud_alimentacion('Tanok', personas_con_discapacidad, sedentarios, [pescaterianos, vegetarianos]).
+persona_salud_alimentacion('Tlayolotl', personas_sanas, sedentarios, [veganos]).
+persona_salud_alimentacion('Tsijiari', personas_con_enfermedades_cronicas, activos_fisicamente, [flexiterianos, omnivoros]).
+persona_salud_alimentacion('Yooko', persnas_con_enfermedades_mentales, sedentarios, [omnivoros]).
+persona_salud_alimentacion('Erendirani', personas_con_discapacidad, sedentarios, [vegetarianos, pescaterianos]).
+persona_salud_alimentacion('Hasen', persnas_con_enfermedades_mentales, sedentarios, [flexiterianos, pescaterianos]).
+persona_salud_alimentacion('Iktan', personas_con_discapacidad, activos_fisicamente, [omnivoros]).
+persona_salud_alimentacion('Itzamatul', personas_con_enfermedades_cronicas, aficionados_al_fitness, [veganos, flexiterianos]).
+persona_salud_alimentacion('Naran', personas_sanas, aficionados_al_fitness, [omnivoros]).
+persona_salud_alimentacion('Nima', personas_con_discapacidad, sedentarios, [pescaterianos, flexiterianos]).
+persona_salud_alimentacion('Seti', personas_con_enfermedades_cronicas, activos_fisicamente, [veganos]).
+persona_salud_alimentacion('Shanarani', personas_sanas, activos_fisicamente, [pescaterianos]).
+persona_salud_alimentacion('Suré', persnas_con_enfermedades_mentales, activos_fisicamente, [vegetarianos, veganos]).
+persona_salud_alimentacion('Taiyari', personas_sanas, sedentarios, [veganos]).
 
 % Relación entre Situación Económica y Religión
 situacion_religion([clase_baja, clase_media], catolicos).
@@ -2886,130 +4842,42 @@ religion_lengua(budistas, [espanol, ingles, frances]).
 religion_lengua(hinduistas, [espanol, ingles]).
 religion_lengua(sin_religion, [espanol, ingles, frances]).
 
-
-% Relación entre Subtipo de Idioma y Situación Económica
-/*
-subtipo_situacion(nahuatl, [clase_baja, clase_media_baja]).
-subtipo_situacion(maya, [clase_baja, clase_media_baja]).
-subtipo_situacion(zapoteco, [clase_baja ,clase_media_baja]).
-subtipo_situacion(ingles, [clase_media_alta, clase_alta, clase_media]).
-subtipo_situacion(frances, [clase_media_alta, clase_alta]).
-subtipo_situacion(espanol, [clase_baja, clase_media_baja, clase_media, clase_media_alta,clase_alta]).
-*/
-
-% ---
-
-dispositivo_uso_medio(usuarios_de_redes_sociales, smartphones).
-dispositivo_uso_medio(consumidores_de_contenido_digital, computadoras_y_tabletas).
-
-% Preferencia Alimentaria y Actividad Física
-preferencia_actividad(vegetarianos, actividad_fisica, baja).
-preferencia_actividad(veganos, actividad_fisica, alta).
-preferencia_actividad(pescetarianos, actividad_fisica, media).
-preferencia_actividad(flexitarianos, actividad_fisica, variable).
-
-% Lugar y Tiempo de Actividad Física
-lugar_tiempo_actividad(activos_fisicamente, al_aire_libre, tarde).
-lugar_tiempo_actividad(deportistas_profesionales, instalaciones_deportivas, manana).
-lugar_tiempo_actividad(aficionados_al_fitness, gimnasios, noche).
-lugar_tiempo_actividad(sedentarios, casa, indiferente).
-
-% Consumo de Medios y Preferencia de Contenido
-medio_preferencia_contenido(consumidores_de_television, entretenimiento, series_y_peliculas).
-medio_preferencia_contenido(usuarios_de_redes_sociales, informacion, noticias).
-medio_preferencia_contenido(lectores_de_periodicos_y_revistas, educacion, articulos_de_opinion).
-
-% Relación entre Actividad Física y Consumo de Medios
-actividad_consumo_medios(activos_fisicamente, bajo, redes_sociales).
-actividad_consumo_medios(sedentarios, alto, television).
-actividad_consumo_medios(deportistas_profesionales, medio, revistas_especializadas).
-actividad_consumo_medios(aficionados_al_fitness, medio, blogs_de_fitness).
-
-% Preferencia Alimentaria, Actividad Física y Edad
-preferencia_actividad_edad(vegetarianos, actividad_fisica, baja, adultos_jovenes).
-preferencia_actividad_edad(veganos, actividad_fisica, alta, adultos).
-preferencia_actividad_edad(pescetarianos, actividad_fisica, media, adultos_mayores).
-preferencia_actividad_edad(flexitarianos, actividad_fisica, variable, adolescentes).
-
-% Lugar, Tiempo de Actividad Física y Género
-lugar_tiempo_actividad_genero(activos_fisicamente, al_aire_libre, tarde, femenino).
-lugar_tiempo_actividad_genero(deportistas_profesionales, instalaciones_deportivas, manana, masculino).
-lugar_tiempo_actividad_genero(aficionados_al_fitness, gimnasios, noche, femenino).
-lugar_tiempo_actividad_genero(sedentarios, casa, indiferente, indistinto).
-
-% Consumo de Medios, Preferencia de Contenido y Edad
-medio_preferencia_contenido_edad(consumidores_de_television, entretenimiento, series_y_peliculas, adultos).
-medio_preferencia_contenido_edad(usuarios_de_redes_sociales, informacion, noticias, jovenes_adultos).
-medio_preferencia_contenido_edad(lectores_de_periodicos_y_revistas, educacion, articulos_de_opinion, adultos_mayores).
-
-% Relación entre Actividad Física, Consumo de Medios, y Género
-actividad_consumo_medios_genero(activos_fisicamente, bajo, redes_sociales, masculino).
-actividad_consumo_medios_genero(sedentarios, alto, television, femenino).
-actividad_consumo_medios_genero(deportistas_profesionales, medio, revistas_especializadas, masculino).
-actividad_consumo_medios_genero(aficionados_al_fitness, medio, blogs_de_fitness, femenino).
-
-% perfil_demografico
-
-perfil_demografico(bajio, mestizos, educacion_media_superior, jovenes_adultos, clase_media).
-perfil_demografico(occidentales, indigenas, educacion_basica_incompleta, ninos, clase_baja).
-perfil_demografico(surenos, afrodescendientes, educacion_superior, adultos, clase_media_baja).
-perfil_demografico(peninsulares, descendientes_de_inmigrantes, postgrado, adultos_mayores, clase_media).
-perfil_demografico(centroamericanos, criollos, educacion_basica_completa, adolescentes, clase_media_baja).
-perfil_demografico(bajio, indigenas, analfabetos, adultos_mayores, clase_baja).
-perfil_demografico(occidentales, mestizos, educacion_media_superior, adultos, clase_media).
-perfil_demografico(surenos, criollos, educacion_superior, jovenes_adultos, clase_media).
-perfil_demografico(peninsulares, afrodescendientes, educacion_basica_incompleta, ninos, clase_baja).
-perfil_demografico(centroamericanos, mestizos, postgrado, adultos, clase_media).
-perfil_demografico(bajio, indigenas, educacion_basica_completa, adolescentes, clase_media_baja).
-perfil_demografico(occidentales, descendientes_de_inmigrantes, educacion_media_superior, jovenes_adultos, clase_media).
-perfil_demografico(surenos, criollos, analfabetos, adultos_mayores, clase_baja).
-perfil_demografico(peninsulares, mestizos, educacion_superior, adultos, clase_media_alta).
-perfil_demografico(centroamericanos, afrodescendientes, educacion_basica_incompleta, ninos, clase_baja).
-perfil_demografico(bajio, criollos, postgrado, adultos_mayores, clase_media).
-perfil_demografico(occidentales, indigenas, educacion_media_superior, adultos, clase_media_baja).
-perfil_demografico(surenos, mestizos, educacion_superior, jovenes_adultos, clase_media).
-perfil_demografico(peninsulares, descendientes_de_inmigrantes, educacion_basica_completa, adolescentes, clase_media_baja).
-perfil_demografico(centroamericanos, indigenas, analfabetos, adultos_mayores, clase_baja). 
-
- 
-% ---
-
 %Pais
 pais(mexico).
 
 %Estados
-estado('Aguascalientes').
-estado('Baja California').
-estado('Baja California sur').
-estado('Campeche').
-estado('Chiapas').
-estado('Chihuahua').
-estado('Ciudad de Mexico').
-estado('Coahuila').
-estado('Colima').
-estado('Durango').
-estado('Guanajuato').
-estado('Guererro').
-estado('Hidalgo').
-estado('Jalisco').
-estado('Estado de Mexico').
-estado('Michoacan').
-estado('Morelos').
-estado('Nayarit').
-estado('Nuevo Leon').
-estado('Oaxaca').
-estado('Puebla').
-estado('Queretaro').
-estado('Quintana Roo').
-estado('San Luis Potosi').
-estado('Sinaloa').
-estado('Sonora').
-estado('Tabasco').
-estado('Tamaulipas').
-estado('Tlaxcala').
-estado('Veracruz').
-estado('Yucatan').
-estado('Zacatecas').
+estados('Aguascalientes').
+estados('Baja California').
+estados('Baja California sur').
+estados('Campeche').
+estados('Chiapas').
+estados('Chihuahua').
+estados('Ciudad de Mexico').
+estados('Coahuila').
+estados('Colima').
+estados('Durango').
+estados('Guanajuato').
+estados('Guererro').
+estados('Hidalgo').
+estados('Jalisco').
+estados('Ed de Mexico').
+estados('Michoacan').
+estados('Morelos').
+estados('Nayarit').
+estados('Nuevo Leon').
+estados('Oaxaca').
+estados('Puebla').
+estados('Queretaro').
+estados('Quintana Roo').
+estados('San Luis Potosi').
+estados('Sinaloa').
+estados('Sonora').
+estados('Tabasco').
+estados('Tamaulipas').
+estados('Tlaxcala').
+estados('Veracruz').
+estados('Yucatan').
+estados('Zacatecas').
 
 % --- region estado 
 
@@ -3184,38 +5052,38 @@ estado_poblacion('Zacatecas','1,633,349').
 
 %Estado_capital_comidatipica_poblacion
 
-e_ca_ct_p('Aguascalientes','Aguascalientes','Pollo de San Marcos','1.476.741').
-e_ca_ct_p('Baja California','Mexicali''Chile con Carne','3,803,598').
-e_ca_ct_p('Baja California Sur','La Paz','Ceviche','837,179').
-e_ca_ct_p('Campeche','San Francisco de Campeche','Pan de Cazon','946,130').
-e_ca_ct_p('Chiapas','Tuxtla Gutierrez','Tamales de chipilin','5,670,350').
-e_ca_ct_p('Chihuahua','Chihuahua','Burritos','3,789,509').
-e_ca_ct_p('Ciudad de Mexico','Guajolotas','9,259,354').
-e_ca_ct_p('Coahuila','Saltillo','Carne Asada','3,257,311').
-e_ca_ct_p('Colima','Colima','Sopitos','767,311').
-e_ca_ct_p('Durango','Victoria de Durango','Caldillo','1,860,401').
-e_ca_ct_p('Gunajuato','Guanajuato','Enchiladas mineras','6,247,346').
-e_ca_ct_p('Guererro','Chilpancingo','Pozole','3,583,667').
-e_ca_ct_p('Hidalgo','Pachuca','Barbacoa''3,132,539').
-e_ca_ct_p('Jalisco','Guadalajara','Birria','8,460,591').
-e_ca_ct_p('Estado de Mexico','Toluca','Pambazo','17,240,430').
-e_ca_ct_p('Michoacan','Morelia','4,919,271').
-e_ca_ct_p('Morelos','Cuernavaca','Carnitas','2,000,319').
-e_ca_ct_p('Nayarit','Tepic','Pescado zarandeado','1,256,198').
-e_ca_ct_p('Nuevo Leon','Monterrey','Cabrito','6,028,770').
-e_ca_ct_p('Oaxaca','Oaxaca','Tlayudas','4,228,733').
-e_ca_ct_p('Puebla','Puebla','Mole','6,682,040').
-e_ca_ct_p('Queretaro','Queretaro','Enchiladas queretanas','2,462,840').
-e_ca_ct_p('Quintana Roo','Chetumal''Salbutes','1,908,246').
-e_ca_ct_p('San Luis Potosi','San Luis Potosi','Enchiladas potosinas','2,858,265').
-e_ca_ct_p('Sinaloa','Culiacan','Aguachile','3,072,955').
-e_ca_ct_p('Sonora','Hermosillo','Chimichanga','2,983,268').
-e_ca_ct_p('Tabasco','Villahermosa','Pejelagarto','2,430,550').
-e_ca_ct_p('Tamaulipas','Ciudad Victoria','Tampiquena','3,571,603').
-e_ca_ct_p('Tlaxcala','Tlaxcala','Tacos de Canasta','1,364,154').
-e_ca_ct_p('Veracruz','Xalapa','Pescado a la veracruzana','8,166,395').
-e_ca_ct_p('Yucatan','Merida','Cochinita pibil','2,362,065').
-e_ca_ct_p('Zacatecas','Zacatecas','Asado de bodas','1,633,349').
+estado_capital_comidaTipica_poblacion('Aguascalientes','Aguascalientes','Pollo de San Marcos','1.476.741').
+estado_capital_comidaTipica_poblacion('Baja California','Mexicali''Chile con Carne','3,803,598').
+estado_capital_comidaTipica_poblacion('Baja California Sur','La Paz','Ceviche','837,179').
+estado_capital_comidaTipica_poblacion('Campeche','San Francisco de Campeche','Pan de Cazon','946,130').
+estado_capital_comidaTipica_poblacion('Chiapas','Tuxtla Gutierrez','Tamales de chipilin','5,670,350').
+estado_capital_comidaTipica_poblacion('Chihuahua','Chihuahua','Burritos','3,789,509').
+estado_capital_comidaTipica_poblacion('Ciudad de Mexico','Guajolotas','9,259,354').
+estado_capital_comidaTipica_poblacion('Coahuila','Saltillo','Carne Asada','3,257,311').
+estado_capital_comidaTipica_poblacion('Colima','Colima','Sopitos','767,311').
+estado_capital_comidaTipica_poblacion('Durango','Victoria de Durango','Caldillo','1,860,401').
+estado_capital_comidaTipica_poblacion('Gunajuato','Guanajuato','Enchiladas mineras','6,247,346').
+estado_capital_comidaTipica_poblacion('Guererro','Chilpancingo','Pozole','3,583,667').
+estado_capital_comidaTipica_poblacion('Hidalgo','Pachuca','Barbacoa''3,132,539').
+estado_capital_comidaTipica_poblacion('Jalisco','Guadalajara','Birria','8,460,591').
+estado_capital_comidaTipica_poblacion('Estado de Mexico','Toluca','Pambazo','17,240,430').
+estado_capital_comidaTipica_poblacion('Michoacan','Morelia','4,919,271').
+estado_capital_comidaTipica_poblacion('Morelos','Cuernavaca','Carnitas','2,000,319').
+estado_capital_comidaTipica_poblacion('Nayarit','Tepic','Pescado zarandeado','1,256,198').
+estado_capital_comidaTipica_poblacion('Nuevo Leon','Monterrey','Cabrito','6,028,770').
+estado_capital_comidaTipica_poblacion('Oaxaca','Oaxaca','Tlayudas','4,228,733').
+estado_capital_comidaTipica_poblacion('Puebla','Puebla','Mole','6,682,040').
+estado_capital_comidaTipica_poblacion('Queretaro','Queretaro','Enchiladas queretanas','2,462,840').
+estado_capital_comidaTipica_poblacion('Quintana Roo','Chetumal''Salbutes','1,908,246').
+estado_capital_comidaTipica_poblacion('San Luis Potosi','San Luis Potosi','Enchiladas potosinas','2,858,265').
+estado_capital_comidaTipica_poblacion('Sinaloa','Culiacan','Aguachile','3,072,955').
+estado_capital_comidaTipica_poblacion('Sonora','Hermosillo','Chimichanga','2,983,268').
+estado_capital_comidaTipica_poblacion('Tabasco','Villahermosa','Pejelagarto','2,430,550').
+estado_capital_comidaTipica_poblacion('Tamaulipas','Ciudad Victoria','Tampiquena','3,571,603').
+estado_capital_comidaTipica_poblacion('Tlaxcala','Tlaxcala','Tacos de Canasta','1,364,154').
+estado_capital_comidaTipica_poblacion('Veracruz','Xalapa','Pescado a la veracruzana','8,166,395').
+estado_capital_comidaTipica_poblacion('Yucatan','Merida','Cochinita pibil','2,362,065').
+estado_capital_comidaTipica_poblacion('Zacatecas','Zacatecas','Asado de bodas','1,633,349').
 
 % -- Personas
 
@@ -3349,7 +5217,6 @@ persona('Jonatan', 51, funcionario_publico, 'Agenero', [espanol]).
 persona('Jorge', 48, emprendedor, 'Mujer', [aleman, italiano]).
 persona('Jose', 61, chofer, 'Transgenero', [italiano, ingles, aleman]).
 persona('Josefino', 28, maestro, 'Fluido', [italiano, frances, espanol]).
-persona('Juan', 50, medico, 'NoBinaria', [aleman, italiano, espanol]).
 persona('Julian', 38, enfermero, 'Hombre', [ingles, aleman, italiano]).
 persona('Julio', 103, ingeniero, 'Bigenero', [espanol, aleman, italiano]).
 persona('Justo', 34, trabajador_del_sector_servicios, 'Agenero', [ingles, aleman]).
@@ -3384,7 +5251,6 @@ persona('Oscar', 54, funcionario_publico, 'Hombre', [espanol, italiano, aleman])
 persona('Pablo', 92, investigador, 'Agenero', [espanol]).
 persona('Pascual', 59, arquitecto, 'NoBinaria', [aleman, ingles, frances]).
 persona('Patricio', 119, mesero, 'Bigenero', [frances]).
-persona('Pedro', 50, carpintero, 'Fluido', [ingles]).
 persona('Pio', 72, arquitecto, 'Mujer', [frances, aleman, espanol]).
 persona('Rafael', 84, periodista, 'Fluido', [frances, aleman]).
 persona('Ramiro', 98, constructor, 'Mujer', [aleman, espanol]).
@@ -3621,84 +5487,461 @@ persona('Taiyari', 40, contador, 'Agenero', [tzeltal, purepecha, mixteco]).
 
 % ----------------------------------------------------------------------------------------------------------------------------------
 % Reglas con Listas de Argumentos 
-
 % definicion de reglas
-
 % Reglas para encontrar mexicanos de ciertas regiones o etnicidades
 
 % ¿Cuantos mexicanos hay?
-
 total_mexicanos(Total) :-
+    write('Total de mexicanos: '),
     findall(Persona, mexicano(Persona), ListaMexicanos),
     length(ListaMexicanos, Total).
 
 % ¿Que mexicanos hay en lista?
 
-% Asumiendo que tienes un predicado pertenece_region(Persona, Region) que determina la región de una persona.
-
 mexicanos_en_lista :-
-    write('Mexicanos o personas de la region norte en la lista: '), nl,
-    (mexicano(Persona) ; pertenece_region(Persona, norte)),  % Disyunción aquí
+    write('Mexicanos en la lista: '), nl,
+    mexicano(Persona),
     write(Persona), nl,
     fail.
 mexicanos_en_lista.
+% Regla para mostrar a todos los estados de mexico
+estados_de_mexico :-
+    write('Estados de Mexico: '), nl,
+    estado(Estado),
+    write(Estado), nl,
+    fail.
+estados_de_mexico.
+
+% ¿Cuantos estados hay?
+total_estados(Total) :-
+    findall(Estado, estados(Estado), ListaEstados),
+    sort(ListaEstados, ListaEstadosUnicos),  % Elimina duplicados
+    length(ListaEstadosUnicos, Total),
+    write('Total de estados de Mexico: '),
+    writeln(Total).
+
+% Asumiendo que tienes un predicado pertenece_region(Persona, Region) que determina la región de una persona.
+mexicanos_de_noroeste :-
+write('Mexicanos de la region Noroeste en la lista: '), nl,
+findall(Persona, (
+    pertenece_region(Persona, Regiones),
+    (is_list(Regiones) -> member('Noroeste', Regiones) ; Regiones = 'Este')
+), PersonasSinFiltrar),
+sort(PersonasSinFiltrar, Personas),
+imprimir_personas(Personas),
+!.
+
+% Predicado para imprimir las personas
+imprimir_personas([]).
+imprimir_personas([Persona|Resto]) :-
+write(Persona), nl,
+imprimir_personas(Resto).
+
+mexicanos_de_noreste :-
+    write('Mexicanos de la region Noreste en la lista: '), nl,
+    findall(Persona, (
+        pertenece_region(Persona, Regiones),
+        (is_list(Regiones) -> member('Noreste', Regiones) ; Regiones = 'Este')
+    ), PersonasSinFiltrar),
+    sort(PersonasSinFiltrar, Personas),
+    imprimir_personas(Personas),
+    !.
+    
+    % Predicado para imprimir las personas
+    imprimir_personas([]).
+    imprimir_personas([Persona|Resto]) :-
+    write(Persona), nl,
+    imprimir_personas(Resto).
+
+mexicanos_de_occidente :-
+    write('Mexicanos de la region Occidente en la lista: '), nl,
+    findall(Persona, (
+        pertenece_region(Persona, Regiones),
+        (is_list(Regiones) -> member('Occidente', Regiones) ; Regiones = 'Este')
+    ), PersonasSinFiltrar),
+    sort(PersonasSinFiltrar, Personas),
+    imprimir_personas(Personas),
+    !.
+    
+    % Predicado para imprimir las personas
+    imprimir_personas([]).
+    imprimir_personas([Persona|Resto]) :-
+    write(Persona), nl,
+    imprimir_personas(Resto).
+
+    mexicanos_de_centronorte :-
+        write('Mexicanos de la region Centro-Norte en la lista: '), nl,
+        findall(Persona, (
+            pertenece_region(Persona, Regiones),
+            (is_list(Regiones) -> member('Centro-Norte', Regiones) ; Regiones = 'Este')
+        ), PersonasSinFiltrar),
+        sort(PersonasSinFiltrar, Personas),
+        imprimir_personas(Personas),
+        !.
+        
+        % Predicado para imprimir las personas
+        imprimir_personas([]).
+        imprimir_personas([Persona|Resto]) :-
+        write(Persona), nl,
+        imprimir_personas(Resto).
+
+        mexicanos_de_centrosur :-
+            write('Mexicanos de la region Centro-Sur en la lista: '), nl,
+            findall(Persona, (
+                pertenece_region(Persona, Regiones),
+                (is_list(Regiones) -> member('Centro-Sur', Regiones) ; Regiones = 'Este')
+            ), PersonasSinFiltrar),
+            sort(PersonasSinFiltrar, Personas),
+            imprimir_personas(Personas),
+            !.
+            
+            % Predicado para imprimir las personas
+            imprimir_personas([]).
+            imprimir_personas([Persona|Resto]) :-
+            write(Persona), nl,
+            imprimir_personas(Resto).
+
+% Regla para encontrar personas que pertenecen a la región 'Este'
+mexicanos_de_este :-
+    write('Mexicanos de la region Este en la lista: '), nl,
+    findall(Persona, (
+        pertenece_region(Persona, Regiones),
+        (is_list(Regiones) -> member('Este', Regiones) ; Regiones = 'Este')
+    ), PersonasSinFiltrar),
+    sort(PersonasSinFiltrar, Personas),
+    imprimir_personas(Personas),
+    !.
+
+% Predicado para imprimir las personas
+imprimir_personas([]).
+imprimir_personas([Persona|Resto]) :-
+    write(Persona), nl,
+    imprimir_personas(Resto).
+
+mexicanos_de_sureste :-
+        write('Mexicanos de la region Sureste en la lista: '), nl,
+        findall(Persona, (
+            pertenece_region(Persona, Regiones),
+            (is_list(Regiones) -> member('Sureste', Regiones) ; Regiones = 'Este')
+        ), PersonasSinFiltrar),
+        sort(PersonasSinFiltrar, Personas),
+        imprimir_personas(Personas),
+        !.
+    
+    % Predicado para imprimir las personas
+    imprimir_personas([]).
+    imprimir_personas([Persona|Resto]) :-
+        write(Persona), nl,
+        imprimir_personas(Resto).
+
+mexicanos_de_suroeste :-
+    write('Mexicanos de la region Suroeste en la lista: '), nl,
+    findall(Persona, (
+    pertenece_region(Persona, Regiones),
+        (is_list(Regiones) -> member('Suroeste', Regiones) ; Regiones = 'Este')
+        ), PersonasSinFiltrar),
+        sort(PersonasSinFiltrar, Personas),
+        imprimir_personas(Personas),
+        !.
+        
+        % Predicado para imprimir las personas
+        imprimir_personas([]).
+        imprimir_personas([Persona|Resto]) :-
+            write(Persona), nl,
+            imprimir_personas(Resto).
+
 
 % ¿Que regiones existentes hay?
-    regiones_existentes :-
-        setof(Region, Persona^pertenece_region(Persona, Region), Regiones),
+regiones_existentes :-
+        setof(Region, region_geografica(Region), Regiones),
         write('Regiones existentes: '), nl,
         imprimir_lista(Regiones).
-    
     imprimir_lista([]).
     imprimir_lista([Cabeza|Cola]) :-
         write(Cabeza), nl,
         imprimir_lista(Cola).
-
 % ¿Qué personas mexicanas pertenecen a una región específica?
-
+% Regla para consultar por región o por nombre y región
 mexicano_de_region(Region, Persona) :-
-    mexicano(Persona),
-    pertenece_region(Persona, Region).
-
+    pertenece_region(Persona, Regiones),
+    member(Region, Regiones).
+% Consultar solo por región
+mexicano_de_region(Region) :-
+    mexicano_de_region(Region, Persona),
+    format('~w pertenece a la region ~w~n', [Persona, Region]).
 % ¿Qué personas mexicanas pertenecen a una etnicidad específica?
-
 mexicano_de_etnicidad(Etnicidad, Persona) :-
     mexicano(Persona),
-    pertenece_etnicidad(Persona, Etnicidad).
-
-% ¿Qué personas mexicanas pertenecen a una religión específica?
-
+    pertenece_etnicidad(Persona, Etnicidades),
+    member(Etnicidad, Etnicidades).
+% ¿Qué personas mexicanas pertenecen a una religión específica? 
 mexicano_de_religion(Religion, Persona) :-
     mexicano(Persona), 
     pertenece_religion(Persona, Religion).
-
 % Mexicano por Genero y Nombre
 mexicano_de_genero(Genero, Persona) :-
     mexicano(Persona),
     pertenece_genero(Persona, Genero).
-
 % Regla para determinar la región de una persona basada en un género específico
 mexicano_de_region_y_genero(Region, Genero, Persona) :-
     mexicano(Persona),
     pertenece_region(Persona, Region),
     pertenece_genero(Persona, Genero).
 
-% ¿Es hombre? 
+% Preguntas Especficas
+% Definiciones de reglas
+comida_tipica('Pollo de San Marcos') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Pollo de San Marcos', _).
+comida_tipica('Chile con Carne') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Chile con Carne', _).
+comida_tipica('Ceviche') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Ceviche', _).
+comida_tipica('Pan de Cazon') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Pan de Cazon', _).
+comida_tipica('Carne Asada') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Carne Asada', _).
+comida_tipica('Sopitos') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Sopitos', _).
+comida_tipica('Tamales de chipilin') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Tamales de chipilin', _).
+comida_tipica('Burritos') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Burritos', _).
+comida_tipica('Guajolotas') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Guajolotas', _).
+comida_tipica('Caldillo') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Caldillo', _).
+comida_tipica('Enchiladas mineras') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Enchiladas mineras', _).
+comida_tipica('Pozole') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Pozole', _).
+comida_tipica('Barbacoa') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Barbacoa', _).
+comida_tipica('Birria') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Birria', _).
+comida_tipica('Pambazo') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Pambazo', _).
+comida_tipica('Carnitas') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Carnitas', _).
+comida_tipica('Cecina') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Cecina', _).
+comida_tipica('Pescado zarandeado') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Pescado zarandeado', _).
+comida_tipica('Cabrito') :-
+     estado_capital_comidaTipica_poblacion(_, _, 'Cabrito', _).
+comida_tipica('Tlayudas') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Tlayudas', _).
+comida_tipica('Mole') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Mole', _).
+comida_tipica('Enchiladas queretanas') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Enchiladas queretanas', _).
+comida_tipica('Salbutes') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Salbutes', _).
+comida_tipica('Enchiladas potosinas') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Enchiladas potosinas', _).
+comida_tipica('Aguachile') :- 
+    estado_capital_comidaTipica_poblacion(_, _, 'Aguachile', _).
+%¿La chimichanga es un platillo típico de México?
+comida_tipica('Chimichanga') :-
+    estado_capital_comidaTipica_poblacion(_, _, 'Chimichanga', _).
+% ¿El pejelagarto es un platillo típico de México?
+comida_tipica('Pejelagarto') :-
+    estado_capital_comidaTipica_poblacion(_, _, 'Pejelagarto', _).
+% ¿La tampiqueña es un platillo típico de México?
+comida_tipica('Tampiquena') :-
+    estado_capital_comidaTipica_poblacion(_, _, 'Tampiquena', _).
+% ¿Los tacos de canasta son un platillo típico de México?
+comida_tipica('Tacos de Canasta') :-
+    estado_capital_comidaTipica_poblacion(_, _, 'Tacos de Canasta', _).
+% ¿El pescado a la veracruzana es un platillo típico de México?
+comida_tipica('Pescado a la veracruzana') :-
+    estado_capital_comidaTipica_poblacion(_, _, 'Pescado a la veracruzana', _).
+% ¿La cochinita pibil es un platillo típico de México?
+comida_tipica('Cochinita pibil') :-
+    estado_capital_comidaTipica_poblacion(_, _, 'Cochinita pibil', _).
+% ¿El asado de bodas es un platillo típico de México?
+comida_tipica('Asado de bodas') :-
+    estado_capital_comidaTipica_poblacion(_, _, 'Asado de bodas', _).
 
+% Regla para verificar si una etapa es parte de las etapas de la vida
+etapas_de_vida(Etapa) :-
+    % Aquí se listan todas las etapas de vida disponibles
+    member(Etapa, ['Infancia', 'Ninez', 'Adolescencia', 'Adultez', 'Adulto_mayor']).
+
+% Reglas específicas para preguntas sobre las etapas de vida
+es_etapa_de_vida(Etapa) :-
+    etapas_de_vida(Etapa).
+
+% Regla para verificar si un nivel educativo es válido
+nivel_educativo(Nivel) :-
+    % Aquí se listan todos los niveles educativos disponibles
+    member(Nivel, [analfabetos, educacion_basica_incompleta, educacion_basica_completa, educacion_media_superior, educacion_superior, postgrado]).
+
+% Reglas específicas para preguntas sobre los niveles educativos
+es_nivel_educativo(Nivel) :-
+    nivel_educativo(Nivel).
+
+% Regla para verificar si una religión es válida
+religion(Religion) :-
+    % Aquí se listan todas las religiones disponibles
+    member(Religion, [catolicos, protestantes_evangelicos, testigos_de_jehova, mormones, judios, musulmanes, budistas, hinduistas, sin_religion]).
+
+% Reglas específicas para preguntas sobre las religiones
+es_religion(Religion) :-
+    religion(Religion).
+
+% Regla para verificar si un estado es parte de México
+estado(Estado) :-
+    % Aquí se listan todos los estados de México
+    member(Estado, ['Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chiapas', 'Chihuahua', 'Ciudad de Mexico', 'Coahuila', 'Colima', 'Durango', 'Guanajuato', 'Guererro', 'Hidalgo', 'Jalisco', 'Estado de Mexico', 'Michoacan', 'Morelos', 'Nayarit', 'Nuevo Leon', 'Oaxaca', 'Puebla', 'Queretaro', 'Quintana Roo', 'San Luis Potosi', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas', 'Tlaxcala', 'Veracruz', 'Yucatan', 'Zacatecas']).
+% Reglas específicas para preguntas sobre los estados
+es_estado(Estado) :-
+    estado(Estado).
+
+% Regla genérica para encontrar la región a la que pertenece un estado
+a_que_region_pertenece(Estado, Region) :-
+    estado_pertenece_region(Estado, Region).
+
+% Regla para encontrar los estados que pertenecen a una región
+estados_de_region(Region, Estado) :-
+    estado_pertenece_region(Estado, Region).
+
+% Regla para encontrar las personas que pertenecen a una región
+personas_de_region(Region, Persona) :-
+    pertenece_region(Persona, Regiones),
+    member(Region, Regiones).
+
+% Regla para encontrar las personas que pertenecen a una etnicidad específica
+personas_de_etnicidad(Etnicidad, Persona) :-
+    pertenece_etnicidad(Persona, Etnicidades),
+    member(Etnicidad, Etnicidades).
+
+% Regla para encontrar los grupos indígenas
+grupos_indigenas(Grupo) :-
+    grupo_indigena(Grupo).
+
+% Regla para encontrar los grupos indígenas que pertenecen a una región específica
+grupo_indigena_en_region(Grupo, Region) :-
+    grupo_indigena_region(Grupos, Region),
+    member(Grupo, Grupos).
+
+% Regla para encontrar los estados a los que pertenece un grupo indígena específico
+estado_grupo_indigena_en_estado(Grupo, Estado) :-
+    estado_grupo_indigena(Grupo, Estados),
+    member(Estado, Estados).
+
+% Regla para encontrar todas las edades
+es_edad(Edad) :- 
+    between(1, 120, Edad).
+
+% Regla para encontrar las edades que abarcan una etapa de vida específica
+etapa_edad(Etapa, Edad) :-
+    etapa_edad(Etapa, Edades),
+    member(Edad, Edades).
+
+% Reglas para encontrar a las personas según su clase social
+pertenece_economia(Persona, ClaseSocial) :- 
+    persona_pertenece_etnicidad_clase_social(Persona, _, [ClaseSocial], _).
+
+% Reglas para consultar las religiones
+
+imprimir_personas([]).
+imprimir_personas([Persona|Resto]) :-
+    write(Persona), nl,
+    imprimir_personas(Resto).
+
+encontrar_personas_por_religion(Religion) :-
+    findall(Persona, (
+        pertenece_religion(Persona, Religiones),
+        member(Religion, Religiones)
+    ), Personas),
+    imprimir_personas(Personas).
+
+% ¿Quiénes son católicos?
+
+es_catolico :-
+    write('Mexicanos catolicos: '), nl,
+    encontrar_personas_por_religion(catolicos).
+
+% ¿Quiénes son protestantes evangélicos?
+es_protestante_evangelico :-
+    write('Mexicanos protestantes evangelicos: '), nl,
+    encontrar_personas_por_religion(protestantes_evangelicos).
+
+% ¿Quiénes son testigos de Jehová?
+es_testigo_de_jehova :-
+    write('Mexicanos testigos de jehova: '), nl,
+    encontrar_personas_por_religion(testigos_de_jehova).
+
+% ¿Quiénes son mormones?
+
+es_mormon :-
+    write('Mexicanos mormones: '), nl,
+    encontrar_personas_por_religion(mormones).
+
+% ¿Quiénes son judíos?
+
+es_judio :-
+    write('Mexicanos judios: '), nl,
+    encontrar_personas_por_religion(judios).
+
+% ¿Quiénes son musulmanes?
+
+es_musulman :-
+    write('Mexicanos musulmanes: '), nl,
+    encontrar_personas_por_religion(musulmanes).
+
+%  ¿Quiénes son budistas?
+
+es_budista :-
+    write('Mexicanos budistas: '), nl,
+    encontrar_personas_por_religion(budistas).
+
+% ¿Quiénes son hinduistas?
+
+es_hinduista :-
+    write('Mexicanos hinduistas: '), nl,
+    encontrar_personas_por_religion(hinduistas).
+
+%  ¿Quiénes no tienen religión?
+
+es_sin_religion :-
+    write('Mexicanos sin religión: '), nl,
+    encontrar_personas_por_religion(sin_religion).
+
+% CONSULTAS POR GENERO
+% ¿Es hombre? 
+% Lista todos los mexicanos que son hombres
 mexicano_hombre(Persona) :- 
     pertenece_genero(Persona, Generos),
     member('Hombre', Generos).
 
+mexicanos_hombres :- mexicano_por_genero('Hombre').
+
+mexicano_por_genero(Genero) :-
+    write('Mexicanos que son '), write(Genero), write(': '), nl,
+    findall(Persona, (
+        pertenece_genero(Persona, Generos),
+        member(Genero, Generos)
+    ), Personas),
+    imprimir_personas(Personas).
+
+
 % ¿Es mujer?
+
+% Lista todos los mexicanos que son hombres
 
 mexicano_mujer(Persona) :- 
     pertenece_genero(Persona, Generos),
     member('Mujer', Generos).
 
+mexicanos_mujeres :- mexicano_por_genero('Mujer').
+
 % ¿Es transgenero?
 mexicano_transgenero(Persona) :- 
     pertenece_genero(Persona, Generos),
     member('Transgenero', Generos).
+
+mexicanos_transgenero :- mexicano_por_genero('Transgenero').
 
 % ¿Es agenero?
 
@@ -3706,13 +5949,51 @@ mexicano_agenero(Persona) :-
     pertenece_genero(Persona, Generos),
     member('Agenero', Generos).
 
+mexicanos_agenero :- mexicano_por_genero('Agenero').
+
 % ¿Es bigenero?
 mexicano_bigenero(Persona) :- 
     pertenece_genero(Persona, Generos),
     member('Bigenero', Generos).
 
-% ¿Qué religiones están asociadas a un idioma específico?
+mexicanos_bigenero :- mexicano_por_genero('Bigenero').
+% -------------------------------------------------------
+% Consultas por Idioma, ClaseSocial y Etnicidad
+% Que personas hablan un idioma en especifico?
+personas_que_hablan(Idioma, Personas) :-
+    findall(Nombre, (
+        persona(Nombre, _, _, _, Lenguas), 
+    member(Idioma, Lenguas)
+    ), Personas),
+    (Personas \= [] -> true ; write('No se encontraron personas que hablen '), write(Idioma), nl, fail).
 
+% Encontrar ocupaciones en comun con las personas que hablan el mismo idioma
+ocupaciones_comunes(Idioma, Ocupaciones) :-
+    findall(Ocupacion, (
+        persona(_, _, Ocupacion, _, Lenguas),
+        member(Idioma, Lenguas)
+        ), OcupacionesDuplicadas),
+    list_to_set(OcupacionesDuplicadas, Ocupaciones).
+
+% ¿Qué nivel educativo tiene una persona específica?
+% Consultar el nivel educativo de una persona
+nivel_educativo_persona(Persona, Nivel) :- 
+    pertenece_educacion(Persona, Nivel).
+
+personas_por_religion(Religion, Personas) :-
+    findall(Persona, (
+    pertenece_religion(Persona, Religiones),
+    member(Religion, Religiones)
+    ), Personas).
+
+
+% Cual es el estado civil de las personas? 
+
+consultar_estado_civil(Nombre, EstadoCivil) :-
+    persona_estado_civil(Nombre, ListaEstados),
+    member(EstadoCivil, ListaEstados).
+
+% ¿Qué religiones están asociadas a un idioma específico?
 religion_por_idioma(Idioma, Religion) :-
     subtipo_religion(Idioma, Religion).
 
@@ -3733,7 +6014,90 @@ religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion) :-
 religion_por_etnicidad_y_region(Etnicidad, Region, Religion) :-
     mexicano_de_etnicidad(Etnicidad, Persona),
     mexicano_de_region(Region, Persona),
-    pertenece_religion(Persona, Religion).
+    pertenece_religion(Persona, Religiones),
+    member(Religion, Religiones).
+
+% Encuentra personas por etnicidad y religión
+personas_por_etnicidad_y_religion(Etnicidad, Religion, Personas) :-
+    findall(Persona, (
+        pertenece_etnicidad(Persona, Etnicidades),
+        member(Etnicidad, Etnicidades),
+        pertenece_religion(Persona, Religiones),
+        member(Religion, Religiones)
+    ), Personas).
+
+% Encuentra personas por región y ocupación
+personas_por_region_y_ocupacion(Region, Ocupacion, Personas) :-
+    findall(Persona, (
+        pertenece_region(Persona, Regiones),
+        member(Region, Regiones),
+        persona(Persona, _, Ocupacion, _, _)
+    ), Personas).
+
+% Encuentra personas por idioma y nivel educativo
+personas_por_idioma_y_nivel_educativo(Idioma, Nivel, Personas) :-
+    findall(Persona, (
+        persona(Persona, _, _, _, Lenguas),
+        member(Idioma, Lenguas),
+        pertenece_educacion(Persona, Nivel)
+    ), Personas).
+
+% Encuentra personas por género y situación económica
+personas_por_genero_y_situacion_economica(Genero, Situacion, Personas) :-
+    findall(Persona, (
+        pertenece_genero(Persona, Generos),
+        member(Genero, Generos),
+        pertenece_situacion_economica(Persona, Situacion)
+    ), Personas).
+
+% Encuentra personas por edad y salud
+personas_por_edad_y_salud(Edad, Salud, Personas) :-
+    findall(Persona, (
+        persona(Persona, Edad, _, _, _),
+        persona_salud_alimentacion(Persona, Salud, _, _)
+    ), Personas).
+
+% Encuentra personas por religión y región
+personas_por_religion_y_region(Religion, Region, Personas) :-
+    findall(Persona, (
+        pertenece_religion(Persona, Religiones),
+        member(Religion, Religiones),
+        pertenece_region(Persona, Regiones),
+        member(Region, Regiones)
+    ), Personas).
+
+% Encuentra personas por ocupación y nivel educativo
+personas_por_ocupacion_y_nivel_educativo(Ocupacion, Nivel, Personas) :-
+    findall(Persona, (
+        persona(Persona, _, Ocupacion, _, _),
+        pertenece_educacion(Persona, Nivel)
+    ), Personas).
+
+% Encuentra personas por región y clase social
+personas_por_region_y_clase_social(Region, Clase, Personas) :-
+    findall(Persona, (
+        pertenece_region(Persona, Regiones),
+        member(Region, Regiones),
+        persona_pertenece_etnicidad_clase_social(Persona, _, Clases, _),
+        member(Clase, Clases)
+    ), Personas).
+
+% Encuentra personas por género y ocupación
+personas_por_genero_y_ocupacion(Genero, Ocupacion, Personas) :-
+    findall(Persona, (
+        pertenece_genero(Persona, Generos),
+        member(Genero, Generos),
+        persona(Persona, _, Ocupacion, _, _)
+    ), Personas).
+
+% Encuentra personas por idioma y etnicidad
+personas_por_idioma_y_etnicidad(Idioma, Etnicidad, Personas) :-
+    findall(Persona, (
+        persona(Persona, _, _, _, Lenguas),
+        member(Idioma, Lenguas),
+        pertenece_etnicidad(Persona, Etnicidades),
+        member(Etnicidad, Etnicidades)
+    ), Personas).
 
 % ¿Qué religión practica una persona mexicana considerando su idioma, clase social, etnicidad y región?
 
@@ -3742,18 +6106,6 @@ religion_total(Idioma, ClaseSocial, Etnicidad, Region, Religion) :-
     religion_por_idioma_y_clase_social(Idioma, ClaseSocial, Religion),
     religion_por_etnicidad_y_region(Etnicidad, Region, Religion).
 
-
-%  ¿Qué personas pertenecen a una región específica?
-
-% Personas de una región específica
-/* personas_de_region(Region, Persona) :- 
-    pertenece_region(Persona, Region).
-
-% ¿ A qué etnicidad pertenece cierta persona ?
-% Personas de una etnicidad específica
-personas_de_etnicidad(Etnicidad, Persona) :- 
-    pertenece_etnicidad(Persona, Etnicidad). */
-
 % ¿Qué personas hablan un idioma específico? 
 % Personas que hablan un idioma específico
 personas_hablan_idioma(Idioma, Persona) :- 
@@ -3761,18 +6113,22 @@ personas_hablan_idioma(Idioma, Persona) :-
     religion_idioma(Religion, Idioma).
 
 
-% ¿Qué nivel educativo tiene una persona específica?
-% Consultar el nivel educativo de una persona
-nivel_educativo_persona(Persona, Nivel) :- 
-    nivel_educativo(Nivel), 
-    pertenece_educacion(Persona, Nivel).
-
 % ¿Qué personas pertenecen a una religion en alguna entidad especifica?
 % esta regla cuenta con operadores para consultas más específicas
 
 persona_region_etnicidad(Persona, Region, Etnicidad) :-
-pertenece_region(Persona, Region),
-pertenece_etnicidad(Persona, Etnicidad).
+    pertenece_region(Persona, Regiones),
+    member(Region, Regiones),
+    pertenece_etnicidad(Persona, Etnicidades),
+    member(Etnicidad, Etnicidades).
+
+% Encuentra personas de una etnicidad específica
+personas_de_etnicidad(Etnicidad, Personas) :-
+    findall(Persona, (
+        pertenece_etnicidad(Persona, Etnicidades),
+        member(Etnicidad, Etnicidades)
+    ), Personas).
+
 
 % ¿Qué personas pertenecen a alguna religion? 
 % (no importa qué religion) Esta Regla cuenta con funciones de Agregación Y Busqueda.
@@ -3780,22 +6136,614 @@ pertenece_etnicidad(Persona, Etnicidad).
 personas_por_religion(Religion, Personas) :- 
 findall(Persona, pertenece_religion(Persona, Religion), Personas).
 
-% Cual es el estado civil de las personas? 
 
-consultar_estado_civil(Nombre, EstadoCivil) :-
-    persona_estado_civil(Nombre, ListaEstados),
-    member(EstadoCivil, ListaEstados).
+% Regla compuesta con disyunciones para consultar diferentes características de los mexicanos
+consulta_mexicano(Criterio, Valor, Persona) :-
+(   Criterio = idioma, persona(Persona, _, _, _, Valores), member(Valor, Valores)
+;   Criterio = ocupacion, persona(Persona, _, Valor, _, _)
+;   Criterio = edad, persona(Persona, Valor, _, _, _)
+;   Criterio = genero, persona(Persona, _, _, Valor, _)
+).
 
-% Que personas hablan un idioma en especifico?
+% Regla compuesta con disyunciones para consultar diferentes características de los mexicanos
+consulta_mexicano_residencia_politica(Criterio, Valor, Persona) :-
+(   Criterio = residencia, persona_residencia_posicion_politica(Persona, Valor, _)
+;   Criterio = posicion_politica, persona_residencia_posicion_politica(Persona, _, Posiciones), 
+    member(Valor, Posiciones)
+).
 
-personas_que_hablan(Idioma, Personas) :-
-    findall(Nombre, (persona(Nombre, _, _, _, Lenguas), member(Idioma, Lenguas)), Personas),
-    % Check if the list is empty and handle accordingly
-    (Personas \= [] -> true ; write('No se encontraron personas que hablen '), write(Idioma), nl, fail).
+% Regla compuesta con disyunciones para consultar diferentes características de los mexicanos
+consulta_mexicano_etnicidad_clase(Criterio, Valor, Persona) :-
+(   Criterio = etnicidad, persona_pertenece_etnicidad_clase_social(Persona, Etnicidades, _, _), 
+    member(Valor, Etnicidades)
+;   Criterio = clase_social, persona_pertenece_etnicidad_clase_social(Persona, _, Clases, _), 
+    member(Valor, Clases)
+;   Criterio = lenguaje, persona_pertenece_etnicidad_clase_social(Persona, _, _, Lenguajes), 
+    member(Valor, Lenguajes)
+).
 
-% Encontrar ocupaciones en comun con las personas que hablan el mismo idioma
+% Regla compuesta con disyunciones para consultar diferentes características de los mexicanos
+consulta_mexico_salud_alimentacion(Criterio, Valor, Persona) :-
+(   Criterio = salud, persona_salud_alimentacion(Persona, Valor, _, _)
+;   Criterio = actividad, persona_salud_alimentacion(Persona, _, Valor, _)
+;   Criterio = alimentacion, persona_salud_alimentacion(Persona, _, _, Alimentaciones), 
+    member(Valor, Alimentaciones)
+).
 
-ocupaciones_comunes(Idioma, Ocupaciones) :-
-    findall(Ocupacion, (persona(_, _, Ocupacion, _, Lenguas), member(Idioma, Lenguas)), OcupacionesDuplicadas),
-    list_to_set(OcupacionesDuplicadas, Ocupaciones).
+% Consultar personas por múltiples criterios
+consulta_persona(Criterio, Valor, Persona) :-
+(   Criterio = idioma, personas_que_hablan(Valor, Personas), member(Persona, Personas)
+;   Criterio = ocupacion, persona(Persona, _, Valor, _, _)
+;   Criterio = edad, persona(Persona, Valor, _, _, _)
+;   Criterio = genero, persona(Persona, _, _, Valor, _)
+;   Criterio = etnicidad, persona_pertenece_etnicidad_clase_social(Persona, Etnicidades, _, _),
+    member(Valor, Etnicidades)
+;   Criterio = clase_social, persona_pertenece_etnicidad_clase_social(Persona, _, Clases, _),
+    member(Valor, Clases)
+;   Criterio = salud, persona_salud_alimentacion(Persona, Valor, _, _)
+;   Criterio = actividad, persona_salud_alimentacion(Persona, _, Valor, _)
+;   Criterio = alimentacion, persona_salud_alimentacion(Persona, _, _, Alimentaciones),
+    member(Valor, Alimentaciones)
+;   Criterio = residencia, persona_residencia_posicion_politica(Persona, Valor, _)
+;   Criterio = posicion_politica, persona_residencia_posicion_politica(Persona, _, Posiciones),
+    member(Valor, Posiciones)
+).
 
+% Quienes sonlas personas que hablan frances? 
+
+habla_frances(Persona) :- 
+    persona(Persona, _, _, _, Idiomas),
+    member(frances, Idiomas).
+
+
+
+% Encuentra personas mayores de cierta edad
+personas_mayores_de(Edad, Personas) :-
+    findall(Persona, (
+        persona(Persona, EdadPersona, _, _, _),
+        EdadPersona > Edad
+    ), Personas).
+
+% Encuentra personas menores de cierta edad
+personas_menores_de(Edad, Personas) :-
+    findall(Persona, (
+        persona(Persona, EdadPersona, _, _, _),
+        EdadPersona < Edad
+    ), Personas).
+
+% Encuentra personas en un rango de edad
+personas_entre_edades(EdadMin, EdadMax, Personas) :-
+    findall(Persona, (
+        persona(Persona, EdadPersona, _, _, _),
+        EdadPersona >= EdadMin,
+        EdadPersona =< EdadMax
+    ), Personas).
+
+% Encuentra personas de una edad específica
+personas_de_edad(Edad, Personas) :-
+    findall(Persona, (
+        persona(Persona, Edad, _, _, _)
+        ), Personas).
+
+
+% Consultas por ocupacion
+
+% Encuentra personas con una ocupación específica
+personas_con_ocupacion(Ocupacion, Personas) :-
+    findall(Persona, (
+        persona(Persona, _, Ocupacion, _, _)
+    ), Personas).
+
+% Encuentra personas con una lista de ocupaciones
+personas_con_ocupaciones(Ocupaciones, Personas) :-
+    findall(Persona, (
+        persona(Persona, _, Ocupacion, _, _),
+        member(Ocupacion, Ocupaciones)
+    ), Personas).
+
+% Encuentra personas sin una ocupación específica
+personas_sin_ocupacion(Ocupacion, Personas) :-
+    findall(Persona, (
+        persona(Persona, _, OcupacionPersona, _, _),
+        OcupacionPersona \= Ocupacion
+    ), Personas).
+
+% Que personas tienen mas de 50 anos?
+
+mayor_de_50(Persona) :- 
+    persona(Persona, Edad, _, _, _),
+    Edad > 50.
+
+% Cuales son las ocupaciones de las personas que hablan aleman? 
+
+ocupacion_hablan_aleman(Persona, Ocupacion) :- 
+    persona(Persona, _, Ocupacion, _, Idiomas),
+    member(aleman, Idiomas).
+
+% Que genero tiene la persona llaada 'Pedro'?
+
+genero_de_pedro(Genero) :- 
+    persona('Pedro', _, _, Genero, _).
+
+% Que persona es obrero_industrial?
+
+es_obrero_industrial(Persona) :- 
+    persona(Persona, _, obrero_industrial, _, _).
+
+% Quienes hablan mas de dos idomas?
+
+habla_mas_de_dos_idiomas(Persona) :- 
+    persona(Persona, _, _, _, Idiomas),
+    length(Idiomas, NumeroIdiomas),
+    NumeroIdiomas > 2.
+
+% Que idoma habla 'Jesus'?
+
+idioma_de_jesus(Idioma) :- 
+    persona('Jesus', _, _, _, Idiomas),
+    member(Idioma, Idiomas).
+
+% Que personas tienen una ocupacion relacionada con la investigacion? 
+
+ocupacion_investigacion(Persona) :- 
+    persona(Persona, _, investigador, _, _).
+
+% Que personas hablan espanol y frances? 
+
+habla_espanol_y_frances(Persona) :- 
+    persona(Persona, _, _, _, Idiomas),
+    member(espanol, Idiomas),
+    member(frances, Idiomas).
+
+% Que personas tiene mas de 80 anos y hablan aleman?
+
+mayor_de_80_y_habla_aleman(Persona) :- 
+    persona(Persona, Edad, _, _, Idiomas),
+    Edad > 80,
+    member(aleman, Idiomas).
+
+% Que ocupacion tiene 'Alma'?
+
+ocupacion_de_alma(Ocupacion) :- 
+    persona('Alma', _, Ocupacion, _, _).
+
+% Que personas tienen menos de 60 anos y hablan italiano?
+
+menor_de_60_y_habla_italiano(Persona) :- 
+    persona(Persona, Edad, _, _, Idiomas),
+    Edad < 60,
+    member(italiano, Idiomas).
+
+% Que personas tienen una ocupacion relacionada con la tecnologia?
+
+ocupacion_tecnologia(Persona) :- 
+    persona(Persona, _, tecnologo, _, _).
+
+% Que personas son bigenero y hablan italiano?
+
+bigenero_habla_italiano(Persona) :- 
+    persona(Persona, _, _, 'Bigenero', Idiomas),
+    member(italiano, Idiomas).
+
+% Quienes son las personas activas fisicamente?
+
+es_activo_fisicamente(Persona) :- 
+    persona_salud_alimentacion(Persona, _, activos_fisicamente, _). 
+
+% Que personas son omnivoras?
+
+es_omnivoro(Persona) :- 
+    persona_salud_alimentacion(Persona, _, _, Alimentacion),
+    member(omnivoros, Alimentacion).
+
+% Quienes son las personas con enfermedades cronicas?
+
+tiene_enfermedades_cronicas(Persona) :- 
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_cronicas, _, _).
+
+% Que personas tienen una alimentacion flexiteriana?
+
+es_flexiteriano(Persona) :- 
+    persona_salud_alimentacion(Persona, _, _, Alimentacion),
+    member(flexiterianos, Alimentacion).
+
+% Que personas son aficionados al fitness?
+
+es_aficionado_al_fitness(Persona) :- 
+    persona_salud_alimentacion(Persona, _, aficionados_al_fitness, _).
+
+% Quienes son las personas con discapacidad?
+
+tiene_discapacidad(Persona) :- 
+    persona_salud_alimentacion(Persona, personas_con_discapacidad, _, _).
+
+% Quienes son veganos?
+
+es_vegano(Persona) :- 
+    persona_salud_alimentacion(Persona, _, _, Alimentacion),
+    member(veganos, Alimentacion).
+
+% Que personas son sedentarias?
+
+es_sedentario(Persona) :- 
+    persona_salud_alimentacion(Persona, _, sedentarios, _).
+
+% Que personas viven en areas urbanas? 
+
+vive_en_urbano(Persona) :- 
+    persona_residencia_posicion_politica(Persona, urbanos, _).
+
+
+% Que personas son apoliticas?
+
+no_activo_politicamente(Persona) :-
+    persona_residencia_posicion_politica(Persona, _, PosicionesPoliticas),
+    member(no_activos_politicamente, PosicionesPoliticas).
+
+% Quienes son las personas que viven en areas suburbanas? 
+vive_en_suburbano(Persona) :- 
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+
+% Que personas son militares de partidos politicos?
+es_militante_de_partido_politico(Persona) :- 
+    persona_residencia_posicion_politica(Persona, _, PosicionesPoliticas),
+    member(militantes_partidos_politicos, PosicionesPoliticas).
+
+% Quienes son las personas activas politicamente?
+
+es_activo_politicamente(Persona) :- 
+    persona_residencia_posicion_politica(Persona, _, PosicionesPoliticas),
+    member(activos_politicamente, PosicionesPoliticas).
+
+% ¿Quiénes son las personas que viven en áreas urbanas y son apolíticas?
+
+urbano_apolitico(Persona) :-
+    persona_residencia_posicion_politica(Persona, urbanos, PosicionesPoliticas),
+    member(apoliticos, PosicionesPoliticas).
+    
+% ¿Qué personas son suburbanos y no son activos políticamente?
+    
+suburbano_no_activo_politicamente(Persona) :-
+    persona_residencia_posicion_politica(Persona, suburbanos, PosicionesPoliticas),
+    member(no_activos_politicamente, PosicionesPoliticas).
+    
+% ¿Qué personas tienen más de una posición política?
+    
+mas_de_una_posicion_politica(Persona) :-
+    persona_residencia_posicion_politica(Persona, _, PosicionesPoliticas),
+    length(PosicionesPoliticas, N),
+    N > 1.
+    
+% ¿Qué personas con enfermedades mentales son aficionados al fitness?
+enfermedad_mental_aficionado_fitness(Persona) :-
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_mentales, aficionados_al_fitness, _).   
+
+% ¿Quiénes son las personas sedentarias que son flexiterianas?   
+sedentario_flexiteriano(Persona) :-
+    persona_salud_alimentacion(Persona, _, sedentarios, Alimentacion),
+    member(flexiterianos, Alimentacion).
+    
+% ¿Qué personas tienen una ocupación artística y viven en áreas urbanas?  
+artista_vive_en_urbano(Persona) :-
+    persona(Persona, _, artista_artesano, _, _),
+    persona_residencia_posicion_politica(Persona, urbanos, _).
+    
+% ¿Qué personas tienen más de 80 años y viven en áreas suburbanas?
+
+mayor_de_80_vive_en_suburbano(Persona) :-
+    persona(Persona, Edad, _, _, _),
+    Edad > 80,
+    persona_residencia_posicion_politica(Persona, suburbanos, _).  
+
+% ¿Qué personas se identifican como 'Mujer' y son investigadores?
+mujer_investigador(Persona) :-
+    persona(Persona, _, investigador, 'Mujer', _).
+    
+% ¿Qué personas se identifican como 'Hombre' y son profesionales?
+hombre_profesional(Persona) :-
+    persona(Persona, _, profesional, 'Hombre', _).
+
+% ¿Qué personas son 'Fluido' y hablan inglés y alemán?
+fluido_habla_ingles_aleman(Persona) :-
+    persona(Persona, _, _, 'Fluido', Idiomas),
+    member(ingles, Idiomas),
+    member(aleman, Idiomas).
+
+% ¿Qué personas son investigadores y no activos políticamente?
+investigador_no_activo_politicamente(Persona) :-
+    persona(Persona, _, investigador, _, _),
+    persona_residencia_posicion_politica(Persona, _, PosicionesPoliticas),
+    member(no_activos_politicamente, PosicionesPoliticas).
+% ¿Qué personas son 'Bigenero' y viven en áreas suburbanas?
+bigenero_vive_en_suburbano(Persona) :-
+    persona(Persona, _, _, 'Bigenero', _),
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+% ¿Qué personas son obrero_industrial y tienen más de 50 años? 
+obrero_industrial_mas_de_50(Persona) :-
+    persona(Persona, Edad, obrero_industrial, _, _),
+    Edad > 50.
+% ¿Qué personas son tecnológicos y viven en áreas suburbanas?
+tecnologico_vive_en_suburbano(Persona) :-
+    persona(Persona, _, tecnologo, _, _),
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+% ¿Qué personas son investigadores y tienen más de 50 años?
+investigador_mas_de_50(Persona) :-
+    persona(Persona, Edad, investigador, _, _),
+    Edad > 50.
+% ¿Qué personas son jardineros y tienen más de 80 años?
+jardinero_mas_de_80(Persona) :-
+    persona(Persona, Edad, jardinero, _, _),
+    Edad > 80.
+%  ¿Qué personas tienen más de 90 años y son ganaderos?
+ganadero_mas_de_90(Persona) :-
+    persona(Persona, Edad, ganadero, _, _),
+    Edad > 90.
+% ¿Qué personas son 'Mujer' y tienen más de 90 años?
+mujer_mas_de_90(Persona) :-
+    persona(Persona, Edad, _, 'Mujer', _),
+    Edad > 90.
+
+% ¿Qué personas son 'Transgenero' y tienen más de 100 años?
+transgenero_mas_de_100(Persona) :-
+    persona(Persona, Edad, _, 'Transgenero', _),
+    Edad > 100.
+
+% Consultas por Salud 
+% Encuentra personas con un estado de salud específico
+personas_con_salud(Salud, Personas) :-
+    findall(Persona, (
+        persona_salud_alimentacion(Persona, Salud, _, _)
+    ), Personas).
+
+% Encuentra personas con una actividad física específica
+personas_con_actividad_fisica(Actividad, Personas) :-
+    findall(Persona, (
+        persona_salud_alimentacion(Persona, _, Actividad, _)
+    ), Personas).
+
+% Encuentra personas con una preferencia alimentaria específica
+personas_con_preferencia_alimentaria(Preferencia, Personas) :-
+    findall(Persona, (
+        persona_salud_alimentacion(Persona, _, _, Preferencias),
+        member(Preferencia, Preferencias)
+    ), Personas).
+
+% ¿Qué personas son activas físicamente y son veganas?
+activo_fisicamente_vegano(Persona) :-
+    persona_salud_alimentacion(Persona, _, activos_fisicamente, Alimentacion),
+    member(veganos, Alimentacion).
+
+% ¿Qué personas tienen más de 60 años y son aficionados al fitness?
+mas_de_60_aficionado_fitness(Persona) :-
+    persona(Persona, Edad, _, _, _),
+    Edad > 60,
+    persona_salud_alimentacion(Persona, _, aficionados_al_fitness, _).
+
+% ¿Qué personas tienen una alimentación pescetariana?
+es_pescetariano(Persona) :-
+    persona_salud_alimentacion(Persona, _, _, Alimentacion),
+    member(pescaterianos, Alimentacion).
+
+% ¿Qué personas son activos físicamente y son omnivoras?
+activo_fisicamente_omnivoro(Persona) :-
+    persona_salud_alimentacion(Persona, _, activos_fisicamente, Alimentacion),
+    member(omnivoros, Alimentacion).
+
+% ¿Qué personas con enfermedades crónicas son flexiterianas?
+enfermedad_cronica_flexiteriano(Persona) :-
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_cronicas, _, Alimentacion),
+    member(flexiterianos, Alimentacion).
+
+% ¿Qué personas son aficionados al fitness y pescaterianos?
+aficionado_fitness_pescetariano(Persona) :-
+    persona_salud_alimentacion(Persona, _, aficionados_al_fitness, Alimentacion),
+    member(pescaterianos, Alimentacion).
+
+% ¿Qué personas con discapacidad son vegetarianas?
+discapacidad_vegetariano(Persona) :-
+    persona_salud_alimentacion(Persona, personas_con_discapacidad, _, Alimentacion),
+    member(vegetarianos, Alimentacion).
+
+% ¿Qué personas con enfermedades mentales son veganas?
+enfermedad_mental_vegano(Persona) :-
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_mentales, _, Alimentacion),
+    member(veganos, Alimentacion).
+
+% ¿Qué personas con discapacidad son omnivoras?
+discapacidad_omnivoro(Persona) :-
+    persona_salud_alimentacion(Persona, personas_con_discapacidad, _, Alimentacion),
+    member(omnivoros, Alimentacion).
+
+% ¿Qué personas tienen enfermedades crónicas y son sedentarias?
+enfermedad_cronica_sedentario(Persona) :-
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_cronicas, sedentarios, _).
+
+% ¿Qué personas con enfermedades mentales tienen más de 50 años?
+enfermedad_mental_mas_de_50(Persona) :-
+    persona(Persona, Edad, _, _, _),
+    Edad > 50,
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_mentales, _, _).
+
+% ¿Qué personas con discapacidad tienen más de 60 años?
+discapacidad_mas_de_60(Persona) :-
+    persona(Persona, Edad, _, _, _),
+    Edad > 60,
+    persona_salud_alimentacion(Persona, personas_con_discapacidad, _, _).
+
+% ¿Qué personas son veganas y tienen más de 60 años?
+vegano_mas_de_60(Persona) :-
+    persona(Persona, Edad, _, _, _),
+    Edad > 60,
+    persona_salud_alimentacion(Persona, _, _, Alimentacion),
+    member(veganos, Alimentacion).
+
+% ¿Qué personas son investigadores y tienen más de 90 años?
+investigador_mas_de_90(Persona) :-
+    persona(Persona, Edad, investigador, _, _),
+    Edad > 90.
+
+% ¿Qué personas tienen más de 50 años y son apolíticas?
+mas_de_50_apolitico(Persona) :-
+    persona(Persona, Edad, _, _, _),
+    Edad > 50,
+    persona_residencia_posicion_politica(Persona, _, PosicionesPoliticas),
+    member(apoliticos, PosicionesPoliticas).
+
+% ¿Qué personas son ganaderos y son activos políticamente?
+
+ganadero_activo_politicamente(Persona) :-
+    persona(Persona, _, ganadero, _, _),
+    persona_residencia_posicion_politica(Persona, _, PosicionesPoliticas),
+    member(activos_politicamente, PosicionesPoliticas).
+
+% ¿Qué personas son investigadores y viven en áreas suburbanas?
+investigador_vive_en_suburbano(Persona) :-
+    persona(Persona, _, investigador, _, _),
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+
+% ¿Qué personas son investigadores y tienen enfermedades crónicas?
+investigador_enfermedad_cronica(Persona) :-
+    persona(Persona, _, investigador, _, _),
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_cronicas, _, _).
+
+% ¿Qué personas son jardineros y son sedentarias?
+
+jardinero_sedentario(Persona) :-
+    persona(Persona, _, jardinero, _, _),
+    persona_salud_alimentacion(Persona, _, sedentarios, _).
+% ¿Qué personas son ganaderos y tienen enfermedades crónicas?
+ganadero_enfermedad_cronica(Persona) :-
+    persona(Persona, _, ganadero, _, _),
+    persona_salud_alimentacion(Persona, personas_con_enfermedades_cronicas, _, _).
+
+% ¿Qué personas son tecnólogos y tienen más de 80 años?
+tecnologo_mas_de_80(Persona) :-
+    persona(Persona, Edad, tecnologo, _, _),
+    Edad > 80.
+
+% ¿Qué personas son jardineros y tienen más de 80 años?
+jardinero_mas_de_80(Persona) :-
+    persona(Persona, Edad, jardinero, _, _),
+    Edad > 80.
+
+% ¿Qué personas son obrero_industrial y tienen más de 50 años?
+obrero_industrial_mas_de_50(Persona) :-
+    persona(Persona, Edad, obrero_industrial, _, _),
+    Edad > 50.
+
+% ¿Qué personas son investigadores y hablan más de dos idiomas?
+investigador_habla_mas_de_dos_idiomas(Persona) :-
+    persona(Persona, _, investigador, _, Idiomas),
+    length(Idiomas, N),
+    N > 2.
+
+% ¿Qué personas son investigadores y viven en áreas suburbanas?
+investigador_vive_en_suburbano(Persona) :-
+    persona(Persona, _, investigador, _, _),
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+
+% ¿Qué personas son jardineros y hablan alemán?
+jardinero_habla_aleman(Persona) :-
+    persona(Persona, _, jardinero, _, Idiomas),
+    member(aleman, Idiomas).
+
+% ¿Qué personas son ganaderos y hablan italiano?
+ganadero_habla_italiano(Persona) :-
+    persona(Persona, _, ganadero, _, Idiomas),
+    member(italiano, Idiomas).
+
+% ¿Qué personas son artistas y viven en áreas urbanas?
+artista_vive_en_urbano(Persona) :-
+    persona(Persona, _, artista, _, _),
+    persona_residencia_posicion_politica(Persona, urbanos, _).
+
+% ¿Qué personas son investigadores y hablan inglés?
+investigador_habla_ingles(Persona) :-
+    persona(Persona, _, investigador, _, Idiomas),
+    member(ingles, Idiomas).
+% ¿Qué personas son tecnólogos y viven en áreas suburbanas?
+tecnologo_vive_en_suburbano(Persona) :-
+    persona(Persona, _, tecnologo, _, _),
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+% ¿Qué personas son profesionales y hablan francés?
+profesional_habla_frances(Persona) :-
+    persona(Persona, _, profesional, _, Idiomas),
+    member(frances, Idiomas).
+% ¿Qué personas son investigadores y hablan español?
+investigador_habla_espanol(Persona) :-
+    persona(Persona, _, investigador, _, Idiomas),
+    member(espanol, Idiomas).
+%¿Qué personas son investigadores y tienen más de 90 años?
+investigador_mas_de_90(Persona) :-
+    persona(Persona, Edad, investigador, _, _),
+    Edad > 90.
+% ¿Qué personas son jardineros y viven en áreas suburbanas?
+jardinero_vive_en_suburbano(Persona) :-
+    persona(Persona, _, jardinero, _, _),
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+% ¿Qué personas son ganaderos y tienen más de 90 años?
+ganadero_mas_de_90(Persona) :-
+    persona(Persona, Edad, ganadero, _, _),
+    Edad > 90.
+% ¿Qué personas son profesionales y viven en áreas suburbanas?
+profesional_vive_en_suburbano(Persona) :-
+    persona(Persona, _, profesional, _, _),
+    persona_residencia_posicion_politica(Persona, suburbanos, _).
+
+% ¿Qué personas son investigadores y tienen más de 60 años?
+investigador_mas_de_60(Persona) :-
+    persona(Persona, Edad, investigador, _, _),
+    Edad > 60. 
+
+% Regla para determinar la región de un estado a partir de su nombre:
+estado_region(Estado, Region) :- estado_pertenece_region(Estado, Region).
+
+% Regla para determinar la capital de un estado a partir de su nombre:
+estado_capital(Estado, Capital) :- estado_capital(Estado, Capital).
+
+% Regla para determinar la comida típica de un estado a partir de su nombre:
+estado_comida(Estado, Comida) :- estado_ct(Estado, Comida).
+
+% Regla para determinar la población de un estado a partir de su nombre:
+estado_poblacion(Estado, Poblacion) :- estado_poblacion(Estado, Poblacion).
+
+% Regla para determinar la capital y la comida típica de un estado a partir de su nombre:
+estado_capital_comida(Estado, Capital, Comida) :-
+    estado_capital(Estado, Capital),
+    estado_ct(Estado, Comida).
+
+% Regla para determinar la relación entre situación económica y religión:
+situacion_religion_economica(Situacion, Religion) :-
+    situacion_religion(Situacion, Religion).
+
+% Regla para determinar la relación entre situación económica y lengua:
+situacion_lengua_economica(Situacion, Lenguas) :-
+    situacion_lengua(Situacion, Lenguas).
+
+% Regla para determinar la relación entre religión y lengua:
+religion_lengua_hablada(Religion, Lenguas) :-
+    religion_lengua(Religion, Lenguas).
+
+% Regla para determinar si un estado pertenece a una región específica:
+pertenece_region(Estado, Region) :- estado_pertenece_region(Estado, Region).
+
+% Regla para determinar la capital, comida típica y población de un estado:
+info_estado(Estado, Capital, Comida, Poblacion) :-
+    estado_capital_comidaTipica_poblacion(Estado, Capital, Comida, Poblacion).
+
+% Determinar qué lengua se habla en un estado dado su situación económica:
+lengua_hablada_en_estado(Estado, Lengua) :-
+    estado_poblacion(Estado, Poblacion),
+    poblacion_situacion(Poblacion, Situacion), 
+    situacion_lengua(Situacion, Lenguas),
+    member(Lengua, Lenguas).
+
+% Determinar  la comida típica de una región específica:
+comida_tipica_region(Region, Comida) :-
+    estado_pertenece_region(Estado, Region),
+    estado_ct(Estado, Comida).
+
+% Determinar  el número total de estados en una región:
+total_estados_region(Region, Total) :-
+    findall(Estado, estado_pertenece_region(Estado, Region), Estados),
+    length(Estados, Total).
